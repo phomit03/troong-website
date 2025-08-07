@@ -176,7 +176,7 @@ body {
 .section-heading h6 {
   font-size: 15px;
   font-weight: 700;
-  color: #726ae3;
+  color: #b381c8;
   text-transform: uppercase;
   margin-bottom: 15px;
 }
@@ -341,7 +341,7 @@ header
 }
 
 .pre-header ul.info li {
-  margin-right: 45px;
+  margin-right: 30px;
 }
 
 .pre-header ul.info li a {
@@ -1071,6 +1071,16 @@ About Style
   margin-bottom: 30px;
 }
 
+.about-right-content {
+  padding-left: 0;
+}
+
+@media (min-width: 992px) {
+  .about-right-content {
+    margin-left: 20px;
+  }
+}
+
 .skills-content {
   position: relative;
   z-index: 1;
@@ -1131,7 +1141,7 @@ About Style
 }
 
 .second-skill-item .progress .progress-bar {
-  border-color: #726ae3;
+  border-color: #b381c8;
 }
 
 .third-skill-item .progress .progress-bar {
@@ -1317,6 +1327,7 @@ Services Style
 .services {
   padding-top: 100px;
   position: relative;
+  overflow: visible;
 }
 
 .services:after {
@@ -1328,7 +1339,7 @@ Services Style
   top: 0px;
   width: 786px;
   height: 1217px;
-  z-index: 1;
+  z-index: 1 !important;
 }
 
 .services:before {
@@ -1557,7 +1568,7 @@ Free Quote
   outline: none;
   border: none;
   margin-left: 30px;
-  background-color: #726ae3;
+  background-color: #b381c8;
   font-size: 15px;
   color: #fff;
 }
@@ -1748,7 +1759,7 @@ Blog
   font-size: 15px;
   color: #fff;
   padding: 8px 12px;
-  background-color: #726ae3;
+  background-color: #b381c8;
   border-radius: 18px;
   display: inline-block;
 }
@@ -1821,7 +1832,7 @@ Blog
   font-size: 15px;
   color: #fff;
   padding: 8px 12px;
-  background-color: #726ae3;
+  background-color: #b381c8;
   border-radius: 18px;
   display: inline-block;
 }
@@ -2217,8 +2228,12 @@ responsive
   z-index: 2;
 }
 
+.courses .col-lg-5 {
+  margin-top: 2rem;
+}
+
 .card-custom {
-  background: linear-gradient(to bottom, #535c87, #d4a7a0);
+  background: linear-gradient(to bottom, #f6f6f6, #b381c8);
   border-radius: 15px;
   padding: 20px;
   color: white;
@@ -2261,4 +2276,190 @@ responsive
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+
+#study-france {
+  padding-top: 120px;
+  position: relative;
+  z-index: 2;
+}
+
+.study-france-right-content p {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.study-france {
+  padding-right: 0;
+}
+
+@media (min-width: 992px) {
+  .study-france-left-image {
+    margin-right: 50px;
+  }
+}
+
+.study-france-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+/* Hiệu ứng nút cơ bản */
+.btn-more {
+  position: relative;
+  padding: 12px 30px;
+  margin-top: 25px;
+  background: linear-gradient(45deg, #b484c8, #b381c8); /* Lên tone sáng hơn */
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow:
+          0 4px 15px rgba(195, 150, 218, 0.6),
+          0 0 10px rgba(255, 255, 255, 0.4) inset; /* Thêm ánh sáng bên trong */
+  z-index: 1;
+  letter-spacing: 1px;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Hiệu ứng hover sáng hơn */
+.btn-more:hover {
+  box-shadow:
+          0 0 25px rgba(214, 174, 235, 0.9),
+          0 0 15px rgba(255, 255, 255, 0.6) inset;
+  transform: translateY(-3px);
+  background: linear-gradient(45deg, #d1a8e6, #c396da); /* Màu sáng hơn khi hover */
+}
+
+/* Vòng phát sáng neon */
+.btn-more::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 52px; /* Lớn hơn nút 2px */
+  background: linear-gradient(45deg, #e2c1f5, #d1a8e6, #e2c1f5);
+  z-index: -2;
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.btn-more:hover::before {
+  opacity: 0.8;
+  animation: neon-glow 1.5s infinite alternate;
+}
+
+/* Animation neon nhấp nháy */
+@keyframes neon-glow {
+  from {
+    box-shadow: 0 0 10px #e2c1f5, 0 0 20px rgba(226, 193, 245, 0.8);
+  }
+  to {
+    box-shadow: 0 0 15px #e2c1f5, 0 0 30px rgba(226, 193, 245, 0.9), 0 0 40px rgba(226, 193, 245, 0.6);
+  }
+}
+
+/* Hiệu ứng ánh sáng chạy sáng hơn */
+.btn-more::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%; /* Thu nhỏ lại để sáng tập trung hơn */
+  height: 100%;
+  background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.8),
+          transparent
+  );
+  transition: 0.8s;
+  transform: skewX(-15deg);
+}
+
+.btn-more:hover::after {
+  left: 150%;
+}
+
+/* Animation nền */
+@keyframes pulse-light {
+  0% {
+    box-shadow: 0 0 12px rgba(214, 174, 235, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(214, 174, 235, 0.9), 0 0 10px rgba(255, 255, 255, 0.6) inset;
+  }
+  100% {
+    box-shadow: 0 0 12px rgba(214, 174, 235, 0.7);
+  }
+}
+
+.study-france-box .btn-more {
+  animation: pulse-light 2s infinite ease-in-out;
+}
+
+.study-france-box:hover .btn-more {
+  animation: none;
+}
+
+/* Hiệu ứng click sáng */
+.btn-more:active {
+  transform: translateY(1px);
+  background: linear-gradient(45deg, #b381c8, #a572ba);
+  box-shadow: 0 0 30px rgba(214, 174, 235, 0.9) inset;
+}
+
+
+/* Phần Du học Pháp */
+.study-abroad {
+  padding-top: 80px;
+  padding-bottom: 120px;
+  background-color: #f9f7fe; /* Màu nền nhạt */
+}
+
+.study-abroad-left-content p {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #555; /* Màu chữ tối hơn chút */
+}
+
+.study-abroad-right-image {
+  position: relative;
+  text-align: center;
+}
+
+.study-abroad-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+/* Giữ nguyên hiệu ứng nút từ phần trước */
+.study-abroad-box .btn-more {
+  margin-top: 25px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .study-abroad-right-image {
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .study-abroad-left-content {
+    padding-right: 30px;
+  }
 }
