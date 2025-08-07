@@ -341,7 +341,7 @@ header
 }
 
 .pre-header ul.info li {
-  margin-right: 30px;
+  margin-right: 10px;
 }
 
 .pre-header ul.info li a {
@@ -2077,7 +2077,7 @@ responsive
   }
   .main-banner {
     text-align: center;
-    padding: 226px 0px 30px 0px;
+    padding: 226px 0px 0px 0px;
   }
   .main-banner:before {
     display: none;
@@ -2097,8 +2097,9 @@ responsive
     margin-bottom: 30px;
   }
   .about-left-image img {
-    margin-right: 0px;
-    margin-bottom: 45px;;
+    /*margin-right: 0px;
+    margin-bottom: 45px;*/
+    display: none;
   }
   .services .naccs .menu div {
     font-size: 15px;
@@ -2281,7 +2282,7 @@ responsive
 
 
 #study-france {
-  padding-top: 120px;
+  padding-top: 100px;
   position: relative;
   z-index: 2;
 }
@@ -2297,127 +2298,27 @@ responsive
 
 @media (min-width: 992px) {
   .study-france-left-image {
-    margin-right: 50px;
+    margin-right: 20px;
   }
 }
 
 .study-france-box {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 50px;
 }
 
-/* Hiệu ứng nút cơ bản */
-.btn-more {
-  position: relative;
-  padding: 12px 30px;
-  margin-top: 25px;
-  background: linear-gradient(45deg, #b484c8, #b381c8); /* Lên tone sáng hơn */
-  color: white;
-  border: none;
-  border-radius: 50px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  outline: none;
-  overflow: hidden;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  box-shadow:
-          0 4px 15px rgba(195, 150, 218, 0.6),
-          0 0 10px rgba(255, 255, 255, 0.4) inset; /* Thêm ánh sáng bên trong */
-  z-index: 1;
-  letter-spacing: 1px;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-}
-
-/* Hiệu ứng hover sáng hơn */
-.btn-more:hover {
-  box-shadow:
-          0 0 25px rgba(214, 174, 235, 0.9),
-          0 0 15px rgba(255, 255, 255, 0.6) inset;
-  transform: translateY(-3px);
-  background: linear-gradient(45deg, #d1a8e6, #c396da); /* Màu sáng hơn khi hover */
-}
-
-/* Vòng phát sáng neon */
-.btn-more::before {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  border-radius: 52px; /* Lớn hơn nút 2px */
-  background: linear-gradient(45deg, #e2c1f5, #d1a8e6, #e2c1f5);
-  z-index: -2;
-  opacity: 0;
-  transition: all 0.6s ease;
-}
-
-.btn-more:hover::before {
-  opacity: 0.8;
-  animation: neon-glow 1.5s infinite alternate;
-}
-
-/* Animation neon nhấp nháy */
-@keyframes neon-glow {
-  from {
-    box-shadow: 0 0 10px #e2c1f5, 0 0 20px rgba(226, 193, 245, 0.8);
-  }
-  to {
-    box-shadow: 0 0 15px #e2c1f5, 0 0 30px rgba(226, 193, 245, 0.9), 0 0 40px rgba(226, 193, 245, 0.6);
-  }
-}
-
-/* Hiệu ứng ánh sáng chạy sáng hơn */
-.btn-more::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 50%; /* Thu nhỏ lại để sáng tập trung hơn */
-  height: 100%;
-  background: linear-gradient(
-          90deg,
-          transparent,
-          rgba(255, 255, 255, 0.8),
-          transparent
-  );
-  transition: 0.8s;
-  transform: skewX(-15deg);
-}
-
-.btn-more:hover::after {
-  left: 150%;
-}
-
-/* Animation nền */
-@keyframes pulse-light {
-  0% {
-    box-shadow: 0 0 12px rgba(214, 174, 235, 0.7);
-  }
-  50% {
-    box-shadow: 0 0 20px rgba(214, 174, 235, 0.9), 0 0 10px rgba(255, 255, 255, 0.6) inset;
-  }
-  100% {
-    box-shadow: 0 0 12px rgba(214, 174, 235, 0.7);
-  }
-}
-
 .study-france-box .btn-more {
-  animation: pulse-light 2s infinite ease-in-out;
+  margin-top: 25px;
 }
 
-.study-france-box:hover .btn-more {
-  animation: none;
-}
-
-/* Hiệu ứng click sáng */
-.btn-more:active {
-  transform: translateY(1px);
-  background: linear-gradient(45deg, #b381c8, #a572ba);
-  box-shadow: 0 0 30px rgba(214, 174, 235, 0.9) inset;
+.button-wrapper {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 30;
 }
 
 
@@ -2425,13 +2326,13 @@ responsive
 .study-abroad {
   padding-top: 80px;
   padding-bottom: 120px;
-  background-color: #f9f7fe; /* Màu nền nhạt */
+  /*background-color: #f9f7fe;*/
 }
 
 .study-abroad-left-content p {
   margin-top: 30px;
   margin-bottom: 30px;
-  color: #555; /* Màu chữ tối hơn chút */
+  color: #555;
 }
 
 .study-abroad-right-image {
@@ -2452,14 +2353,313 @@ responsive
 }
 
 /* Responsive */
-@media (max-width: 991px) {
+/*@media (max-width: 991px) {
   .study-abroad-right-image {
     margin-top: 50px;
   }
-}
+}*/
 
 @media (min-width: 992px) {
   .study-abroad-left-content {
     padding-right: 30px;
+  }
+}
+
+
+/* Nút đăng ký với hiệu ứng hiện đại */
+.btn-more {
+  position: static !important;
+  transform: none !important;
+  padding: 10px 30px;
+  background: #b381c8;
+  color: white;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+  box-shadow:
+          0 5px 15px rgba(179, 129, 200, 0.4),
+          0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid transparent;
+}
+
+/* Hiệu ứng hover */
+.btn-more:hover {
+  transform: translateY(-3px);
+  box-shadow:
+          0 8px 25px rgba(179, 129, 200, 0.6),
+          0 4px 10px rgba(0, 0, 0, 0.1);
+  background: #c396da;
+}
+
+/* Hiệu ứng ánh sáng trắng chạy qua */
+.btn-more::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent
+  );
+  transition: 0.6s;
+  z-index: -1;
+}
+
+.btn-more:hover::before {
+  left: 100%;
+}
+
+/* Hiệu ứng khi click */
+.btn-more:active {
+  transform: translateY(1px);
+  box-shadow:
+          0 3px 10px rgba(179, 129, 200, 0.5),
+          0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Hiệu ứng viền trắng nhấp nháy */
+@keyframes border-pulse {
+  0% { border-color: rgba(255, 255, 255, 0.3); }
+  50% { border-color: rgba(255, 255, 255, 0.8); }
+  100% { border-color: rgba(255, 255, 255, 0.3); }
+}
+
+.btn-more {
+  animation: border-pulse 2s infinite;
+}
+
+/* Phiên bản mobile */
+@media (max-width: 768px) {
+  .btn-more {
+    padding: 12px 30px;
+    font-size: 16px;
+  }
+}
+
+.btn-more::after {
+  margin-left: 10px;
+  transition: all 0.3s;
+}
+.btn-more:hover::after {
+  margin-left: 15px;
+}
+
+.btn-more:hover {
+  transform: translateY(-3px) scale(1.02);
+}
+
+
+
+
+/* CSS */
+.image-with-rocket {
+  position: relative;
+  display: inline-block;
+}
+
+.rocket-container {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  transition: all 0.5s ease;
+  z-index: 10;
+}
+
+/* Hiệu ứng hover */
+.image-with-rocket:hover .rocket-container,
+.btn-more:hover ~ .rocket-container {
+  transform: translateY(-100px) rotate(-15deg);
+  opacity: 0;
+}
+
+/* Hiệu ứng click nút */
+.btn-more:active ~ .rocket-container {
+  animation: launch 1.5s forwards;
+}
+
+@keyframes launch {
+  0% { transform: translateY(0) rotate(0); opacity: 1; }
+  100% { transform: translateY(-300px) rotate(-30deg); opacity: 0; }
+}
+
+/* Container chứa ảnh và rocket */
+.study-france-left-image {
+  position: relative; /* Quan trọng: tạo context cho absolute */
+  display: flex; /* Hoặc flex tùy layout hiện tại */
+
+}
+
+/* Rocket Lottie - Đè lên ảnh */
+.study-france-left-image dotlottie-wc {
+  position: absolute;
+  z-index: 10;
+  left: -150px;
+  bottom: 30px;
+  width: 200px;
+  height: 200px;
+  cursor: move;
+  pointer-events: none;
+}
+
+/* Hiệu ứng khi hover */
+.study-france-left-image:hover dotlottie-wc {
+  transform: translateY(-200px) rotate(0deg);
+  transition: all 0.5s ease;
+}
+
+.btn-more:hover ~ dotlottie-wc {
+  animation: launch 1s forwards;
+}
+
+@keyframes launch {
+  0% { transform: translate(0, 0) rotate(0); }
+  100% { transform: translate(100px, -200px) rotate(-30deg); opacity: 0; }
+}
+
+
+/* Container chính */
+.study-abroad-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform-style: preserve-3d;
+}
+
+/* Rocket positioning */
+.consult-rocket {
+  position: absolute;
+  left: -180px;
+  bottom: 130px;
+  width: 250px;
+  height: 250px;
+  z-index: 10;
+  pointer-events: none;
+  transition: all 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* Wrapper nút */
+.consult-button-wrapper {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 20;
+}
+
+/* Nút tư vấn */
+.btn-consult {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+/* Hiệu ứng hover nút */
+.btn-consult:hover {
+  transform: translateY(-3px);
+}
+
+/* Hiệu ứng bay chính - ĐÃ SỬA HƯỚNG */
+.btn-consult:hover ~ .consult-rocket,
+.consult-button-wrapper:hover ~ .consult-rocket,
+.study-abroad-box:hover .consult-rocket {
+  transform: translate(50px, -150px) rotate(15deg); /* Bay lên và sang phải */
+  opacity: 0;
+}
+
+/* Animation khi click - ĐÃ SỬA HƯỚNG */
+.btn-consult:active ~ .consult-rocket {
+  animation: properRocketLaunch 0.8s forwards;
+}
+
+@keyframes properRocketLaunch {
+  0% { transform: translate(0,0) rotate(0); opacity: 1; }
+  50% { transform: translate(80px,-100px) rotate(10deg); }
+  100% { transform: translate(150px,-250px) rotate(25deg); opacity: 0; }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .consult-rocket {
+    /*width: 200px !important;
+    height: 200px !important;
+    left: -30px;
+    bottom: -30px;*/
+    display: none;
+  }
+
+  .study-france-left-image dotlottie-wc {
+    display: none;
+  }
+}
+
+
+.rocket-heading {
+  position: relative;
+}
+
+/* Rocket trong heading */
+.heading-rocket {
+  position: absolute;
+  width: 200px !important;
+  height: 200px !important;
+  bottom: -30px;
+  left: 50%;
+  transform:
+          translateX(-50%) /* Căn giữa */
+          rotate(0deg) /* Nghiêng trái nhẹ */
+          scaleX(2); /* Tùy chỉnh tỷ lệ */
+  z-index: 10;
+  pointer-events: none;
+  transition: all 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* Hiệu ứng khi hover toàn bộ heading */
+.rocket-heading:hover .heading-rocket {
+  animation: headingRocketLaunch 1s forwards;
+}
+
+@keyframes headingRocketLaunch {
+  0% { transform: translateX(-50%) translateY(0) rotate(0); }
+  50% { transform: translateX(-30%) translateY(-80px) rotate(15deg); ; opacity: 0.5;}
+  100% { transform: translateX(20%) translateY(-200px) rotate(30deg) scale(0.5); opacity: 0; }
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .heading-rocket {
+    width: 150px !important;
+    height: 150px !important;
+    bottom: 50px;
+    left: 60%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .heading-rocket {
+    left: 60%;
+  }
+}
+
+/***** mobile only *****/
+@media only screen and (max-width: 992px) {
+  .study-france-left-col {
+    display: none;
+  }
+}
+
+/***** pc only *****/
+@media only screen and (min-width: 1024px) {
+  .mobile-only {
+    display: none;
   }
 }
