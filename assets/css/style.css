@@ -902,6 +902,15 @@ header
     }
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .hide-on-ipad {
+        display: none;
+    }
+    .header-area .container, .header-area .col-12 {
+        padding: 0 !important;
+    }
+}
+
 /* 
 ---------------------------------------------
 preloader
@@ -1563,7 +1572,7 @@ Free Quote
 --------------------------------------------- 
 */
 
-.free-quote {
+.contact {
     background-image: url(../images/quote-bg.jpg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -1574,21 +1583,30 @@ Free Quote
     z-index: 2;
 }
 
-.free-quote .section-heading {
+.contact .container-fluid {
+    max-width: 1200px;
+    padding: 0 30px;
+}
+
+
+.contact .section-heading {
     margin-bottom: 60px;
 }
 
-.free-quote .section-heading h6,
-.free-quote .section-heading h4 {
+.contact .section-heading h6 {
     color: #fff;
 }
 
-.free-quote .section-heading .line-dec {
+.contact .section-heading h4 {
+    color: #fff;
+}
+
+.contact .section-heading .line-dec {
     margin: 0 auto;
     background-color: #fff;
 }
 
-/*.free-quote form {
+/*.contact form {
   display: inline-block;
   width: 100%;
   min-height: 80px;
@@ -1597,7 +1615,7 @@ Free Quote
   z-index: 1;
 }
 
-.free-quote form input {
+.contact form input {
   width: 100%;
   color: #2a2a2a;
   font-weight: 400;
@@ -1613,7 +1631,7 @@ Free Quote
   outline: none;
 }
 
-.free-quote form button {
+.contact form button {
   width: 50%;
   height: 80px;
   border-top-right-radius: 40px;
@@ -1913,7 +1931,7 @@ contact
 --------------------------------------------- 
 */
 
-.contact-us {
+/*.contact-us {
     padding-top: 130px;
 }
 
@@ -2068,7 +2086,7 @@ form#contact button {
 form#contact button:hover {
     background-color: #4c5a8b !important;
     color: #fff !important;
-}
+}*/
 
 /* 
 ---------------------------------------------
@@ -2274,12 +2292,12 @@ responsive
         margin-right: 15px;
     }
 
-    .free-quote form input {
+    .contact form input {
         margin-left: 0px;
         padding: 0px 30px;
     }
 
-    .free-quote form button {
+    .contact form button {
         margin-left: 0px;
         border-bottom-left-radius: 40px;
         border-top-right-radius: 0px;
@@ -2844,5 +2862,110 @@ responsive
 @media only screen and (max-width: 768px) {
     #contact-form .main-button {
         width: 50%;
+    }
+}
+
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #f5f7fa;
+    transition: all 0.3s ease;
+}
+
+.contact-icon {
+    width: 35px;
+    height: 35px;
+    transition: all 0.3s ease;
+}
+
+/* Màu nền khi hover cho từng loại icon */
+.icon-link:hover {
+    transform: translateY(-3px);
+}
+
+.messenger:hover {
+    background: #0084ff;
+}
+.whatsapp:hover {
+    background: #25D366;
+}
+.zalo:hover {
+    background: #0180C7;
+}
+.email:hover {
+    background: #D44638;
+}
+
+/* Đảm bảo icon không bị invert màu khi hover */
+.icon-link:hover .contact-icon {
+    filter: none !important;
+}
+
+
+
+
+
+.card-custom {
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 20px;
+    border: none;
+}
+
+.title-block {
+    border-bottom: 2px solid #3498db;
+}
+
+/*.btn-course {
+    background: #f8f9fa;
+    color: #2c3e50;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    margin: 5px 0;
+    padding: 12px;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.btn-course:hover {
+    background: #3498db;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+}*/
+
+.course-info {
+    white-space: normal;
+    height: auto;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .modal-lg {
+        margin: 20px;
+    }
+
+    .modal-body .row {
+        flex-direction: column;
+    }
+
+    .modal-body .col-md-6 {
+        width: 100%;
     }
 }
