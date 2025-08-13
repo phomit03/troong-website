@@ -202,7 +202,7 @@ body {
 }
 
 .section-heading .line-dec {
-    width: 100px;
+    width: 150px;
     height: 2px;
     background-color: #4c5a8b;
     margin-top: 20px;
@@ -3205,10 +3205,16 @@ nav fix
 
 .header-area .main-nav .nav.nav-fx li:hover,
 .header-area .main-nav .nav.nav-fx li.active {
-    background: linear-gradient(90deg, #a7889e, #8ab1d4);
+    /*background: linear-gradient(90deg, #a7889e, #8ab1d4);*/
+    background: white;
     box-shadow: 0 0 10px rgba(76, 90, 139, 0.35);
-    color: #fff !important;
+    color: #4c5a8b !important;
     border-radius: 999px;
+}
+
+.header-area .main-nav .nav.nav-fx li a:hover,
+.header-area .main-nav .nav.nav-fx li a.active{
+    color: #4c5a8b !important;
 }
 
 .header-area .main-nav .nav.nav-fx li a::after{
@@ -3220,7 +3226,8 @@ nav fix
     bottom:-6px;
     width:70%;
     height:2px;
-    background: linear-gradient(90deg, #8ab1d4, #a7889e);
+    background: white;
+    /*background: linear-gradient(90deg, #8ab1d4, #a7889e);*/
     box-shadow: 0 0 10px rgba(76,90,139,.35);
     transition: transform .35s ease;
 }
@@ -3236,3 +3243,70 @@ nav fix
 }
 
 
+/* Bootstrap sẽ tự thêm .is-invalid / .is-valid, ta chỉ làm đẹp thêm */
+.form-field { position: relative; }
+
+.form-field .inline-error {
+    position: absolute;
+    right: 12px;              /* nằm trong ô, góc phải */
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 60%;
+    text-align: right;
+    font-size: 12px;
+    font-weight: 600;
+    color: #e53935;
+    pointer-events: none;     /* không chặn gõ */
+    opacity: 0;
+    transition: opacity .2s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Khi có lỗi */
+.form-field.has-error .inline-error { opacity: 1; }
+
+/* Viền ô khi lỗi/đúng (giữ style bootstrap mở rộng) */
+.form-control.is-invalid {
+    border-color: #e53935;
+    box-shadow: 0 0 0 .2rem rgba(229,57,53,.15);
+}
+.form-control.is-valid {
+    border-color: #4caf50;
+    box-shadow: 0 0 0 .2rem rgba(76,175,80,.15);
+}
+
+
+/* Thông báo trạng thái gửi */
+#form-status {
+    margin-top: 10px;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-align: center;
+    font-size: 15px;
+    display: none;
+    animation: fadeIn .35s ease forwards;
+}
+
+#form-status.sending {
+    background: linear-gradient(90deg,#2196f3,#64b5f6);
+    color:#fff;
+    box-shadow: 0 0 10px rgba(33,150,243,.5);
+}
+#form-status.success {
+    background: linear-gradient(90deg,#4caf50,#81c784);
+    color:#fff;
+    box-shadow: 0 0 10px rgba(76,175,80,.5);
+}
+#form-status.error {
+    background: linear-gradient(90deg,#e53935,#ef5350);
+    color:#fff;
+    box-shadow: 0 0 10px rgba(239,83,80,.5);
+}
+
+@keyframes fadeIn {
+    from {opacity:0; transform: translateY(-4px);}
+    to   {opacity:1; transform: translateY(0);}
+}

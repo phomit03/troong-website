@@ -58,7 +58,7 @@
             <div class="col-lg-4 col-sm-4 col-5">
                 <ul class="social-media">
                     <li><a href="https://www.facebook.com/phapnguTroong"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="mailto:troong.vn@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                    <li><a href="mailto:troong.hr@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
                     <li><a href="https://wa.me/+84836600097"><i class="fa fa-whatsapp"></i></a></li>
                 </ul>
             </div>
@@ -226,7 +226,8 @@
             </div>
             <div class="col-lg-12 courses ">
                 <div class="container py-3">
-                    <div class="row justify-content-center align-items-stretch position-relative wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <div class="row justify-content-center align-items-stretch position-relative wow fadeInUp"
+                         data-wow-duration="1s" data-wow-delay="0.5s">
                         <!-- Card Giao Tiếp -->
                         <div class="col-lg-6 col-md-6 d-flex mb-4 mb-md-0">
                             <div class="card-custom d-flex flex-column text-center h-100 w-100" data-wow-duration="1s">
@@ -588,7 +589,7 @@
                         <a href="https://zalo.me/0836600097" target="_blank" class="icon-link zalo">
                             <img src="assets/images/icon/zalo.png" alt="Zalo" class="contact-icon">
                         </a>
-                        <a href="mailto:troong.vn@gmail.com" class="icon-link email">
+                        <a href="mailto:troong.hr@gmail.com" class="icon-link email">
                             <img src="assets/images/icon/gmail.png" alt="Email" class="contact-icon">
                         </a>
                         <a href="https://wa.me/+84836600097" target="_blank" class="icon-link whatsapp">
@@ -600,22 +601,32 @@
                 </div>
             </div>
             <div class="col-lg-8 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
-                <form id="contact-form" action="" method="post">
+                <form id="contact-form" action="https://formspree.io/f/xzzvowln" method="POST">
                     <div class="row">
+                        <!--gotcha an chong bot-->
+                        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0">
+
                         <div class="col-md-6">
                             <fieldset>
-                                <input type="text" name="name" class="form-control" placeholder="Họ và tên*" required>
+                                <input type="text" name="Họ Và Tên" class="form-control" placeholder="Họ và tên*"
+                                       required>
                             </fieldset>
                         </div>
                         <div class="col-md-6">
                             <fieldset>
-                                <input type="tel" name="phone" class="form-control" placeholder="Số điện thoại*"
+                                <input type="tel" name="Số Điện Thoại" class="form-control" placeholder="Số điện thoại*"
                                        required>
                             </fieldset>
                         </div>
                         <div class="col-md-12">
                             <fieldset>
-                                <select name="course" class="form-control" required>
+                                <input type="email" name="Email" class="form-control" placeholder="Email*"
+                                       required>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-12">
+                            <fieldset>
+                                <select name="Khóa Học Quan Tâm" class="form-control" required>
                                     <option value="" disabled selected>Chọn trình độ/khóa học bạn quan tâm*</option>
                                     <option value="Khoá phát âm">Khoá phát âm</option>
                                     <option value="Khoá sơ cấp A0 - A1.1">Khoá sơ cấp A0 - A1.1</option>
@@ -632,11 +643,18 @@
                         </div>
                         <div class="col-md-12">
                             <fieldset>
-                                <textarea name="message" class="form-control"
+                                <textarea name="Mong Muốn Khác" class="form-control"
                                           placeholder="Mong muốn khác (Du học, xin Visa...)"></textarea>
                             </fieldset>
                         </div>
+
+                        <input type="hidden" name="Thời Gian Gửi" id="_date">
+
                         <div class="col-md-12">
+                            <input type="hidden" name="_subject" value="Liên Hệ Từ Website">
+
+                            <p id="form-status" style="margin-top: 10px;"></p>
+
                             <fieldset>
                                 <button type="submit" class="main-button">Gửi liên hệ</button>
                             </fieldset>
@@ -647,7 +665,6 @@
         </div>
     </div>
 </div>
-
 
 <div id="portfolio" class="our-portfolio section">
     <div class="container">
@@ -837,95 +854,6 @@
     </div>
 </div>
 
-<!--<div id="contact" class="contact-us section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 offset-lg-3">
-                <div class="section-heading wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
-                    <h6>Contact Us</h6>
-                    <h4>Get In Touch With Us <em>Now</em></h4>
-                    <div class="line-dec"></div>
-                </div>
-            </div>
-            <div class="col-lg-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.25s">
-                <form action="" method="post">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="contact-dec">
-                                <img src="assets/images/contact-dec.png" alt="">
-                            </div>
-                        </div>
-                        <div class="col-lg-5">
-                            <div id="map">
-                                <iframe src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                                        width="100%" height="636px" frameborder="0" style="border:0"
-                                        allowfullscreen></iframe>
-                            </div>
-                        </div>
-                        <div class="col-lg-7">
-                            <div class="fill-form">
-                                <div class="row">
-                                    <div class="col-lg-4">
-                                        <div class="info-post">
-                                            <div class="icon">
-                                                <img src="assets/images/phone-icon.png" alt="">
-                                                <a href="#">010-020-0340</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="info-post">
-                                            <div class="icon">
-                                                <img src="assets/images/email-icon.png" alt="">
-                                                <a href="#">our@email.com</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="info-post">
-                                            <div class="icon">
-                                                <img src="assets/images/location-icon.png" alt="">
-                                                <a href="#">123 Rio de Janeiro</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <fieldset>
-                                            <input type="name" name="name" id="name" placeholder="Name"
-                                                   autocomplete="on" required>
-                                        </fieldset>
-                                        <fieldset>
-                                            <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*"
-                                                   placeholder="Your Email" required="">
-                                        </fieldset>
-                                        <fieldset>
-                                            <input type="subject" name="subject" id="subject" placeholder="Subject"
-                                                   autocomplete="on">
-                                        </fieldset>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <fieldset>
-                                            <textarea name="message" type="text" class="form-control" id="message"
-                                                      placeholder="Message" required=""></textarea>
-                                        </fieldset>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <fieldset>
-                                            <button type="submit" id="form-submit" class="main-button ">Send Message
-                                                Now
-                                            </button>
-                                        </fieldset>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>-->
-
 <footer>
     <div class="container">
         <div class="row">
@@ -945,151 +873,13 @@
 <script src="assets/js/imagesloaded.js"></script>
 <script src="assets/js/custom.js"></script>
 
+<script src="assets/js/nav-fix.js"></script>
+<script src="assets/js/rocket-course.js"></script>
+<script src="assets/js/form-request.js"></script>
+
+
 <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const navLinks = document.querySelectorAll(".nav.nav-fx li");
-
-        function syncActiveClass() {
-            navLinks.forEach(li => {
-                const a = li.querySelector("a");
-                if (a && a.classList.contains("active")) {
-                    li.classList.add("active");
-                } else {
-                    li.classList.remove("active");
-                }
-            });
-        }
-
-        // Sync ngay lúc tải trang
-        syncActiveClass();
-
-        // Khi scroll, có thể active sẽ thay đổi → tiếp tục sync
-        window.addEventListener("scroll", syncActiveClass);
-
-        // Khi click menu cũng cần sync lại
-        document.querySelectorAll(".nav.nav-fx li a").forEach(a => {
-            a.addEventListener("click", () => {
-                // Delay nhỏ để chờ Bootstrap xử lý trước
-                setTimeout(syncActiveClass, 100);
-            });
-        });
-    });
-</script>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const rocket = document.querySelector('.course-rocket');
-        const buttons = document.querySelectorAll('.btn-course');
-        const courseModal = document.getElementById('courseModal');
-        let currentCourse = null;
-        let modalInstance = null;
-        let isModalTransitioning = false; // Thêm biến cờ trạng thái
-
-        const courseLevels = {
-            'pronunciation': '20%',
-            'beginner': '40%',
-            'intermediate': '60%',
-            'advanced': '80%',
-            'master': '100%',
-
-            'tcf': '33.3%',
-            'tef': '66.6%',
-            'delf': '99.9%'
-        };
-
-        function flyRocket(courseType) {
-            if (isModalTransitioning) return;
-
-            const height = courseLevels[courseType] || '50%';
-            rocket.style.transition = 'transform 0.5s ease-out';
-            rocket.style.zIndex = '1000';
-            rocket.style.transform = `translateX(-50%) translateY(calc(-1 * ${height}))`;
-            rocket.classList.add('rocket-flying');
-            rocket.setAttribute('data-fire', 'on');
-        }
-
-        function resetRocket() {
-            rocket.style.transition = 'transform 0.5s ease-in';
-            rocket.style.transform = 'translateX(-50%)';
-            rocket.removeAttribute('data-fire');
-
-            setTimeout(() => {
-                if (!currentCourse && !isModalTransitioning) {
-                    rocket.classList.remove('rocket-flying');
-                    rocket.style.zIndex = '10';
-                    rocket.style.transition = '';
-                }
-            }, 500);
-        }
-
-        function cleanupModal() {
-            const backdrops = document.querySelectorAll('.modal-backdrop');
-            backdrops.forEach(backdrop => backdrop.remove());
-            document.body.classList.remove('modal-open');
-            document.body.style.overflow = '';
-            document.body.style.paddingRight = '';
-        }
-
-        buttons.forEach(button => {
-            button.addEventListener('mouseenter', () => {
-                if (!currentCourse && !isModalTransitioning) {
-                    flyRocket(button.dataset.course);
-                }
-            });
-
-            button.addEventListener('mouseleave', () => {
-                if (!currentCourse && !isModalTransitioning) {
-                    resetRocket();
-                }
-            });
-
-            button.addEventListener('click', function() {
-                if (isModalTransitioning) return;
-
-                const clickedCourse = button.dataset.course;
-                isModalTransitioning = true;
-
-                // Đóng modal hiện tại nếu có
-                if (modalInstance) {
-                    modalInstance.hide();
-
-                    // Giữ rocket ở vị trí cũ trong khi chuyển đổi
-                    setTimeout(() => {
-                        cleanupModal();
-                        currentCourse = clickedCourse;
-                        flyRocket(currentCourse);
-                        openModal();
-                    }, 100);
-                } else {
-                    currentCourse = clickedCourse;
-                    flyRocket(currentCourse);
-                    openModal();
-                }
-            });
-        });
-
-        function openModal() {
-            modalInstance = new bootstrap.Modal(courseModal);
-
-            const handleModalClose = () => {
-                setTimeout(() => {
-                    resetRocket();
-                    currentCourse = null;
-                    cleanupModal();
-                    courseModal.removeEventListener('hidden.bs.modal', handleModalClose);
-                    isModalTransitioning = false;
-                }, 300);
-            };
-
-            courseModal.addEventListener('hidden.bs.modal', handleModalClose);
-
-            modalInstance.show();
-            isModalTransitioning = false;
-        }
-    });
-</script>
 
 </body>
 </html>
