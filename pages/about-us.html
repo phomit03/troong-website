@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Giới thiệu về Pháp Ngữ Troong - Trung tâm đào tạo tiếng Pháp chuyên nghiệp">
+    <meta name="author" content="Pháp Ngữ Troong">
+
+    <title>Về Chúng Tôi - Pháp Ngữ Troong</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/animated.css">
+    <link rel="stylesheet" href="/assets/css/owl.css">
+
+    <!-- CSS riêng cho trang About -->
+    <style>
+        /* Phần giới thiệu */
+        .about-hero {
+            background: linear-gradient(135deg, #4c5a8b 0%, #b381c8 100%);
+            padding: 120px 0 80px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('/assets/images/dots-pattern.jpg');
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        .about-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .about-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        /* Phần giới thiệu chung */
+        .about-intro {
+            padding: 100px 0;
+            background-color: #f9f9f9;
+        }
+
+        .about-intro-content {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            padding: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-intro-content:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, #4c5a8b, #b381c8);
+        }
+
+        .about-intro h2 {
+            color: #4c5a8b;
+            font-weight: 700;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .about-intro h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: #b381c8;
+        }
+
+        .about-intro p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-stats {
+            margin-top: 50px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 30px 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #4c5a8b;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        /* Phần giáo viên */
+        .teachers-section {
+            padding: 100px 0;
+            background: linear-gradient(to bottom, #f9f9f9 0%, #fff 100%);
+        }
+
+        .teachers-section h2 {
+            text-align: center;
+            color: #4c5a8b;
+            font-weight: 700;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .teachers-section h2:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #b381c8;
+        }
+
+        .teacher-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .teacher-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .teacher-img {
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .teacher-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .teacher-card:hover .teacher-img img {
+            transform: scale(1.05);
+        }
+
+        .teacher-info {
+            padding: 25px;
+            position: relative;
+        }
+
+        .teacher-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #4c5a8b;
+            margin-bottom: 5px;
+        }
+
+        .teacher-title {
+            color: #b381c8;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .teacher-bio {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .teacher-social {
+            display: flex;
+            gap: 15px;
+        }
+
+        .teacher-social a {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #4c5a8b;
+            transition: all 0.3s;
+        }
+
+        .teacher-social a:hover {
+            background: #4c5a8b;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .teacher-badge {
+            position: absolute;
+            top: -20px;
+            right: 20px;
+            background: #4c5a8b;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(76, 90, 139, 0.3);
+        }
+
+        /* Phần giá trị cốt lõi */
+        .values-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+        }
+
+        .value-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+            transition: all 0.3s;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .value-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, #4c5a8b, #b381c8);
+            z-index: 2;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #4c5a8b 0%, #b381c8 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .value-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #4c5a8b;
+            margin-bottom: 15px;
+        }
+
+        .value-desc {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about-hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .about-intro-content {
+                padding: 30px;
+            }
+
+            .teacher-img {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .about-hero {
+                padding: 100px 0 60px;
+            }
+
+            .about-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .about-hero p {
+                font-size: 1rem;
+            }
+
+            .stat-item {
+                margin-bottom: 20px;
+            }
+
+            .teacher-card {
+                max-width: 350px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .about-intro-content {
+                padding: 25px 20px;
+            }
+
+            .teacher-info {
+                padding: 20px;
+            }
+
+            .teacher-name {
+                font-size: 1.3rem;
+            }
+
+            .value-card {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ***** Preloader Start ***** -->
+<div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+        <span class="dot"></span>
+        <div class="dots">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</div>
+<!-- ***** Preloader End ***** -->
+
+<!-- Pre-header Starts -->
+<div class="pre-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-sm-8 col-7">
+                <ul class="info">
+                    <li><a href="#"><i class="fa fa-envelope"></i>troong.vn@gmail.com</a></li>
+                    <li><a href="#"><i class="fa fa-phone"></i>(+84) 836.600.097 - (+33) 760.037.733</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-sm-4 col-5">
+                <ul class="social-media">
+                    <li><a href="https://www.facebook.com/phapnguTroong"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://wa.me/+84836600097"><i class="fa fa-whatsapp"></i></a></li>
+                    <li><a href="mailto:troong.vn@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Pre-header End -->
+
+<!-- ***** Header Area Start ***** -->
+<header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="/index.html" class="logo">
+                        <img src="/assets/images/logo/Logo-Troong.png" alt="">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li class="scroll-to-section border-fix"><a href="/index.html">Trang chủ</a></li>
+                        <li class="scroll-to-section border-fix"><a href="/index.html#services">Khóa Học</a></li>
+                        <li class="scroll-to-section border-fix"><a href="/index.html#study-abroad">Du học Pháp</a></li>
+                        <li class="scroll-to-section "><a href="/index.html#blog">Nguồn học tiếng Pháp</a></li>
+                        <li class="scroll-to-section"><a href="about-us.html" class="active">Về chúng tôi</a></li>
+                        <li class="scroll-to-section hide-on-ipad"><a href="/recruitment">Tuyển dụng</a></li>
+                        <li class="scroll-to-section">
+                            <div class="border-first-button"><a href="/index.html#contact">Liên hệ ngay</a></div>
+                        </li>
+                    </ul>
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- ***** Header Area End ***** -->
+
+<!-- Hero Section -->
+<section class="about-hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center about-hero-content">
+                <h1 class="wow fadeInDown" data-wow-delay="0.3s">Về Pháp Ngữ Troong</h1>
+                <p class="wow fadeIn" data-wow-delay="0.6s">Hành trình 10 năm đồng hành cùng học viên chinh phục tiếng
+                    Pháp và giấc mơ du học</p>
+
+                <dotlottie-wc
+                        src="https://lottie.host/bf8218fe-84bf-45a6-9326-5a9746191bcd/D9u8ceaqHs.lottie"
+                        style="width: 200px; height: 200px; margin: 0 auto;"
+                        speed="1"
+                        autoplay
+                        loop
+                ></dotlottie-wc>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Giới thiệu chung -->
+<section class="about-intro">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="about-intro-content wow fadeInUp" data-wow-delay="0.3s">
+                    <h2>Pháp Ngữ Troong</h2>
+                    <p><strong>Pháp Ngữ Troong</strong> tự hào là trung tâm giảng dạy tiếng Pháp chuyên sâu, tập trung
+                        vào các khóa học luyện thi chứng chỉ TCF - TEF và kỹ năng giao tiếp thực tế. Với phương châm
+                        "Chất lượng tạo nên thương hiệu", chúng tôi đã giúp hàng ngàn học viên đạt được mục tiêu tiếng
+                        Pháp của mình.</p>
+
+                    <p>Thành lập từ năm 2014, Pháp Ngữ Troong đã không ngừng phát triển và hoàn thiện phương pháp giảng
+                        dạy, mang đến cho học viên những trải nghiệm học tập hiệu quả nhất. Với đội ngũ giáo viên giàu
+                        kinh nghiệm, chương trình học được thiết kế bài bản và môi trường học tập chuyên nghiệp, chúng
+                        tôi tự tin là địa chỉ đào tạo tiếng Pháp uy tín hàng đầu.</p>
+
+                    <p>Pháp Ngữ Troong không chỉ dừng lại ở việc dạy ngôn ngữ, chúng tôi còn là cầu nối văn hóa, giúp
+                        học viên hiểu sâu hơn về đất nước, con người và nền giáo dục Pháp. Đây chính là nền tảng quan
+                        trọng để các bạn có thể hòa nhập thành công khi du học hoặc làm việc tại Pháp.</p>
+
+                    <div class="row about-stats">
+                        <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="10">0</div>
+                                <div class="stat-label">Năm kinh nghiệm</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.4s">
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="2000">0</div>
+                                <div class="stat-label">Học viên</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="98">0</div>
+                                <div class="stat-label">% Hài lòng</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.6s">
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="500">0</div>
+                                <div class="stat-label">Du học sinh</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Giá trị cốt lõi -->
+<section class="values-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="wow fadeInDown" data-wow-delay="0.3s">Giá Trị Cốt Lõi</h2>
+                <p class="wow fadeIn" data-wow-delay="0.5s" style="max-width: 700px; margin: 0 auto 50px;">Những nguyên
+                    tắc và triết lý giáo dục tạo nên sự khác biệt của Pháp Ngữ Troong</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3 class="value-title">Phương pháp sư phạm</h3>
+                    <p class="value-desc">Áp dụng phương pháp giảng dạy hiện đại, lấy học viên làm trung tâm, kết hợp lý
+                        thuyết và thực hành để đạt hiệu quả cao nhất.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3 class="value-title">Cá nhân hóa</h3>
+                    <p class="value-desc">Mỗi học viên có lộ trình học tập riêng phù hợp với năng lực và mục tiêu cá
+                        nhân, được theo sát bởi đội ngũ giáo viên.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3 class="value-title">Cam kết chất lượng</h3>
+                    <p class="value-desc">Đảm bảo đầu ra theo đúng trình độ đăng ký, hỗ trợ học lại miễn phí nếu không
+                        đạt kết quả như cam kết.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3 class="value-title">Tài liệu độc quyền</h3>
+                    <p class="value-desc">Hệ thống giáo trình và tài liệu được biên soạn riêng, cập nhật liên tục theo
+                        format đề thi mới nhất của Pháp.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-globe-europe"></i>
+                    </div>
+                    <h3 class="value-title">Văn hóa Pháp</h3>
+                    <p class="value-desc">Không chỉ dạy ngôn ngữ, chúng tôi còn giúp học viên hiểu sâu về văn hóa, phong
+                        cách sống và làm việc của người Pháp.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 class="value-title">Hỗ trợ trọn đời</h3>
+                    <p class="value-desc">Học viên của Troong được hỗ trợ tư vấn du học, xin visa và định hướng nghề
+                        nghiệp ngay cả sau khi kết thúc khóa học.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Đội ngũ giáo viên -->
+<section class="teachers-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="wow fadeInDown" data-wow-delay="0.3s">Đội Ngũ Giáo Viên</h2>
+                <p class="text-center wow fadeIn" data-wow-delay="0.5s" style="max-width: 700px; margin: 0 auto 50px;">
+                    Đội ngũ giáo viên tận tâm, giàu kinh nghiệm với trình độ chuyên môn cao và phương pháp giảng dạy
+                    sáng tạo</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="teacher-card">
+                    <div class="teacher-img">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                             alt="Giáo viên 1">
+                    </div>
+                    <div class="teacher-info">
+                        <span class="teacher-badge">Giám đốc đào tạo</span>
+                        <h3 class="teacher-name">ThS. Nguyễn Thị Hương</h3>
+                        <span class="teacher-title">Thạc sĩ Ngôn ngữ Pháp - Đại học Sorbonne</span>
+                        <p class="teacher-bio">Với 12 năm kinh nghiệm giảng dạy tiếng Pháp và luyện thi chứng chỉ, cô
+                            Hương đã giúp hàng trăm học viên đạt điểm cao trong các kỳ thi TCF, TEF.</p>
+                        <div class="teacher-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="teacher-card">
+                    <div class="teacher-img">
+                        <img src="https://images.unsplash.com/photo-1562788869-4ed32648eb72?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                             alt="Giáo viên 2">
+                    </div>
+                    <div class="teacher-info">
+                        <span class="teacher-badge">Chuyên gia phát âm</span>
+                        <h3 class="teacher-name">ThS. Pierre Lambert</h3>
+                        <span class="teacher-title">Giáo viên bản ngữ - Đại học Lyon 2</span>
+                        <p class="teacher-bio">Chuyên gia về phát âm chuẩn Pháp với phương pháp giảng dạy sinh động,
+                            giúp học viên nói tiếng Pháp tự nhiên như người bản xứ.</p>
+                        <div class="teacher-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="teacher-card">
+                    <div class="teacher-img">
+                        <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                             alt="Giáo viên 3">
+                    </div>
+                    <div class="teacher-info">
+                        <span class="teacher-badge">Chuyên gia du học</span>
+                        <h3 class="teacher-name">ThS. Trần Minh Đức</h3>
+                        <span class="teacher-title">Thạc sĩ Giáo dục - Đại học Paris Descartes</span>
+                        <p class="teacher-bio">Với kinh nghiệm 8 năm tư vấn du học Pháp, thầy Đức đã hỗ trợ thành công
+                            cho hơn 200 học viên xin học bổng và visa du học.</p>
+                        <div class="teacher-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="teacher-card">
+                    <div class="teacher-img">
+                        <img src="https://images.unsplash.com/photo-1542190891-2093d38760f2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                             alt="Giáo viên 4">
+                    </div>
+                    <div class="teacher-info">
+                        <span class="teacher-badge">Chuyên gia giao tiếp</span>
+                        <h3 class="teacher-name">ThS. Lê Thị Mai Anh</h3>
+                        <span class="teacher-title">Thạc sĩ Ngôn ngữ học ứng dụng - Đại học Montpellier</span>
+                        <p class="teacher-bio">Chuyên gia về giao tiếp tiếng Pháp trong môi trường công sở, giúp học
+                            viên tự tin làm việc trong các công ty đa quốc gia.</p>
+                        <div class="teacher-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="teacher-card">
+                    <div class="teacher-img">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                             alt="Giáo viên 5">
+                    </div>
+                    <div class="teacher-info">
+                        <span class="teacher-badge">Chuyên gia luyện thi</span>
+                        <h3 class="teacher-name">ThS. Phạm Quang Huy</h3>
+                        <span class="teacher-title">Thạc sĩ Ngôn ngữ Pháp - Đại học Hà Nội</span>
+                        <p class="teacher-bio">Với phương pháp luyện thi khoa học, thầy Huy đã giúp nhiều học viên đạt
+                            điểm cao trong thời gian ngắn, đặc biệt với kỹ năng nghe và đọc.</p>
+                        <div class="teacher-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="teacher-card">
+                    <div class="teacher-img">
+                        <img src="https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                             alt="Giáo viên 6">
+                    </div>
+                    <div class="teacher-info">
+                        <span class="teacher-badge">Giáo viên trẻ tài năng</span>
+                        <h3 class="teacher-name">Nguyễn Thị Thu Trang</h3>
+                        <span class="teacher-title">Cử nhân Sư phạm tiếng Pháp - Đại học Ngoại ngữ</span>
+                        <p class="teacher-bio">Với phong cách giảng dạy trẻ trung, năng động, cô Trang đặc biệt thành
+                            công với các lớp tiếng Pháp cho trẻ em và thanh thiếu niên.</p>
+                        <div class="teacher-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="contact" id="contact" style="padding: 80px 0;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="text-white wow fadeInDown" data-wow-delay="0.3s">Bạn đã sẵn sàng bắt đầu hành trình chinh
+                    phục tiếng Pháp?</h2>
+                <p class="text-white wow fadeIn" data-wow-delay="0.5s" style="margin-bottom: 30px;">Liên hệ ngay với
+                    chúng tôi để được tư vấn lộ trình học phù hợp nhất</p>
+                <a href="/index.html#contact" class="btn btn-light btn-lg wow fadeInUp" data-wow-delay="0.7s"
+                   style="border-radius: 30px; padding: 12px 30px; font-weight: 600; color: #4c5a8b;">Đăng ký tư vấn</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Copyright © 2025 Pháp Ngữ Troong. All Rights Reserved.
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="/vendor/jquery/jquery.min.js"></script>
+<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/owl-carousel.js"></script>
+<script src="/assets/js/animation.js"></script>
+<script src="/assets/js/imagesloaded.js"></script>
+<script src="/assets/js/custom.js"></script>
+
+<script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
+
+</body>
+</html>
