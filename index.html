@@ -253,21 +253,18 @@
                         </div>
 
                         <!-- Card Ôn Thi -->
-                        <div class="col-lg-6 col-md-6 d-flex">
-                            <div class="card-custom text-center w-100 h-100">
+                        <div class="col-lg-6 col-md-6 d-flex mb-4 mb-md-0">
+                            <div class="card-custom d-flex flex-column text-center h-100 w-100">
                                 <div class="title-block">ÔN THI</div>
-                                <div class="d-flex flex-column justify-content-between align-items-center">
-                                    <button class="course-info btn btn-course btn-rocket" data-course="tcf">
-                                        <strong>Khoá ôn thi TCF TP/IRN/Canada</strong>
-                                        A0 – A2 (55 buổi)<br>A0 – B1 (75 buổi)<br>A0 – B2 (95 buổi)
+                                <div class="flex-grow-1 d-flex flex-column justify-content-between align-items-center">
+                                    <button class="course-info btn btn-course flex-fill btn-rocket" data-course="tcf">
+                                        Khoá ôn thi TCF TP/IRN/Canada
                                     </button>
-                                    <button class="course-info btn btn-course btn-rocket" data-course="tef">
-                                        <strong>Khoá ôn thi TEF (TEFAQ)</strong>
-                                        A0 – A2 (55 buổi)<br>A0 – B1 (75 buổi)<br>A0 – B2 (95 buổi)
+                                    <button class="course-info btn btn-course flex-fill btn-rocket" data-course="tef">
+                                        Khoá ôn thi TEF (TEFAQ)
                                     </button>
-                                    <button class="course-info btn btn-course btn-rocket" data-course="delf">
-                                        <strong>Khoá ôn thi DELF</strong>
-                                        A0 – A2 (55 buổi)<br>A0 – B1 (75 buổi)<br>A0 – B2 (95 buổi)
+                                    <button class="course-info btn btn-course flex-fill btn-rocket" data-course="delf">
+                                        Khoá ôn thi DELF
                                     </button>
                                 </div>
                             </div>
@@ -334,118 +331,6 @@
                 </div>
             </div>
 
-            <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                    // Dữ liệu khóa học
-                    const courses = {
-                        'pronunciation': {
-                            title: 'Khoá phát âm',
-                            table: [
-                                ['Khoá phát âm', 'Cơ bản', '5 buổi']
-                            ],
-                            outcomes: [
-                                'Nắm được cách phát âm các âm cơ bản trong tiếng Pháp',
-                                'Cải thiện ngữ điệu và nhấn trọng âm',
-                                'Thực hành giao tiếp cơ bản với phát âm rõ ràng'
-                            ]
-                        },
-                        'beginner': {
-                            title: 'Khoá sơ cấp',
-                            table: [
-                                ['A0 - A1.1', 'Nhập môn', '15 buổi'],
-                                ['A1.2 - A2.1', 'Cơ bản', '15 buổi']
-                            ],
-                            outcomes: [
-                                'Giao tiếp cơ bản trong 9 chủ đề thông dụng',
-                                'Giới thiệu bản thân và gia đình',
-                                'Hiểu và sử dụng các cấu trúc câu đơn giản'
-                            ]
-                        },
-                        'intermediate': {
-                            title: 'Khoá trung cấp',
-                            table: [
-                                ['nodata']
-                            ],
-                            outcomes: [
-                                'nodata'
-                            ]
-                        },
-                        'advanced': {
-                            title: 'Khoá nâng cao',
-                            table: [
-                                ['nodata']
-                            ],
-                            outcomes: [
-                                'nodata'
-                            ]
-                        },
-                        'master': {
-                            title: 'Khoá làm chủ',
-                            table: [
-                                ['nodata']
-                            ],
-                            outcomes: [
-                                'nodata'
-                            ]
-                        },
-                        // Thêm dữ liệu cho các khóa khác...
-                        'tcf': {
-                            title: 'Khoá ôn thi TCF',
-                            table: [
-                                ['A0 - A2', 'Cơ bản', '55 buổi'],
-                                ['A0 - B1', 'Trung cấp', '75 buổi'],
-                                ['A0 - B2', 'Nâng cao', '95 buổi']
-                            ],
-                            outcomes: [
-                                'Làm quen với cấu trúc đề thi TCF',
-                                'Nắm vững các kỹ năng làm bài',
-                                'Thực hành các dạng bài thi thực tế'
-                            ]
-                        }
-                        // Thêm các khóa học khác...
-                    };
-
-                    // Xử lý click nút khóa học
-                    document.querySelectorAll('.btn-course, .course-info').forEach(btn => {
-                        btn.addEventListener('click', function () {
-                            const courseId = this.dataset.course;
-                            const course = courses[courseId];
-
-                            if (!course) return;
-
-                            // Cập nhật modal title
-                            document.getElementById('courseModalTitle').textContent = course.title;
-
-                            // Điền bảng thông tin
-                            const tableBody = document.getElementById('courseTableBody');
-                            tableBody.innerHTML = '';
-                            course.table.forEach(row => {
-                                const tr = document.createElement('tr');
-                                row.forEach(cell => {
-                                    const td = document.createElement('td');
-                                    td.textContent = cell;
-                                    tr.appendChild(td);
-                                });
-                                tableBody.appendChild(tr);
-                            });
-
-                            // Điền kết quả đạt được
-                            const outcomesList = document.getElementById('courseOutcomes');
-                            outcomesList.innerHTML = '';
-                            course.outcomes.forEach(outcome => {
-                                const li = document.createElement('li');
-                                li.className = 'mb-2';
-                                li.innerHTML = `<i class="fas fa-check-circle text-success me-2"></i>${outcome}`;
-                                outcomesList.appendChild(li);
-                            });
-
-                            // Hiển thị modal
-                            const modal = new bootstrap.Modal(document.getElementById('courseModal'));
-                            modal.show();
-                        });
-                    });
-                });
-            </script>
         </div>
     </div>
 </div>
@@ -459,7 +344,7 @@
                     <div class="col-lg-4 study-france-left-col">
                         <div class="study-france-left-image wow fadeInLeft study-france-box" data-wow-duration="1s"
                              data-wow-delay="0.5s">
-                            <img src="assets/images/gif/nguontiengphap.gif" alt="">
+                            <img src="assets/images/gif/gif3.gif" alt="">
                             <div class="button-wrapper">
                                 <a href="#contact">
                                     <button class="btn-more">Tư vấn ngay</button>
@@ -550,7 +435,7 @@
                     <div class="col-lg-4">
                         <div class="study-abroad-right-image wow fadeInRight study-abroad-box" data-wow-duration="1s"
                              data-wow-delay="0.5s">
-                            <img src="assets/images/gif/nguontiengphap.gif" alt="Du học Pháp">
+                            <img src="assets/images/gif/gif2.gif" alt="Du học Pháp">
                             <!--<dotlottie-wc
                                     class="consult-rocket"
                                     autoplay="" direction="" loop="1" speed="1" hover
@@ -666,11 +551,12 @@
     </div>
 </div>
 
-<div id="portfolio" class="our-portfolio section">
+<div id="teacher-team" class="teacher-team-section wow fadeIn">
+    <!-- Phần tiêu đề -->
     <div class="container">
         <div class="row">
-            <div class="col-lg-5">
-                <div class="section-heading wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
+            <div class="col-lg-12">
+                <div class="section-heading">
                     <h6>Đội Ngũ Giáo Viên</h6>
                     <h4><em>Đội ngũ giáo viên</em> Nhà Troong</h4>
                     <div class="line-dec"></div>
@@ -678,105 +564,225 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
-        <div class="row">
+
+    <!-- Phần hiển thị giáo viên dạng stack -->
+    <div class="container">
+        <div class="row justify-content-center">
             <div class="col-lg-12">
-                <div class="loop owl-carousel">
-                    <div class="item">
-                        <a href="#">
-                            <div class="portfolio-item">
-                                <div class="thumb">
-                                    <img src="assets/images/teacher/GV-Hoàng-Giang.jpg" alt="">
-                                </div>
-                            </div>
-                        </a>
+                <div class="teacher-stack-container">
+                    <div class="teacher-stack">
+                        <!-- Các ảnh giáo viên sẽ được thêm bằng JS -->
                     </div>
-                    <div class="item">
-                        <a href="#">
-                            <div class="portfolio-item">
-                                <div class="thumb">
-                                    <img src="assets/images/teacher/GV-Kim-Anh.jpg" alt="">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="#">
-                            <div class="portfolio-item">
-                                <div class="thumb">
-                                    <img src="assets/images/teacher/GV-Minh-Thư.jpg" alt="">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="#">
-                            <div class="portfolio-item">
-                                <div class="thumb">
-                                    <img src="assets/images/teacher/GV-Mỹ-An.jpg" alt="">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="#">
-                            <div class="portfolio-item">
-                                <div class="thumb">
-                                    <img src="assets/images/teacher/GV-Ngọc-Nghi.jpg" alt="">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="#">
-                            <div class="portfolio-item">
-                                <div class="thumb">
-                                    <img src="assets/images/teacher/GV-Thiên-Phúc.jpg" alt="">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="#">
-                            <div class="portfolio-item">
-                                <div class="thumb">
-                                    <img src="assets/images/teacher/GV-Thu-Uyên.jpg" alt="">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="#">
-                            <div class="portfolio-item">
-                                <div class="thumb">
-                                    <img src="assets/images/teacher/GV-Thơm-Nguyễn.jpg" alt="">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="#">
-                            <div class="portfolio-item">
-                                <div class="thumb">
-                                    <img src="assets/images/teacher/GV-Trà-My.jpg" alt="">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="#">
-                            <div class="portfolio-item">
-                                <div class="thumb">
-                                    <img src="assets/images/teacher/GV-Hồng-Linh.jpg" alt="">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+
+                    <!-- Nút điều khiển -->
+                    <button class="stack-nav stack-prev"><i class="fa fa-chevron-left"></i></button>
+                    <button class="stack-nav stack-next"><i class="fa fa-chevron-right"></i></button>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Phần thông tin giáo viên active -->
+    <div class="container">
+        <div class="teacher-thumbnail-list d-flex justify-content-center flex-wrap gap-3 mt-4">
+            <!-- Thumbnails sẽ được thêm bằng JS -->
+        </div>
+    </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // ====== DATA ======
+        const teachers = [
+            { id: 1,  name: "Lê Phạm Hoàng Giang",   image: "assets/images/teacher/GV-Hoàng-Giang.jpg" },
+            { id: 2,  name: "Hoàng Hồng Linh",       image: "assets/images/teacher/GV-Hồng-Linh.jpg" },
+            { id: 3,  name: "Phạm Thị Kim Anh",      image: "assets/images/teacher/GV-Kim-Anh.jpg" },
+            { id: 4,  name: "Tôn Nữ Minh Thư",       image: "assets/images/teacher/GV-Minh-Thư.jpg" },
+            { id: 5,  name: "Lê Mỹ An",              image: "assets/images/teacher/GV-Mỹ-An.jpg" },
+            { id: 6,  name: "Nguyễn Thị Ngọc Nghi",  image: "assets/images/teacher/GV-Ngọc-Nghi.jpg" },
+            { id: 7,  name: "Nguyễn Thị Thơm",       image: "assets/images/teacher/GV-Thơm-Nguyễn.jpg" },
+            { id: 8,  name: "Phạm Hồng Thiên Phúc",  image: "assets/images/teacher/GV-Thiên-Phúc.jpg" },
+            { id: 9,  name: "Nguyễn Thị Thu Uyên",   image: "assets/images/teacher/GV-Thu-Uyên.jpg" },
+            { id: 10, name: "Nguyễn Trà My",         image: "assets/images/teacher/GV-Trà-My.jpg" }
+        ];
+
+        // ====== DOM ======
+        const stackContainer = document.querySelector('.teacher-stack');
+        const thumbnailContainer = document.querySelector('.teacher-thumbnail-list');
+        const nextBtn = document.querySelector('.stack-next');
+        const prevBtn = document.querySelector('.stack-prev');
+
+        // ====== STATE ======
+        let currentIndex = 0;
+        let autoSlideInterval = null;
+
+        // ====== CONFIG / RESPONSIVE ======
+        function getVisibleCount() {
+            const w = window.innerWidth;
+            if (w >= 1200) return 9;   // desktop
+            if (w >= 992)  return 7;   // tablet lớn
+            if (w >= 768)  return 5;   // tablet nhỏ
+            return 3;                  // mobile
+        }
+
+        // ====== UTILS ======
+        function getStartIndex() {
+            return (currentIndex - Math.floor(getVisibleCount() / 2) + teachers.length) % teachers.length;
+        }
+
+        function clampVisibleCount(len) {
+            return Math.min(len, getVisibleCount());
+        }
+
+        // ====== RENDER STACK (trên) ======
+        function createStack() {
+            if (!stackContainer) return;
+            stackContainer.innerHTML = '';
+
+            const displayCount = clampVisibleCount(teachers.length);
+            const startIndex = getStartIndex();
+
+            for (let i = 0; i < displayCount; i++) {
+                const teacherIndex = (startIndex + i) % teachers.length;
+                const t = teachers[teacherIndex];
+
+                const item = document.createElement('div');
+                item.className = 'teacher-stack-item';
+                item.innerHTML = `
+                    <div class="teacher-avatar">
+                      <img src="${t.image}" alt="${t.name}">
+                    </div>
+                  `;
+                stackContainer.appendChild(item);
+            }
+
+            renderThumbnailsWindow(); // khớp "cửa sổ" phía dưới
+        }
+
+        // ====== RENDER THUMBNAILS WINDOW (dưới) ======
+        function renderThumbnailsWindow() {
+            if (!thumbnailContainer) return;
+            thumbnailContainer.innerHTML = '';
+
+            const displayCount = clampVisibleCount(teachers.length);
+            const startIndex = getStartIndex();
+
+            for (let i = 0; i < displayCount; i++) {
+                const teacherIndex = (startIndex + i) % teachers.length;
+                const t = teachers[teacherIndex];
+
+                const thumb = document.createElement('div');
+                thumb.className = 'teacher-thumbnail text-center';
+                thumb.dataset.index = teacherIndex;
+
+                const isActive = teacherIndex === currentIndex;
+
+                thumb.innerHTML = `
+                  <img
+                    src="${t.image}"
+                    alt="${t.name}"
+                    class="rounded-circle ${isActive ? 'is-active' : ''}"
+                    style="width:70px;height:70px;object-fit:cover;"
+                  >
+                  <p style="font-size:13px;margin-top:5px;color:#4c5a8b;font-weight:600;">${t.name}</p>
+                `;
+
+                if (isActive) thumb.classList.add('active-thumb');
+
+                thumb.addEventListener('click', () => {
+                    currentIndex = teacherIndex;   // nhảy đúng index thực
+                    createStack();
+                    resetAutoSlide();
+                });
+
+                thumbnailContainer.appendChild(thumb);
+            }
+        }
+
+        // ====== NAVIGATION ======
+        function nextTeacher() {
+            currentIndex = (currentIndex + 1) % teachers.length;
+            createStack();
+        }
+
+        function prevTeacher() {
+            currentIndex = (currentIndex - 1 + teachers.length) % teachers.length;
+            createStack();
+        }
+
+        // ====== AUTOSLIDE ======
+        function startAutoSlide() {
+            stopAutoSlide();
+            autoSlideInterval = setInterval(nextTeacher, 4000);
+        }
+
+        function stopAutoSlide() {
+            if (autoSlideInterval) {
+                clearInterval(autoSlideInterval);
+                autoSlideInterval = null;
+            }
+        }
+
+        function resetAutoSlide() {
+            startAutoSlide();
+        }
+
+        // ====== EVENTS ======
+        if (nextBtn) nextBtn.addEventListener('click', () => { nextTeacher(); resetAutoSlide(); });
+        if (prevBtn) prevBtn.addEventListener('click', () => { prevTeacher(); resetAutoSlide(); });
+
+        // Hover để tạm dừng auto (desktop)
+        if (stackContainer) {
+            stackContainer.addEventListener('mouseenter', stopAutoSlide);
+            stackContainer.addEventListener('mouseleave', startAutoSlide);
+        }
+
+        // Vuốt (swipe) chuyển giáo viên (mobile)
+        function bindSwipe(el) {
+            if (!el) return;
+            let startX = 0, endX = 0;
+
+            el.addEventListener('touchstart', (e) => {
+                startX = e.changedTouches[0].clientX;
+            }, { passive: true });
+
+            el.addEventListener('touchend', (e) => {
+                endX = e.changedTouches[0].clientX;
+                const dx = endX - startX;
+                if (Math.abs(dx) > 40) {
+                    if (dx < 0) nextTeacher(); else prevTeacher();
+                    resetAutoSlide();
+                }
+            }, { passive: true });
+        }
+        bindSwipe(stackContainer);
+        bindSwipe(thumbnailContainer);
+
+        // Responsive: render lại khi đổi kích thước
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                createStack(); // re-render theo visible count mới
+            }, 150);
+        });
+
+        // ====== SAFETY: set overflow hidden để che phần tràn (nếu CSS chưa có) ======
+        if (stackContainer) {
+            stackContainer.style.overflow = 'hidden';
+            stackContainer.style.position = 'relative';
+        }
+        if (thumbnailContainer) {
+            thumbnailContainer.style.overflow = 'hidden';
+            thumbnailContainer.style.position = 'relative';
+            thumbnailContainer.style.flexWrap = 'nowrap';
+        }
+
+        // ====== INIT ======
+        createStack();
+        startAutoSlide();
+    });
+</script>
 
 <div id="blog" class="blog">
     <div class="container">
@@ -791,17 +797,18 @@
             <div class="col-lg-6 show-up wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
                 <div class="blog-post">
                     <div class="thumb">
-                        <a href="#"><img src="assets/images/blog-post-01.jpg" alt=""></a>
+                        <a href="https://www.facebook.com/story.php?story_fbid=1401267790279518&id=100011889317146&rdid=CmWq95AqhLqRpklG#">
+                            <img src="assets/images/news/banner1.jpg" alt="" style="height: 450px;width: 100%;">
+                        </a>
                     </div>
                     <div class="down-content">
-                        <span class="category">SEO Analysis</span>
-                        <span class="date">03 August 2021</span>
-                        <a href="#"><h4>Lorem Ipsum Dolor Sit Amet, Consectetur Adelore
-                            Eiusmod Tempor Incididunt</h4></a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers itii eiumod deis tempor
-                            incididunt ut labore.</p>
-                        <span class="author"><img src="assets/images/author-post.jpg" alt="">By: Andrea Mentuzi</span>
-                        <div class="border-first-button"><a href="#">Discover More</a></div>
+                        <span class="category">Luyện nghe các trình độ A1 - C2</span>
+                        <span class="date">4 tháng 1, 2023</span>
+                        <a href="https://www.facebook.com/story.php?story_fbid=1401267790279518&id=100011889317146&rdid=CmWq95AqhLqRpklG#">
+                            <h4>Tổng hợp những nguồn luyện nghe tiếng Pháp các trình độ A1 - C2</h4></a>
+                        <p>Đập Tan Nỗi Sợ Nghe Với Các Trang Luyện Nghe Tiếng Pháp "Auto Top" Trình Độ A1 - C2...</p>
+                        <span class="author"><img src="assets/images/logo/Logo-Troong-07.jpg" alt="">By: Fanpage Học tiếng Pháp cùng Troong</span>
+                        <div class="border-first-button"><a href="https://www.facebook.com/story.php?story_fbid=1401267790279518&id=100011889317146&rdid=CmWq95AqhLqRpklG#">Xem thêm</a></div>
                     </div>
                 </div>
             </div>
@@ -811,39 +818,47 @@
                         <div class="col-lg-12">
                             <div class="post-item">
                                 <div class="thumb">
-                                    <a href="#"><img src="assets/images/blog-post-02.jpg" alt=""></a>
+                                    <a href="https://www.facebook.com/100094405151004/posts/285214734635363/?mibextid=wwXIfr&rdid=cRbfzXCOAAsGDcWS#">
+                                        <img src="assets/images/news/banner2.jpg" style="height: 230px; width: auto" alt="">
+                                    </a>
                                 </div>
                                 <div class="right-content">
-                                    <span class="category">SEO Analysis</span>
-                                    <span class="date">24 September 2021</span>
-                                    <a href="#"><h4>Lorem Ipsum Dolor Sit Amei Eiusmod Tempor</h4></a>
-                                    <p>Lorem ipsum dolor sit amet, cocteturi adipiscing eliterski.</p>
+                                    <span class="category">Luyện đọc các trình độ từ A1 - C1</span>
+                                    <span class="date">5 tháng 4, 2024</span>
+                                    <a href="https://www.facebook.com/100094405151004/posts/285214734635363/?mibextid=wwXIfr&rdid=cRbfzXCOAAsGDcWS#"><h4>4 KÊNH LUYỆN ĐỌC TIẾNG PHÁP CỰC XỊN</h4></a>
+                                    <p>(Đặc biệt dành cho dân ôn thi TCF/TEF/DELF/DALF)...</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-12">
                             <div class="post-item">
                                 <div class="thumb">
-                                    <a href="#"><img src="assets/images/blog-post-03.jpg" alt=""></a>
+                                    <a href="https://www.facebook.com/100094405151004/posts/236158529540984/?mibextid=wwXIfr&rdid=8cVqeqiMOn9QbxuR#">
+                                        <img src="assets/images/news/banner3.jpg" style="height: 230px; width: auto" alt="">
+                                    </a>
                                 </div>
                                 <div class="right-content">
-                                    <span class="category">SEO Analysis</span>
-                                    <span class="date">24 September 2021</span>
-                                    <a href="#"><h4>Lorem Ipsum Dolor Sit Amei Eiusmod Tempor</h4></a>
-                                    <p>Lorem ipsum dolor sit amet, cocteturi adipiscing eliterski.</p>
+                                    <span class="category">Luyện Nghe, luyện đề TCF, TEF, DELF</span>
+                                    <span class="date">18 tháng 1, 2024</span>
+                                    <a href="https://www.facebook.com/100094405151004/posts/236158529540984/?mibextid=wwXIfr&rdid=8cVqeqiMOn9QbxuR#">
+                                        <h4>5 kênh youtubes hỗ trợ ôn thi TCF-TEF A2 -> C2 mà bạn không nên bỏ lỡ</h4>
+                                    </a>
+                                    <p>Lại thêm những nguồn học bổ ích giúp các françeurs đang ôn thi TCF-TEF thậm chí là DELF luyện các kĩ năng (nghe-nói-đọc) cực xịn không nên bỏ lỡ nha…</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-12">
                             <div class="post-item last-post-item">
                                 <div class="thumb">
-                                    <a href="#"><img src="assets/images/blog-post-04.jpg" alt=""></a>
+                                    <a href="https://www.facebook.com/photo/?fbid=195357470287757&set=pcb.195358093621028">
+                                        <img src="assets/images/news/banner4.jpg" style="height: 230px; width: 230px" alt="">
+                                    </a>
                                 </div>
                                 <div class="right-content">
-                                    <span class="category">SEO Analysis</span>
-                                    <span class="date">24 September 2021</span>
-                                    <a href="#"><h4>Lorem Ipsum Dolor Sit Amei Eiusmod Tempor</h4></a>
-                                    <p>Lorem ipsum dolor sit amet, cocteturi adipiscing eliterski.</p>
+                                    <span class="category">Mẹo xử lý đề TCF cực đơn giản và chiến lược</span>
+                                    <span class="date">13 tháng 11, 2023</span>
+                                    <a href="https://www.facebook.com/photo/?fbid=195357470287757&set=pcb.195358093621028"><h4>Cấu trúc chi tiết đề thi TCF TP</h4></a>
+                                    <p>Món quà dành cho các sĩ tử chuẩn bị thi TCF...</p>
                                 </div>
                             </div>
                         </div>
@@ -865,9 +880,9 @@
 </footer>
 
 <!--====== CONTACT BELL START ======-->
-<a href="#contact" class="contact-bell" aria-label="Đăng ký tuyển sinh">
+<a href="#contact" class="contact-bell" aria-label="Đăng ký tư vấn">
     <i class="fa fa-bell" aria-hidden="true"></i>
-    <span>Đăng ký tuyển sinh</span>
+    <span>Đăng ký tư vấn</span>
 </a>
 <!--====== CONTACT BELL ENDS ======-->
 
@@ -883,6 +898,7 @@
 <script src="assets/js/nav-fix.js"></script>
 <script src="assets/js/rocket-course.js"></script>
 <script src="assets/js/form-request.js"></script>
+<script src="assets/js/data-course-details.js"></script>
 
 
 <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
