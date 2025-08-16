@@ -1620,7 +1620,7 @@ Free Quote
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    padding: 120px 0;
+    padding: 80px 0;
     text-align: center;
     position: relative;
     z-index: 2;
@@ -3293,14 +3293,14 @@ nav fix
 .header-area .main-nav .nav.nav-fx li:hover,
 .header-area .main-nav .nav.nav-fx li.active {
     /*background: linear-gradient(90deg, #a7889e, #8ab1d4);*/
+    color: #4c5a8b !important;
     background: white;
     box-shadow: 0 0 10px rgba(76, 90, 139, 0.35);
-    color: #4c5a8b !important;
     border-radius: 999px;
 }
 
-.header-area .main-nav .nav.nav-fx li a:hover,
-.header-area .main-nav .nav.nav-fx li a.active {
+.header-area .main-nav .nav.nav-fx li:hover a,
+.header-area .main-nav .nav.nav-fx li.active a {
     color: #4c5a8b !important;
 }
 
@@ -3484,7 +3484,7 @@ Teacher
 }
 
 .teacher-team-section {
-    padding-top: 60px;
+    padding-top: 100px;
     position: relative;
     overflow: hidden;
 }
