@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 		});
 
-		button.addEventListener('click', function () {
+		/*button.addEventListener('click', function () {
 			if (isModalTransitioning) return;
 
 			const clickedCourse = button.dataset.course;
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				flyRocket(currentCourse);
 				openModal();
 			}
-		});
+		});*/
 	});
 
 	function openModal() {

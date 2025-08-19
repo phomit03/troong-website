@@ -1,28 +1,44 @@
-document.addEventListener("DOMContentLoaded", function () {
-	const navLinks = document.querySelectorAll(".nav.nav-fx li");
+(function () {
+	const header = document.querySelector(".header-area");
+	const headerHeight = header ? header.offsetHeight : 0;
+	const navItems = Array.from(document.querySelectorAll(".nav.nav-fx li.scroll-to-section"));
 
-	function syncActiveClass() {
-		navLinks.forEach(li => {
-			const a = li.querySelector("a");
-			if (a && a.classList.contains("active")) {
-				li.classList.add("active");
-			} else {
-				li.classList.remove("active");
-			}
-		});
+	if (!navItems.length) return;
+
+	// Helper: set active cho li
+	function setActiveLi(li) {
+		navItems.forEach(item => item.classList.remove("active"));
+		if (li) li.classList.add("active");
 	}
 
-	// Sync ngay lúc tải trang
-	syncActiveClass();
+	// Lắng nghe scroll
+	window.addEventListener("scroll", () => {
+		const scrollPos = window.scrollY + headerHeight + 20; // offset thêm 20px
+		let currentLi = null;
 
-	// Khi scroll, có thể active sẽ thay đổi → tiếp tục sync
-	window.addEventListener("scroll", syncActiveClass);
+		navItems.forEach(li => {
+			const a = li.querySelector("a[href^='#']");
+			if (!a) return;
+			const id = a.getAttribute("href");
+			if (!id || id.length < 2) return; // bỏ qua #
+			const sec = document.querySelector(id);
+			if (!sec) return;
 
-	// Khi click menu cũng cần sync lại
-	document.querySelectorAll(".nav.nav-fx li a").forEach(a => {
-		a.addEventListener("click", () => {
-			// Delay nhỏ để chờ Bootstrap xử lý trước
-			setTimeout(syncActiveClass, 100);
+			const top = sec.offsetTop;
+			const bottom = top + sec.offsetHeight;
+
+			if (scrollPos >= top && scrollPos < bottom) {
+				currentLi = li;
+			}
 		});
+
+		setActiveLi(currentLi);
 	});
-});
+
+	// Khi click vào link menu thì active luôn (tránh delay)
+	navItems.forEach(li => {
+		const a = li.querySelector("a[href^='#']");
+		if (!a) return;
+		a.addEventListener("click", () => setActiveLi(li));
+	});
+})();
