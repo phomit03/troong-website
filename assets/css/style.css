@@ -94,7 +94,7 @@ header, nav, section, article, aside, footer, hgroup {
 }
 
 html, body {
-    font-family: 'Questrial', Arial, sans-serif;
+    font-family: 'Roboto Slab', serif;
     font-weight: 400;
     background-color: #fff;
     -ms-text-size-adjust: 100%;
@@ -137,7 +137,7 @@ global styles
 html,
 body {
     background: #fff;
-    font-family: 'Questrial', Arial, sans-serif;
+    font-family: 'Roboto Slab', serif;
 }
 
 ::selection {
@@ -183,25 +183,24 @@ body {
 .section-heading h6 {
     font-size: 15px;
     font-weight: 700;
-    color: #b381c8;
+    color: #ea51a1;
     text-transform: uppercase;
     margin-bottom: 15px;
+}
+
+.section-heading h4 em {
+    color: #ea51a1;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-style: normal;
+    font-family: 'Paytone One', sans-serif;
 }
 
 .section-heading h4 {
-    color: #4c5a8b;
-    font-size: 35px;
-    font-weight: 700;
-    text-transform: capitalize;
-    font-style: normal;
-}
-
-.section-heading h2 {
-    font-size: 3rem;
     font-weight: bolder;
-    color: #b381c8;
+    font-size: 1.5rem;
+    color: #4a51a1;
     text-transform: uppercase;
-    margin-bottom: 15px;
 }
 
 .section-heading p {
@@ -210,8 +209,8 @@ body {
 }
 
 .section-heading .line-dec {
-    width: 150px;
-    height: 2px;
+    width: 25%;
+    height: 3px;
     background-color: #4c5a8b;
     margin-top: 20px;
 }
@@ -233,10 +232,10 @@ body {
 }
 
 /* === GLOBAL END === */
-/* 
+/*
 ---------------------------------------------
 intro
---------------------------------------------- 
+---------------------------------------------
 */
 .intro-banner {
     text-align: center;
@@ -328,7 +327,7 @@ intro
 /*
 ---------------------------------------------
 header
---------------------------------------------- 
+---------------------------------------------
 */
 /* === HEADER START === */
 .pre-header {
@@ -410,19 +409,19 @@ header
 }
 
 .background-header .nav li a.active:after {
-    position: absolute;
+    background-color: #4c5a8b;
+    /*position: absolute;
     width: 100%;
     height: 1px;
-    background-color: #4c5a8b;
     content: '';
     left: 50%;
     bottom: -20px;
-    transform: translateX(-50%);
+    transform: translateX(-50%);*/
 }
 
 .header-area {
     background-color: #fff;
-
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.03);
     position: absolute;
     left: 0px;
     right: 0px;
@@ -454,6 +453,11 @@ header
     -moz-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
+}
+
+.header-area .main-nav .logo img {
+    height: 50px;
+    width: auto;
 }
 
 .background-header .main-nav .logo {
@@ -498,7 +502,7 @@ header
 
 .background-header .main-nav .nav li:hover a,
 .background-header .main-nav .nav li a.active {
-    color: #fff !important;
+    color: white;
 }
 
 .header-area .main-nav .nav li.submenu {
@@ -507,7 +511,7 @@ header
 }
 
 .header-area .main-nav .nav li.submenu:after {
-    font-family: 'Questrial', Arial, sans-serif;
+    font-family: 'Roboto Slab', serif;
     content: "\f107";
     font-size: 12px;
     color: #2a2a2a;
@@ -698,9 +702,10 @@ header
     margin-top: 30px;
 }
 
-.header-area.header-sticky .nav li a.active {
-    color: #4c5a8b;
-}
+/*.header-area.header-sticky .nav li a.active {
+    color: #4c5a8b !important;
+    background: white;
+}*/
 
 /* === RESPONSIVE HEADER START === */
 @media (max-width: 1200px) {
@@ -743,12 +748,12 @@ header
         color: #1e1e1e;
     }
 
-    .header-area.header-sticky .nav li a:hover,
+    /*.header-area.header-sticky .nav li a:hover,
     .header-area.header-sticky .nav li a.active {
-        color: #fff !important;
+        color: #4c5a8b;
+        background: white;
         opacity: 1;
-    }
-
+    }*/
     .header-area.header-sticky .nav li.search-icon a {
         width: 100%;
     }
@@ -764,10 +769,9 @@ header
         padding: 0px;
     }
 
-    .header-area .logo {
+    /*.header-area .logo {
         margin-left: 30px;
-    }
-
+    }*/
     .header-area .menu-trigger {
         display: block !important;
     }
@@ -804,6 +808,7 @@ header
 
     .header-area .main-nav .nav.nav-fx {
         border-radius: 20px !important;
+        background: #efe8e0;
     }
 
     .header-area .main-nav .nav li a {
@@ -811,15 +816,20 @@ header
         line-height: 50px !important;
         padding: 0px !important;
         border: none !important;
-        color: #f7f7f7 !important;
+        color: #4c5a8b;
+    }
+
+    .header-area .main-nav .nav li a:hover {
+        color: #4c5a8b;
+        background: white;
     }
 
     .header-area .main-nav .nav li:hover {
-        background: linear-gradient(90deg, #a7889e, #8ab1d4);
         box-shadow: 0 0 10px rgba(76, 90, 139, 0.35);
         padding: 0 12px;
         border-radius: 20px !important;
-        color: #fff !important;
+        color: #4c5a8b !important;
+        background: white !important;
     }
 
     .header-area .main-nav .nav.nav-fx li a::after {
@@ -895,10 +905,10 @@ header
 
 /* === RESPONSIVE HEADER END === */
 /* === HEADER END === */
-/* 
+/*
 ---------------------------------------------
 preloader
---------------------------------------------- 
+---------------------------------------------
 */
 /* === PRELOADER START === */
 .js-preloader {
@@ -999,7 +1009,7 @@ preloader
 /*
 ---------------------------------------------
 Banner Style
---------------------------------------------- 
+---------------------------------------------
 */
 /* === BANNER START === */
 .main-banner {
@@ -1037,6 +1047,7 @@ Banner Style
 
 .main-banner .left-content {
     margin-right: 15px;
+    padding-right: 150px;
 }
 
 .main-banner .left-content h6 {
@@ -1056,39 +1067,40 @@ Banner Style
 }
 
 .main-banner .left-content h1 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Paytone One', sans-serif;;
     z-index: 2;
     position: relative;
     font-weight: 800;
-    font-size: 5.5rem;
+    font-size: 6rem;
     text-transform: uppercase;
-    color: #4c5a8b;
+    color: #e8ac9e;
     margin: 0;
     font-style: normal;
 }
 
 .main-banner .left-content .troong-name {
-    color: #b381c8;
-    font-family: "Pacifico", cursive;
-    font-size: 4rem;
+    color: #4c5a8b;
+    font-family: 'Roboto Slab', serif;
+    font-size: 5rem;
     font-weight: 600;
-    text-transform: uppercase;
-    margin-top: -15px;
+    /*text-transform: uppercase;*/
+    margin-top: -20px;
     margin-bottom: 15px;
     letter-spacing: 1px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    text-shadow: 3px 3px 0 #bfc8e1, 6px 6px 0 #e0e3f3;
 }
 
 .main-banner .left-content p {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    margin-bottom: 30px;
-    color: #ebd7d8;
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #ea51a1;
     font-kerning: none;
     text-decoration-line: none;
     text-decoration-thickness: initial;
     text-decoration-style: initial;
     font-style: italic;
+    text-shadow: 1px 1px 0px #d68bb7, 2px 2px 0px #f3c4e0;
 }
 
 .main-banner .right-image {
@@ -1096,11 +1108,16 @@ Banner Style
     z-index: 20;
 }
 
+.main-banner .vn-de-flow {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
 /* === BANNER END === */
-/* 
+/*
 ---------------------------------------------
 About Style
---------------------------------------------- 
+---------------------------------------------
 */
 /* === ABOUT START === */
 #about {
@@ -1192,7 +1209,7 @@ About Style
 }
 
 .second-skill-item .progress .progress-bar {
-    border-color: #b381c8;
+    border-color: #ea51a1;
 }
 
 .third-skill-item .progress .progress-bar {
@@ -1248,7 +1265,7 @@ About Style
 }
 
 /* This for loop creates the  necessary css animation names
-Due to the split circle of progress-left and progress right, we must use the animations on each side. 
+Due to the split circle of progress-left and progress right, we must use the animations on each side.
 */
 .progress[data-percentage="10"] .progress-right .progress-bar {
     animation: loading-1 1.5s linear forwards;
@@ -1390,14 +1407,14 @@ Due to the split circle of progress-left and progress right, we must use the ani
 }
 
 /* === ABOUT END === */
-/* 
+/*
 ---------------------------------------------
 Services Style
---------------------------------------------- 
+---------------------------------------------
 */
 /* === SERVICES START === */
 .services {
-    padding-top: 100px;
+    padding-top: 80px;
     position: relative;
     overflow: visible;
 }
@@ -1575,7 +1592,7 @@ Services Style
 /*
 ---------------------------------------------
 Free Quote
---------------------------------------------- 
+---------------------------------------------
 */
 /* === CONTACT START === */
 .contact {
@@ -1613,10 +1630,10 @@ Free Quote
 }
 
 /* === CONTACT END === */
-/* 
+/*
 ---------------------------------------------
 Portfolio
---------------------------------------------- 
+---------------------------------------------
 */
 /* === PORTFOLIO START === */
 .our-portfolio {
@@ -1731,10 +1748,10 @@ Portfolio
 }
 
 /* === PORTFOLIO END === */
-/* 
+/*
 ---------------------------------------------
 Blog
---------------------------------------------- 
+---------------------------------------------
 */
 .blog:before {
     content: '';
@@ -1850,7 +1867,7 @@ Blog
     font-size: 15px;
     color: #fff;
     padding: 8px 12px;
-    background-color: #b381c8;
+    background-color: #ea51a1;
     border-radius: 18px;
     display: inline-block;
 }
@@ -1923,7 +1940,7 @@ Blog
     font-size: 15px;
     color: #fff;
     padding: 8px 12px;
-    background-color: #b381c8;
+    background-color: #ea51a1;
     border-radius: 18px;
     display: inline-block;
 }
@@ -1948,7 +1965,7 @@ Blog
 /*
 ---------------------------------------------
 Footer Style
---------------------------------------------- 
+---------------------------------------------
 */
 footer {
     background-image: url(../images/footer-bg.jpg);
@@ -1972,7 +1989,7 @@ footer p a {
 /*
 ---------------------------------------------
 responsive
---------------------------------------------- 
+---------------------------------------------
 */
 @media (max-width: 1200px) {
     .header-area .main-nav .logo h4 {
@@ -2005,7 +2022,7 @@ responsive
 
     .main-banner {
         text-align: center;
-        padding: 226px 0px 0px 0px;
+        padding: 200px 0px 0px 0px;
     }
 
     .main-banner:before {
@@ -2196,7 +2213,7 @@ responsive
 }
 
 .card-custom {
-    background: linear-gradient(to bottom, #ebd7d8, #86b7fe);
+    background: linear-gradient(to bottom, #ea51a1a3, #4c5a8bbd);
     border-radius: 15px;
     padding: 20px;
     color: white;
@@ -2271,17 +2288,6 @@ responsive
     margin-bottom: 50px;
 }
 
-.study-france-box .btn-more {
-    margin-top: 25px;
-}
-
-.button-wrapper {
-    width: 100%;
-    text-align: center;
-    position: relative;
-    z-index: 30;
-}
-
 /* Phần Du học Pháp */
 .study-abroad {
     padding-top: 80px;
@@ -2311,7 +2317,18 @@ responsive
     margin-bottom: 50px;
 }
 
-/* Giữ nguyên hiệu ứng nút từ phần trước */
+/******* button ********/
+.button-wrapper {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 30;
+}
+
+.study-france-box .btn-more {
+    margin-top: 25px;
+}
+
 .study-abroad-box .btn-more {
     margin-top: 25px;
 }
@@ -2323,84 +2340,80 @@ responsive
     }
 }
 
-/* Nút button với hiệu ứng hiện đại */
 .btn-more {
-    position: static !important;
-    transform: none !important;
-    padding: 10px 30px;
-    background: #b381c8;
-    color: white;
-    border-radius: 50px;
-    font-size: 16px;
-    cursor: pointer;
-    overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
-    box-shadow: 0 5px 15px rgba(179, 129, 200, 0.4),
-    0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1;
+    position: relative;
     display: inline-block;
-    text-align: center;
+    padding: 12px 34px;
+    border-radius: 999px;
+    border: 0;
+    background: #ea51a1e0;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: .3px;
+    cursor: pointer;
     text-decoration: none;
-    border: 2px solid transparent;
+    outline: none; /* bóng cơ bản + nhô nhẹ */
+    /*box-shadow: 0 8px 18px rgba(76, 90, 139, .25), 0 2px 6px rgba(0, 0, 0, .08);*/
+    transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+    z-index: 0;
 }
 
-/* Hiệu ứng hover */
+/* lớp phát sáng “nẩy nẩy” */
+.btn-more::after {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    border: none;
+    filter: blur(1.5px);
+    box-shadow: 0 0 12px #93c0d7cc;
+    animation: glow-pulse 3s ease-in-out infinite alternate;
+    z-index: -1;
+}
+
+/* hiệu ứng hover: nổi + sáng mạnh hơn */
 .btn-more:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(179, 129, 200, 0.6),
-    0 4px 10px rgba(0, 0, 0, 0.1);
-    background: #c396da;
+    transform: translateY(-2px) scale(1.02);
+    background: rgba(221, 70, 147, 0.88);
 }
 
-/* Hiệu ứng ánh sáng trắng chạy qua */
-.btn-more:hover::before {
-    left: 100%;
-}
-
-/* Hiệu ứng khi click */
+/*.btn-more:hover::after{ filter: blur(12px); opacity:1; }*/ /* active: nhấn xuống */
 .btn-more:active {
-    transform: translateY(1px);
-    box-shadow: 0 3px 10px rgba(179, 129, 200, 0.5),
-    0 1px 3px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+    box-shadow: 0 8px 18px rgba(76, 90, 139, .28), 0 2px 6px rgba(0, 0, 0, .10);
 }
 
-/* Hiệu ứng viền trắng nhấp nháy */
-@keyframes border-pulse {
+/* focus cho accessibility */
+.btn-more:focus-visible {
+    outline: 3px solid rgba(76, 90, 139, .35);
+    outline-offset: 3px;
+}
+
+@keyframes glow-pulse {
     0% {
-        border-color: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 0 0 rgba(76, 90, 139, 0),
+        0 0 0 rgba(76, 90, 139, 0);
     }
     50% {
-        border-color: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 0 8px rgba(76, 90, 139, 1),
+        0 0 16px rgba(76, 90, 139, 0.95);
     }
     100% {
-        border-color: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 0 0 rgba(76, 90, 139, 0),
+        0 0 0 rgba(76, 90, 139, 0);
     }
 }
 
-.btn-more {
-    animation: border-pulse 2s infinite;
-}
 
-/* Phiên bản mobile */
+/* mobile */
 @media (max-width: 768px) {
     .btn-more {
-        padding: 12px 30px;
+        padding: 12px 28px;
         font-size: 16px;
     }
 }
 
-.btn-more::after {
-    margin-left: 10px;
-    transition: all 0.3s;
-}
-
-.btn-more:hover::after {
-    margin-left: 15px;
-}
-
-.btn-more:hover {
-    transform: translateY(-3px) scale(1.02);
-}
 
 /* end button */
 /* ROCKET TIM HIEU TIENG PHAP */
@@ -2414,7 +2427,7 @@ responsive
     width: 200px !important;
     height: 200px !important;
     bottom: -30px;
-    left: 50%;
+    left: 70%;
     transform: translateX(-50%) /* Căn giữa */ rotate(0deg) /* Nghiêng trái nhẹ */ scaleX(2); /* Tùy chỉnh tỷ lệ */
     z-index: 10;
     pointer-events: none;
@@ -2443,16 +2456,15 @@ responsive
 /* Responsive */
 @media (max-width: 768px) {
     .heading-rocket {
-        width: 150px !important;
-        height: 150px !important;
-        bottom: 50px;
-        left: 60%;
+        display: none;
     }
 }
 
 @media only screen and (max-width: 1024px) {
     .heading-rocket {
-        left: 60%;
+        width: 200px !important;
+        height: 200px !important;
+        left: 75%;
     }
 }
 
@@ -2594,7 +2606,7 @@ responsive
 }
 
 .title-block {
-    border-bottom: 2px solid #b381c8;
+    border-bottom: 2px solid #ea51a1;
 }
 
 .course-info {
@@ -2649,13 +2661,41 @@ responsive
     font-weight: 600;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1280px) {
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+    .main-banner .left-content h1 {
+        font-size: 5.5rem;
+    }
+
+    .main-banner .left-content .troong-name {
+        font-size: 4.5rem;
+    }
+
+    .main-banner .left-content {
+        padding-right: 100px;
+    }
+
+    .main-banner .left-content p {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .vn-de-flow {
+        max-width: 90% !important;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 1200px) {
     .main-banner .left-content h1 {
         font-size: 5rem;
     }
 
     .main-banner .left-content .troong-name {
-        font-size: 3.5rem;
+        font-size: 5rem;
+    }
+
+    .main-banner .left-content {
+        padding-right: 50px;
     }
 
     .main-banner .left-content p {
@@ -2663,34 +2703,37 @@ responsive
     }
 }
 
-@media only screen and (min-width: 481px) and (max-width: 576px) {
+@media only screen and (min-width: 576px) and (max-width: 992px) {
+    .main-banner .left-content {
+        padding-right: 0;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .main-banner {
+        padding-top: 180px;
+    }
+
     .main-banner .left-content h1 {
-        font-size: 4.5rem;
+        font-size: 3.5rem;
     }
 
     .main-banner .left-content .troong-name {
         font-size: 3.5rem;
-    }
-
-    .main-banner .left-content p {
-        font-size: 16px;
-        margin-bottom: 0;
-    }
-}
-
-@media only screen and (min-width: 320px) and (max-width: 480px) {
-    .main-banner .left-content h1 {
-        font-size: 55px;
-    }
-
-    .main-banner .left-content .troong-name {
-        font-size: 2.5rem;
         margin-bottom: 10px;
+    }
+
+    .main-banner .left-content {
+        padding-right: 0;
     }
 
     .main-banner .left-content p {
         font-size: 12px;
         margin-bottom: 0;
+    }
+
+    .vn-de-flow {
+        max-width: 80% !important;
     }
 }
 
@@ -2781,10 +2824,11 @@ dotlottie-wc {
     gap: 4px;
     padding: 6px 8px;
     border-radius: 40px;
-    background: #4c5a8b;
+    /*background: red;*/
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
 }
+
 
 /* Link cơ bản + underline gradient */
 .header-area .main-nav .nav.nav-fx li a {
@@ -2792,31 +2836,33 @@ dotlottie-wc {
     z-index: 1;
     padding: 0 10px;
     border-radius: 999px;
-    color: white;
+    color: #4c5a8b;
     transition: all 0.3s ease;
 }
 
 .header-area .main-nav .nav.nav-fx li:hover {
-    color: #fff !important;
+    color: white;
+    background: #4c5a8b;
+    box-shadow: 0 0 10px rgba(76, 90, 139, 0.35);
+    border-radius: 999px;
 }
 
 .header-area .main-nav .nav.nav-fx li:hover a {
-    color: #fff !important;
+    color: white;
 }
 
 .header-area .main-nav .nav.nav-fx li.active {
-
-    color: #4c5a8b !important;
-    background: white;
+    color: white;
+    background: #4c5a8b;
     box-shadow: 0 0 10px rgba(76, 90, 139, 0.35);
     border-radius: 999px;
 }
 
 .header-area .main-nav .nav.nav-fx li.active a {
-    color: #4c5a8b !important;
+    color: white;
 }
 
-.header-area .main-nav .nav.nav-fx li a::after {
+/*.header-area .main-nav .nav.nav-fx li a::after {
     content: "";
     position: absolute;
     left: 50%;
@@ -2829,7 +2875,7 @@ dotlottie-wc {
 
     box-shadow: 0 0 10px rgba(76, 90, 139, .35);
     transition: transform .35s ease;
-}
+}*/
 
 .header-area .main-nav .nav.nav-fx li:hover a::after {
     transform: translateX(-50%) scaleX(1);
@@ -3602,7 +3648,7 @@ Feedback Style
 }
 
 .quote-icon {
-    color: #b381c8;
+    color: #ea51a1;
     font-size: 40px;
     opacity: 0.2;
     margin-bottom: 15px;
@@ -3655,7 +3701,7 @@ Feedback Style
 
 .author-info span {
     font-size: 14px;
-    color: #b381c8;
+    color: #ea51a1;
     font-weight: 500;
 }
 
@@ -3760,16 +3806,16 @@ Feedback Style
 }
 
 .feedback-slider .owl-nav button:hover {
-    background: #b381c8 !important;
+    background: #ea51a1 !important;
 }
 
 .feedback-slider .owl-nav span {
     font-size: 1.5rem !important;
 }
 
-.feedback-slider .owl-dots {
+/*.feedback-slider .owl-dots {
     margin-top: 30px;
-}
+}*/
 
 .feedback-slider .owl-dot span {
     width: 12px;
@@ -3857,14 +3903,14 @@ Feedback Style
 /* ===== Feedback Photos (masonry-lite) ===== */
 .feedback-photos {
     margin-top: 30px;
-    padding-top: 30px;
+    /*padding-top: 30px;*/
     border-top: 1px solid #eee;
 }
 
 .feedback-photos h4 {
     color: #4c5a8b;
     font-weight: 700;
-    margin-bottom: 30px
+    margin: 40px 0;
 }
 
 .photo-grid {
@@ -3929,15 +3975,17 @@ Feedback Style
 
 /*
 ---------------------------------------------
-Model Courses Style
+Modal Courses Style
 ---------------------------------------------
 */
-/* ===== Modal Course v2 (premium) ===== */
 .course-modal.v2 .modal-content {
     border: 0;
     border-radius: 24px;
     overflow: hidden;
     box-shadow: 0 30px 80px rgba(28, 33, 68, .25);
+    height: clamp(560px, 85vh, 900px);
+    display: flex;
+    flex-direction: column;
 }
 
 /* Hero */
@@ -3950,9 +3998,9 @@ Model Courses Style
 .cmv2-hero-bg {
     position: absolute;
     inset: 0;
-    background: radial-gradient(80% 120% at 10% -10%, #b381c840 0%, transparent 60%),
+    background: radial-gradient(80% 120% at 10% -10%, #ea51a140 0%, transparent 60%),
     radial-gradient(80% 120% at 100% 10%, #4c5a8b5c 0%, transparent 65%),
-    linear-gradient(135deg, #4c5a8b 0%, #6b7bb0 38%, #b381c8 100%);
+    linear-gradient(135deg, #4c5a8bd4 0%, #6b7bb0d6 38%, #ea51a1d6 100%);
     filter: saturate(1.1);
 }
 
@@ -4064,12 +4112,17 @@ Model Courses Style
 .cmv2-body {
     padding: 18px 22px 22px;
     background: radial-gradient(120% 100% at 0% 0%, #f6f7ff 0, #fbfbfe 60%, #ffffff 100%);
+    flex: 1 1 auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .cmv2-grid {
     display: grid;
     gap: 18px;
-    grid-template-columns:1.4fr .8fr;
+    grid-template-columns: 1.4fr .8fr;
+    min-height: 0;
 }
 
 /* Panel & Aside */
@@ -4079,6 +4132,17 @@ Model Courses Style
     border-radius: 20px;
     padding: 16px 16px 6px;
     box-shadow: 0 8px 26px rgba(28, 33, 68, .06);
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+/* Chỉ phần outcomes được cuộn */
+#cm-outcomes {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
 }
 
 .cmv2-section-title {
@@ -4086,14 +4150,15 @@ Model Courses Style
     color: #4c5a8b;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 15px;
+    padding-bottom: 10px;
 }
 
 .cmv2-section-title .dot {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #b381c8, #4c5a8b);
+    background: linear-gradient(135deg, #ea51a1, #4c5a8b);
     box-shadow: 0 4px 10px rgba(76, 90, 139, .35);
 }
 
@@ -4162,7 +4227,7 @@ Model Courses Style
     display: block;
     height: 100%;
     width: var(--p, 50%);
-    background: linear-gradient(90deg, #4c5a8b, #b381c8);
+    background: linear-gradient(90deg, #4c5a8b, #ea51a1);
     box-shadow: inset 0 0 8px #ffffff80;
     animation: cmv2-grow .8s cubic-bezier(.2, .9, .2, 1) both;
 }
@@ -4216,7 +4281,7 @@ Model Courses Style
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #b381c8, #4c5a8b);
+    background: linear-gradient(135deg, #ea51a1, #4c5a8b);
     box-shadow: 0 8px 18px rgba(76, 90, 139, .35);
 }
 
@@ -4229,19 +4294,58 @@ Model Courses Style
     border-top: 1px solid #f0f1fa;
 }
 
+.cmv2-footer .brand {
+    color: red;
+    text-decoration: underline;
+}
+
 .cmv2-cta {
-    background: linear-gradient(135deg, #4c5a8b, #b381c8);
+    position: relative;
+    background: linear-gradient(130deg, #4c5a8bdb, #ea51a1e0);
     color: #fff;
-    border: 0;
-    font-weight: 800;
-    padding: 10px 18px;
-    border-radius: 14px;
-    box-shadow: 0 10px 26px rgba(76, 90, 139, .25);
+    font-weight: 700;
+    padding: 12px 28px;
+    border-radius: 999px;
+    border: none;
+    z-index: 0;
+    overflow: visible;
+}
+
+/* Vòng viền xanh động */
+.cmv2-cta::after {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    border: none;
+    filter: blur(1px);
+    box-shadow: 0 0 12px rgba(76, 90, 139, 0.8);
+    animation: focusGlow 3s ease-in-out infinite alternate;
+    z-index: -1;
 }
 
 .cmv2-cta:hover {
-    opacity: .95;
+    color: white;
+    box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
+    transform: translateY(-2px);
 }
+
+@keyframes focusGlow {
+    0% {
+        box-shadow: 0 0 0 rgba(76, 90, 139, 0),
+        0 0 0 rgba(76, 90, 139, 0);
+    }
+    50% {
+        box-shadow: 0 0 8px rgba(76, 90, 139, 1),
+        0 0 16px rgba(76, 90, 139, 0.95);
+    }
+    100% {
+        box-shadow: 0 0 0 rgba(76, 90, 139, 0),
+        0 0 0 rgba(76, 90, 139, 0);
+    }
+}
+
+
 
 @keyframes cmv2-reveal {
     to {
@@ -4268,7 +4372,7 @@ Model Courses Style
 
 @media (max-width: 1199.98px) {
     .cmv2-grid {
-        grid-template-columns:1fr .9fr;
+        grid-template-columns: 1fr .9fr;
     }
 }
 
@@ -4277,8 +4381,12 @@ Model Courses Style
         margin: 14px;
     }
 
+    .course-modal.v2 .modal-content {
+        height: clamp(520px, 92vh, 880px);
+    }
+
     .cmv2-grid {
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
     }
 
     .cmv2-hero {
@@ -4406,5 +4514,6 @@ Model Courses Style
     color: #2b2f42;
     font-weight: 600;
 }
+
 
 /* Mobile: 1 cột, từ >=768px: 2 cột */

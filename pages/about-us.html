@@ -16,17 +16,17 @@
     <!-- Bootstrap core CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 
     <!-- Additional CSS Files -->
-    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/fontawesome.css">
-    <link rel="stylesheet" href="/assets/css/style-goc.css">
-    <link rel="stylesheet" href="/assets/css/animated.css">
-    <link rel="stylesheet" href="/assets/css/owl.css">
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/fontawesome.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/animated.css">
+    <link rel="stylesheet" href="../assets/css/owl.css">
 
     <!-- CSS riêng cho trang About -->
     <style>
@@ -46,7 +46,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('/assets/images/dots-pattern.jpg');
+            background-image: url('../assets/images/dots-pattern.jpg');
             opacity: 0.1;
             z-index: 1;
         }
@@ -72,7 +72,7 @@
         /* Phần giới thiệu chung */
         .about-intro {
             padding: 100px 0;
-            background: #f9f9f9;
+            background: red;
         }
 
         .about-intro-content {
@@ -122,7 +122,7 @@
         }
 
         .about-stats {
-            margin-top: 50px;
+            margin-top: 20px;
         }
 
         .stat-item {
@@ -277,6 +277,32 @@
             background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
         }
 
+        .values-section h2 {
+            text-align: center;
+            color: #4c5a8b;
+            font-weight: 700;
+            position: relative;
+            font-size: 35px;
+        }
+        .values-section .col-lg-12 p {
+            text-align: center;
+            color: #666666;
+            position: relative;
+            font-size: 18px;
+            margin: 30px 0 40px 0;
+        }
+
+        .values-section h2:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #b381c8;
+        }
+
         .value-card {
             background: white;
             border-radius: 15px;
@@ -389,13 +415,39 @@
         }
 
         #about {
-            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%); !important;
+            background: #f9f9f9;
             padding: 100px 0;
+        }
+
+        #about .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            padding: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #about .container:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, #4c5a8b, #b381c8);
         }
 
         #about .section-heading .line-dec {
             height: 3px;
             background-color: #b381c8;
+        }
+
+        .section-heading h4 {
+            font-weight: bolder;
+            font-size: 35px;
+            color: #4a51a1;
+            text-transform: uppercase;
         }
     </style>
 </head>
@@ -442,23 +494,17 @@
             <div class="col-12">
                 <nav class="main-nav">
                     <!--====== Logo Start ======-->
-                    <a href="/index.html" class="logo">
-                        <img src="/assets/images/logo/Logo-Troong.png" alt="">
+                    <a href="../index.html" class="logo">
+                        <img src="../assets/images/logo/Logo-Troong-ver2.png" alt="">
                     </a>
                     <!--====== Logo End ======-->
                     <!--====== Menu Start ======-->
                     <ul class="nav nav-fx">
-                        <!--<li class="scroll-to-section active"><a href="#top"">Home</a></li>-->
+                        <li class="scroll-to-section"><a href="../index.html">Trang Chủ</a></li>
                         <li class="scroll-to-section active"><a href="about-us.html">Về Chúng Tôi</a></li>
-                        <li class="scroll-to-section"><a href="/index.html#services">Khóa Học</a></li>
-                        <!--<li class="scroll-to-section"><a href="#study-abroad">Du học</a></li>-->
-                        <li class="scroll-to-section"><a href="/index.html#study-abroad">Nguồn học tiếng</a></li>
-                        <li class="scroll-to-section"><a href="/index.html#contact">Liên Hệ</a></li>
-                        <li class="scroll-to-section"><a href="/index.html#feedback">Phản Hồi</a></li>
-                        <li class="scroll-to-section"><a href="">Tuyển dụng</a></li>
-                        <!--<li class="scroll-to-section">
-                            <div class="border-first-button"><a href="#contact">Liên hệ ngay</a></div>
-                        </li>-->
+                        <li class="scroll-to-section"><a href="../index.html#services">Khóa Học</a></li>
+                        <li class="scroll-to-section"><a href="../index.html#study-france">Kho Tài Liệu</a></li>
+                        <li class="scroll-to-section"><a href="../index.html#study-abroad">Du học Pháp</a></li>
                     </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -484,7 +530,7 @@
 </section>
 
 <!-- Founder -->
-<section class="about-intro">
+<!--<section class="about-intro">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -504,37 +550,11 @@
                         học viên hiểu sâu hơn về đất nước, con người và nền giáo dục Pháp. Đây chính là nền tảng quan
                         trọng để các bạn có thể hòa nhập thành công khi du học hoặc làm việc tại Pháp.</p>
 
-                    <div class="row about-stats">
-                        <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.3s">
-                            <div class="stat-item">
-                                <div class="stat-number" data-count="10">0</div>
-                                <div class="stat-label">Năm kinh nghiệm</div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.4s">
-                            <div class="stat-item">
-                                <div class="stat-number" data-count="2000">0</div>
-                                <div class="stat-label">Học viên</div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.5s">
-                            <div class="stat-item">
-                                <div class="stat-number" data-count="98">0</div>
-                                <div class="stat-label">% Hài lòng</div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.6s">
-                            <div class="stat-item">
-                                <div class="stat-number" data-count="500">0</div>
-                                <div class="stat-label">Du học sinh</div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</section>-->
 
 <!--====== Phap Ngu Troong ======-->
 <div id="about" class="about section">
@@ -544,14 +564,14 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="about-left-image  wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
-                            <img src="/assets/images/Troong.png" alt="">
+                            <img src="../assets/images/Troong.png" alt="">
                         </div>
                     </div>
                     <div class="col-lg-8 align-self-center wow fadeInRight" data-wow-duration="1s"
                          data-wow-delay="0.5s">
                         <div class="about-right-content">
                             <div class="section-heading">
-                                <h4>Pháp Ngữ Troong</h4>
+                                <h4>Founder Ngô Quỳnh Trang</h4>
                                 <div class="line-dec"></div>
                             </div>
                             <p style="margin: 20px 0 10px 0;"><span style="font-weight: 600">Pháp ngữ Troong tự hào là trung tâm giảng dạy tiếng Pháp
@@ -584,6 +604,33 @@
                             </div>-->
                         </div>
                     </div>
+
+                    <div class="row about-stats">
+                        <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="10">0</div>
+                                <div class="stat-label">Năm kinh nghiệm</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.4s">
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="2000">0</div>
+                                <div class="stat-label">Học viên</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="98">0</div>
+                                <div class="stat-label">% Hài lòng</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.6s">
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="500">0</div>
+                                <div class="stat-label">Du học sinh</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -591,7 +638,7 @@
 </div>
 
 <!-- Giá trị cốt lõi -->
-<!--<section class="values-section">
+<section class="values-section">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -605,7 +652,7 @@
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="value-card">
                     <div class="value-icon">
-                        <i class="fa fa-chalkboard-teacher"></i>
+                        <i class="fa-solid fa-chalkboard-user"></i>
                     </div>
                     <h3 class="value-title">Phương pháp sư phạm</h3>
                     <p class="value-desc">Áp dụng phương pháp giảng dạy hiện đại, lấy học viên làm trung tâm, kết hợp lý
@@ -616,7 +663,7 @@
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
                 <div class="value-card">
                     <div class="value-icon">
-                        <i class="fa fa-user-graduate"></i>
+                        <i class="fa-solid fa-user-graduate"></i>
                     </div>
                     <h3 class="value-title">Cá nhân hóa</h3>
                     <p class="value-desc">Mỗi học viên có lộ trình học tập riêng phù hợp với năng lực và mục tiêu cá
@@ -627,7 +674,7 @@
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="value-card">
                     <div class="value-icon">
-                        <i class="fa fa-medal"></i>
+                        <i class="fa-solid fa-medal"></i>
                     </div>
                     <h3 class="value-title">Cam kết chất lượng</h3>
                     <p class="value-desc">Đảm bảo đầu ra theo đúng trình độ đăng ký, hỗ trợ học lại miễn phí nếu không
@@ -638,7 +685,7 @@
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="value-card">
                     <div class="value-icon">
-                        <i class="fa fa-book-open"></i>
+                        <i class="fa-solid fa-book-open"></i>
                     </div>
                     <h3 class="value-title">Tài liệu độc quyền</h3>
                     <p class="value-desc">Hệ thống giáo trình và tài liệu được biên soạn riêng, cập nhật liên tục theo
@@ -649,7 +696,7 @@
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
                 <div class="value-card">
                     <div class="value-icon">
-                        <i class="fa fa-globe-europe"></i>
+                        <i class="fa-solid fa-globe"></i>
                     </div>
                     <h3 class="value-title">Văn hóa Pháp</h3>
                     <p class="value-desc">Không chỉ dạy ngôn ngữ, chúng tôi còn giúp học viên hiểu sâu về văn hóa, phong
@@ -660,7 +707,7 @@
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="value-card">
                     <div class="value-icon">
-                        <i class="fa fa-hands-helping"></i>
+                        <i class="fa-solid fa-hands-helping"></i>
                     </div>
                     <h3 class="value-title">Hỗ trợ trọn đời</h3>
                     <p class="value-desc">Học viên của Troong được hỗ trợ tư vấn du học, xin visa và định hướng nghề
@@ -669,7 +716,7 @@
             </div>
         </div>
     </div>
-</section>-->
+</section>
 
 <!-- Đội ngũ giáo viên -->
 <section class="teachers-section">
@@ -687,7 +734,7 @@
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="teacher-card">
                     <div class="teacher-img">
-                        <img src="/assets/images/teacher/GV-Trà-My.jpg"
+                        <img src="../assets/images/teacher/GV-Trà-My.jpg"
                              alt="Giáo viên 1">
                     </div>
                 </div>
@@ -696,7 +743,7 @@
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
                 <div class="teacher-card">
                     <div class="teacher-img">
-                        <img src="/assets/images/teacher/GV-Thơm-Nguyễn.jpg"
+                        <img src="../assets/images/teacher/GV-Thơm-Nguyễn.jpg"
                              alt="Giáo viên 2">
                     </div>
                 </div>
@@ -705,7 +752,7 @@
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="teacher-card">
                     <div class="teacher-img">
-                        <img src="/assets/images/teacher/GV-Thu-Uyên.jpg"
+                        <img src="../assets/images/teacher/GV-Thu-Uyên.jpg"
                              alt="Giáo viên 3">
                     </div>
                 </div>
@@ -745,13 +792,14 @@
 <section class="contact" id="contact" style="padding: 80px 0;">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="text-white wow fadeInDown" data-wow-delay="0.3s">Bạn đã sẵn sàng bắt đầu hành trình chinh
-                    phục tiếng Pháp?</h2>
-                <p class="text-white wow fadeIn" data-wow-delay="0.5s" style="margin-bottom: 30px;">Liên hệ ngay với
-                    chúng tôi để được tư vấn lộ trình học phù hợp nhất</p>
-                <a href="/index.html#contact" class="btn btn-light btn-lg wow fadeInUp" data-wow-delay="0.7s"
-                   style="border-radius: 30px; padding: 12px 30px; font-weight: 600; color: #4c5a8b;">Đăng ký tư vấn</a>
+            <div class="col-lg-12">
+                <h2 class="wow fadeInDown animated" data-wow-delay="0.3s"
+                    style="visibility: visible;-webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;">
+                    Giá Trị Cốt Lõi
+                </h2>
+                <p class="text-center wow fadeIn" data-wow-delay="0.5s" style="max-width: 700px; margin: 0 auto 50px;">
+                    Những nguyên tắc và triết lý giáo dục tạo nên sự khác biệt của Pháp Ngữ Troong
+                </p>
             </div>
         </div>
     </div>
@@ -768,17 +816,17 @@
 </footer>
 
 <!-- Scripts -->
-<script src="/vendor/jquery/jquery.min.js"></script>
-<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="/assets/js/owl-carousel.js"></script>
-<script src="/assets/js/animation.js"></script>
-<script src="/assets/js/imagesloaded.js"></script>
-<script src="/assets/js/custom.js"></script>
+<script src="../vendor/jquery/jquery.min.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/owl-carousel.js"></script>
+<script src="../assets/js/animation.js"></script>
+<script src="../assets/js/imagesloaded.js"></script>
+<script src="../assets/js/custom.js"></script>
 
-<script src="/assets/js/rocket-course.js"></script>
-<script src="/assets/js/form-request.js"></script>
-<script src="/assets/js/data-course-details.js"></script>
-<script src="/assets/js/data-teachers.js"></script>
+<script src="../assets/js/rocket-course.js"></script>
+<script src="../assets/js/form-request.js"></script>
+<script src="../assets/js/course-details.js"></script>
+<script src="../assets/js/data-teachers.js"></script>
 
 <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
 

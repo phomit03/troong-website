@@ -31,7 +31,13 @@ const COURSE_DETAILS = {
         level: "A2.2 – B1.1",
         sessions: 17,
         outcomes: [
-            "NO DATA"
+            "Làm chủ các cấu trúc ngữ pháp từ trung cấp đến khá, bao gồm chia động từ phức tạp và các thì nâng cao",
+            "Tự tin sử dụng tiếng Pháp nâng cao trong các chủ đề giao tiếp phức tạp thông qua luyện tập thực tế mỗi buổi học",
+            "Nắm vững kỹ thuật trình bày quan điểm, suy nghĩ cá nhân qua các bài nói, được hướng dẫn chi tiết để diễn đạt mạch lạc và thuyết phục",
+            "Thực hành ngôn ngữ với 9+ chủ đề thực tế: Giới thiệu bản thân và gia đình; Mua sắm, ăn uống và văn hóa ẩm thực Pháp; Công việc, học tập và kế hoạch tương lai; Du lịch - khám phá các thành phố và phong tục địa phương; Sức khỏe; thể thao và lối sống lành mạnh; Quan hệ xã hội, tình bạn và tình yêu; Môi trường và trách nhiệm cộng đồng; Công nghệ và truyền thông hiện đại; Nghệ thuật, âm nhạc và giải trí",
+            "Nhận phản hồi chi tiết: mỗi bài viết được giáo viên chấm chữa kỹ lưỡng về từ vựng, ngữ pháp và nội dung; bài nói được sửa phát âm chi tiết",
+            "Luyện tập phát âm chuẩn như người bản xứ thông qua bài tập đọc theo đoạn hội thoại",
+            "Đủ khả năng tham gia thi thử các chứng chỉ DELF, TCF A2 và ôn luyện đầu vào trình độ A2, B1"
         ],
         progress: "50%",
     },
@@ -40,15 +46,22 @@ const COURSE_DETAILS = {
         level: "B1.2 - B2.1",
         sessions: 17,
         outcomes: [
-            "NO DATA"
+            "Thành thạo các cấu trúc ngữ pháp phức tạp như các thì nâng cao, câu điều kiện, và câu bị động, giúp xây dựng câu chính xác, tự nhiên trong giao tiếp và viết lách, đạt trình độ trung cấp chỉ sau 5 tháng học tập chăm chỉ",
+            "Tự tin giao tiếp cơ bản chỉ sau 1 tháng, phản ứng linh hoạt trong các tình huống đời thường như hỏi đường, đặt lịch hẹn, hoặc thảo luận ngắn gọn",
+            "Nắm vững phương pháp trình bày quan điểm rõ ràng, logic và thuyết phục, áp dụng hiệu quả trong các chủ đề học thuật (giáo dục, văn hóa) và đời sống (gia đình, công việc)",
+            "Luyện tập thực hành Nói - Viết đa dạng với hơn 9 chủ đề thực tế",
+            "Tập trung vào các chủ đề như du lịch (lên kế hoạch chuyến đi), công việc (phỏng vấn xin việc), giáo dục (thảo luận về trường học), môi trường (bảo vệ thiên nhiên), sức khỏe (chế độ ăn uống), truyền thông (mạng xã hội), văn hóa (lễ hội Pháp), mua sắm (so sánh giá cả), và quan hệ xã hội (gặp gỡ bạn bè)",
+            "Giáo viên chấm chữa chi tiết về từ vựng, ngữ pháp, và nội dung, giúp cải thiện chất lượng bài viết từng bước",
+            "Sửa phát âm cẩn thận, kết hợp bài tập đọc theo hội thoại từ giáo trình để phát âm chuẩn, ngữ điệu tự nhiên như người bản xứ",
+            "Sau khóa học, học viên đủ năng lực thi thử trong kỳ thi DELF, TCF trình độ B1-B2, đồng thời được hướng dẫn chi tiết để ôn luyện cho các kỳ thi chính thức"
         ],
         progress: "75%",
     },
     "master": {
         title: "Khoá Làm Chủ",
         tracks: [
-          { level: "B2.1 - B2.2", sessions: 20 },
-          { level: "B2.2 - C1.1", sessions: 20 }
+            {level: "B2.1 - B2.2", sessions: 20},
+            {level: "B2.2 - C1.1", sessions: 20}
         ],
         outcomes: [
             "Linh hoạt trong ngôn ngữ và giao tiếp rất tự nhiên khi thảo luận về những chủ đề xã hội, văn hoá và chuyên môn chuyên sâu có tính tranh luận",
@@ -69,9 +82,9 @@ const COURSE_DETAILS = {
     "tcf": {
         title: "Khoá ôn thi TCF TP/IRN/Canada",
         tracks: [
-            { level: "A0 - A2", sessions: 55 },
-            { level: "A0 - B1", sessions: 75 },
-            { level: "A0 - B2", sessions: 95 }
+            {level: "A0 - A2", sessions: 55},
+            {level: "A0 - B1", sessions: 75},
+            {level: "A0 - B2", sessions: 95}
         ],
         outcomes: [
             "Nắm vững ngữ pháp và từ vựng tiếng Pháp ở trình độ từ A1 đến B2 để làm bài thi một cách chính xác",
@@ -87,9 +100,9 @@ const COURSE_DETAILS = {
     "tef": {
         title: "Khóa ôn thi TEF (TEFAQ)",
         tracks: [
-            { level: "A0 - A2", sessions: 55 },
-            { level: "A0 - B1", sessions: 75 },
-            { level: "A0 - B2", sessions: 95 }
+            {level: "A0 - A2", sessions: 55},
+            {level: "A0 - B1", sessions: 75},
+            {level: "A0 - B2", sessions: 95}
         ],
         outcomes: [
             "Nắm vững ngữ pháp và từ vựng tiếng Pháp ở trình độ từ A1 đến B2 để làm bài thi một cách chính xác",
@@ -105,9 +118,9 @@ const COURSE_DETAILS = {
     "delf": {
         title: "Khoá ôn thi DELF",
         tracks: [
-            { level: "A0 - A2", sessions: 55 },
-            { level: "A0 - B1", sessions: 75 },
-            { level: "A0 - B2", sessions: 95 }
+            {level: "A0 - A2", sessions: 55},
+            {level: "A0 - B1", sessions: 75},
+            {level: "A0 - B2", sessions: 95}
         ],
         outcomes: [
             "Nắm vững ngữ pháp và từ vựng tiếng Pháp ở trình độ từ A1 đến B2 để làm bài thi một cách chính xác",
@@ -130,8 +143,12 @@ function openCourseModal(courseId) {
 
     // -- Helpers
     const $ = (sel, root) => (root || document).querySelector(sel);
-    const safeText = (el, text) => { if (el) el.textContent = text ?? ""; };
-    const safeHTML = (el, html) => { if (el) el.innerHTML = html || ""; };
+    const safeText = (el, text) => {
+        if (el) el.textContent = text ?? "";
+    };
+    const safeHTML = (el, html) => {
+        if (el) el.innerHTML = html || "";
+    };
     const escapeHTML = (s) => String(s)
         .replaceAll("&", "&amp;").replaceAll("<", "&lt;")
         .replaceAll(">", "&gt;").replaceAll('"', "&quot;")
@@ -139,7 +156,7 @@ function openCourseModal(courseId) {
 
     const tracks = Array.isArray(c.tracks) && c.tracks.length
         ? c.tracks
-        : (c.level || c.sessions) ? [{ level: c.level ?? "—", sessions: c.sessions ?? "—" }] : [];
+        : (c.level || c.sessions) ? [{level: c.level ?? "—", sessions: c.sessions ?? "—"}] : [];
 
     // ===== Header
     safeText(document.getElementById("cm-title"), c.title || "");
@@ -222,3 +239,27 @@ document.addEventListener("click", function (e) {
     const id = target.getAttribute("data-course");
     openCourseModal(id);
 });
+
+// ====== LISTENERS BUTTON CONTACT ======
+document.addEventListener("DOMContentLoaded", function () {
+    const ctaBtn = document.querySelector(".cmv2-cta");
+    if (ctaBtn) {
+        ctaBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            // Đóng modal (nếu đang mở)
+            const modalEl = document.getElementById("courseInfoModal");
+            if (modalEl) {
+                const bsModal = bootstrap.Modal.getInstance(modalEl)
+                    || new bootstrap.Modal(modalEl);
+                bsModal.hide();
+            }
+            // Sau khi modal đóng, cuộn xuống contact
+            setTimeout(() => {
+                document.getElementById("contact").scrollIntoView({
+                    behavior: "smooth"
+                });
+            }, 300); // delay để modal đóng xong
+        });
+    }
+});
+
