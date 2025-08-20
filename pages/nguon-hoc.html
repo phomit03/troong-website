@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+
+    <title>Kho Tài Liệu - Pháp Ngữ Troong</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- Additional CSS Files -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/fontawesome.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/animated.css">
+    <link rel="stylesheet" href="../assets/css/owl.css">
+
+
+    <style>
+        /* Hero */
+        .resources-hero {
+            background: linear-gradient(135deg, #4c5a8b 30%, #ea51a1 100%);
+            padding: 120px 0 80px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .resources-hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../assets/images/dots-pattern.jpg');
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        .resources-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .resources-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            font-family: 'Paytone One', sans-serif;
+        }
+
+        .resources-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        /* News Grid */
+        .news-grid {
+            padding: 80px 0;
+            background: #f9f9f9;
+        }
+
+        .news-card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .news-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .news-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .news-content {
+            padding: 20px;
+        }
+
+        .news-category {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        /* Màu đa dạng */
+        .cat-blue {
+            background: #eef4ff;
+            color: #2563eb; /* xanh dương */
+        }
+
+        .cat-purple {
+            background: #f3e8ff;
+            color: #9333ea; /* tím */
+        }
+
+        .cat-green {
+            background: #ecfdf5;
+            color: #059669; /* xanh lá */
+        }
+
+        .cat-red {
+            background: #fef2f2;
+            color: #dc2626; /* đỏ */
+        }
+
+        .cat-orange {
+            background: #fff7ed;
+            color: #ea580c; /* cam */
+        }
+
+
+        .news-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .news-description {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .resources-hero h1 {
+                font-size: 2rem;
+            }
+
+            .news-card img {
+                height: 180px;
+            }
+        }
+
+        .load-more-btn {
+            background: transparent;
+            border: 2px solid #ea51a1;
+            color: #ea51a1;
+            padding: 10px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .load-more-btn:hover {
+            background: #ea51a1;
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!--====== Preloader Start ======-->
+<div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+        <span class="dot"></span>
+        <div class="dots">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</div>
+
+<!--====== Pre-header Starts ======-->
+<div class="pre-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-sm-8 col-7">
+                <ul class="info">
+                    <li><a href="#"><i class="fa fa-envelope"></i>troong.hr@gmail.com</a></li>
+                    <li><a href="#"><i class="fa fa-phone"></i>(+84) 836.600.097 - (+33) 760.037.733</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-sm-4 col-5">
+                <ul class="social-media">
+                    <li><a href="https://www.facebook.com/phapnguTroong"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="mailto:troong.hr@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                    <li><a href="https://wa.me/+84836600097"><i class="fa fa-whatsapp"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--====== Header Area Start ======-->
+<header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!--====== Logo Start ======-->
+                    <a href="../index.html" class="logo">
+                        <img src="../assets/images/logo/Logo-Troong-ver2.png" alt="">
+                    </a>
+                    <!--====== Logo End ======-->
+                    <!--====== Menu Start ======-->
+                    <ul class="nav nav-fx">
+                        <li class="scroll-to-section"><a href="../index.html">Trang Chủ</a></li>
+                        <li class="scroll-to-section"><a href="about-us.html">Về Chúng Tôi</a></li>
+                        <li class="scroll-to-section"><a href="../index.html#services">Khóa Học</a></li>
+                        <li class="scroll-to-section active"><a href="nguon-hoc.html">Kho Tài Liệu</a></li>
+                        <li class="scroll-to-section"><a href="#">Du học Pháp</a></li>
+                    </ul>
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!--====== Menu End ======-->
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="resources-hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 mt-lg-5 text-center resources-hero-content">
+                <h1 class="wow fadeInDown" data-wow-delay="0.3s">Kho Tài Liệu Nguồn Học</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- News Grid -->
+<section class="news-grid">
+    <div class="container">
+        <div class="row">
+            <!-- Box 1 -->
+            <div class="col-lg-4 col-md-6 news-item">
+                <div class="news-card">
+                    <img src="../assets/images/services-image.jpg" alt="Blog 1">
+                    <div class="news-content">
+                        <span class="news-category cat-blue">Mẹo ôn thi</span>
+                        <h3 class="news-title">Chiến lược đạt DELF B2 trong 6 tháng</h3>
+                        <p class="news-description">Bí quyết học và luyện đề giúp bạn tự tin đạt chứng chỉ DELF B2 ngay từ lần thi
+                            đầu tiên...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Box 2 -->
+            <div class="col-lg-4 col-md-6 news-item">
+                <div class="news-card">
+                    <img src="../assets/images/services-image.jpg" alt="Blog 2">
+                    <div class="news-content">
+                        <span class="news-category cat-purple">Tài liệu</span>
+                        <h3 class="news-title">Tổng hợp 50 đề thi thử TCF mới nhất</h3>
+                        <p class="news-description">Bộ tài liệu luyện thi TCF sát với đề thi thật, được biên soạn bởi đội ngũ giáo
+                            viên Troong...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Box 3 -->
+            <div class="col-lg-4 col-md-6 news-item">
+                <div class="news-card">
+                    <img src="../assets/images/services-image.jpg" alt="Blog 3">
+                    <div class="news-content">
+                        <span class="news-category cat-green">Kinh nghiệm</span>
+                        <h3 class="news-title">Chia sẻ hành trình du học Pháp</h3>
+                        <p class="news-description">Nghe câu chuyện thực tế từ cựu học viên Troong đã thành công giành học bổng và
+                            du học Pháp...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Box 4 -->
+            <div class="col-lg-4 col-md-6 news-item">
+                <div class="news-card">
+                    <img src="../assets/images/services-image.jpg" alt="Blog 1">
+                    <div class="news-content">
+                        <span class="news-category cat-orange">Mẹo ôn thi</span>
+                        <h3 class="news-title">Chiến lược đạt DELF B2 trong 6 tháng</h3>
+                        <p class="news-description">Bí quyết học và luyện đề giúp bạn tự tin đạt chứng chỉ DELF B2 ngay từ lần thi
+                            đầu tiên...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Box 5 -->
+            <div class="col-lg-4 col-md-6 news-item">
+                <div class="news-card">
+                    <img src="../assets/images/services-image.jpg" alt="Blog 2">
+                    <div class="news-content">
+                        <span class="news-category cat-red">Tài liệu</span>
+                        <h3 class="news-title">Tổng hợp 50 đề thi thử TCF mới nhất</h3>
+                        <p class="news-description">Bộ tài liệu luyện thi TCF sát với đề thi thật, được biên soạn bởi đội ngũ giáo
+                            viên Troong...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Box 6 -->
+            <div class="col-lg-4 col-md-6 news-item">
+                <div class="news-card">
+                    <img src="../assets/images/services-image.jpg" alt="Blog 3">
+                    <div class="news-content">
+                        <span class="news-category cat-green">Kinh nghiệm</span>
+                        <h3 class="news-title">Chia sẻ hành trình du học Pháp</h3>
+                        <p class="news-description">Nghe câu chuyện thực tế từ cựu học viên Troong đã thành công giành học bổng và
+                            du học Pháp...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Box 7 -->
+            <div class="col-lg-4 col-md-6 news-item">
+                <div class="news-card">
+                    <img src="../assets/images/services-image.jpg" alt="Blog 2">
+                    <div class="news-content">
+                        <span class="news-category cat-purple">Tài liệu</span>
+                        <h3 class="news-title">Tổng hợp 50 đề thi thử TCF mới nhất</h3>
+                        <p class="news-description">Bộ tài liệu luyện thi TCF sát với đề thi thật, được biên soạn bởi đội ngũ giáo
+                            viên Troong...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Box 8 -->
+            <div class="col-lg-4 col-md-6 news-item">
+                <div class="news-card">
+                    <img src="../assets/images/services-image.jpg" alt="Blog 3">
+                    <div class="news-content">
+                        <span class="news-category cat-green">Kinh nghiệm</span>
+                        <h3 class="news-title">Chia sẻ hành trình du học Pháp</h3>
+                        <p class="news-description">Nghe câu chuyện thực tế từ cựu học viên Troong đã thành công giành học bổng và
+                            du học Pháp...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nút load thêm -->
+        <div class="text-center mt-4">
+            <button id="loadMore" class="load-more-btn">Xem thêm nguồn học</button>
+        </div>
+    </div>
+</section>
+
+<!-- Scripts -->
+<script src="../vendor/jquery/jquery.min.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/owl-carousel.js"></script>
+<script src="../assets/js/animation.js"></script>
+<script src="../assets/js/imagesloaded.js"></script>
+<script src="../assets/js/custom.js"></script>
+
+<script src="../assets/js/rocket-course.js"></script>
+<script src="../assets/js/form-request.js"></script>
+<script src="../assets/js/course-details.js"></script>
+<script src="../assets/js/data-teachers.js"></script>
+
+<script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let items = document.querySelectorAll(".news-item");
+        let loadMoreBtn = document.getElementById("loadMore");
+        let itemsPerPage = 6; // số box hiển thị ban đầu
+        let currentItems = itemsPerPage;
+
+        // Ẩn các box ngoài itemsPerPage
+        items.forEach((item, index) => {
+            if (index >= itemsPerPage) {
+                item.style.display = "none";
+            }
+        });
+
+        loadMoreBtn.addEventListener("click", function () {
+            let nextItems = currentItems + itemsPerPage;
+            for (let i = currentItems; i < nextItems && i < items.length; i++) {
+                items[i].style.display = "block";
+            }
+            currentItems += itemsPerPage;
+
+            // Ẩn nút nếu không còn tin để load
+            if (currentItems >= items.length) {
+                loadMoreBtn.style.display = "none";
+            }
+        });
+    });
+</script>
+
+
+
+</body>
+
+</html>

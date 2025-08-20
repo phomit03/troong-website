@@ -32,8 +32,7 @@
     <style>
         /* Phần giới thiệu */
         .about-hero {
-            background: linear-gradient(135deg, #4c5a8b 0%, #b381c8 100%);
-            padding: 120px 0 80px;
+            background: linear-gradient(135deg, #4c5a8b 30%, #ea51a1 100%);            padding: 120px 0 80px;
             color: white;
             position: relative;
             overflow: hidden;
@@ -61,6 +60,7 @@
             font-weight: 800;
             margin-bottom: 20px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            font-family: 'Paytone One', sans-serif;
         }
 
         .about-hero p {
@@ -91,7 +91,7 @@
             left: 0;
             width: 5px;
             height: 100%;
-            background: linear-gradient(to bottom, #4c5a8b, #b381c8);
+            background: linear-gradient(to bottom, #4c5a8b, #ea51a1);
         }
 
         .about-intro h2 {
@@ -101,7 +101,7 @@
             padding-bottom: 15px;
             position: relative;
             display: inline-block;
-            font-size: 35px;
+            font-size: 40px;
         }
 
         .about-intro h2:after {
@@ -111,7 +111,7 @@
             left: 0;
             width: 150px;
             height: 3px;
-            background: #b381c8;
+            background: #ea51a1;
             margin-top: 20px;
         }
 
@@ -157,24 +157,9 @@
             background: linear-gradient(to bottom, #f9f9f9 0%, #fff 100%);
         }
 
-        .teachers-section h2 {
-            text-align: center;
-            color: #4c5a8b;
-            font-weight: 700;
-            margin-bottom: 60px;
-            position: relative;
-            font-size: 35px;
-        }
-
-        .teachers-section h2:after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background: #b381c8;
+        .teachers-section .section-heading .line-dec {
+            margin: 20px auto 80px;
+            width: 150px;
         }
 
         .teacher-card {
@@ -209,40 +194,9 @@
             transform: scale(1.05);
         }
 
-        .teacher-info {
-            padding: 25px;
-            position: relative;
-        }
-
-        .teacher-name {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #4c5a8b;
-            margin-bottom: 5px;
-        }
-
-        .teacher-title {
-            color: #b381c8;
-            font-weight: 600;
-            margin-bottom: 15px;
-            display: block;
-        }
-
-        .teacher-bio {
-            color: #666;
-            margin-bottom: 20px;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        .teacher-social {
-            display: flex;
-            gap: 15px;
-        }
-
         .teacher-social a {
-            width: 35px;
-            height: 35px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             background: #f0f0f0;
             display: flex;
@@ -277,30 +231,17 @@
             background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
         }
 
-        .values-section h2 {
-            text-align: center;
-            color: #4c5a8b;
-            font-weight: 700;
-            position: relative;
-            font-size: 35px;
+        .values-section .section-heading .line-dec {
+            margin: 20px auto 0;
+            width: 150px;
         }
-        .values-section .col-lg-12 p {
+
+        .values-section .section-heading p {
             text-align: center;
             color: #666666;
             position: relative;
             font-size: 18px;
             margin: 30px 0 40px 0;
-        }
-
-        .values-section h2:after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background: #b381c8;
         }
 
         .value-card {
@@ -323,7 +264,7 @@
             left: 0;
             width: 100%;
             height: 5px;
-            background: linear-gradient(to right, #4c5a8b, #b381c8);
+            background: linear-gradient(to right, #4c5a8b, #ea51a1);
             z-index: 2;
         }
 
@@ -335,7 +276,7 @@
         .value-icon {
             width: 80px;
             height: 80px;
-            background: linear-gradient(135deg, #4c5a8b 0%, #b381c8 100%);
+            background: linear-gradient(135deg, #4c5a8b 0%, #ea51a1 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -435,20 +376,25 @@
             left: 0;
             width: 5px;
             height: 100%;
-            background: linear-gradient(to bottom, #4c5a8b, #b381c8);
+            background: linear-gradient(to bottom, #4c5a8b, #ea51a1);
         }
 
         #about .section-heading .line-dec {
             height: 3px;
-            background-color: #b381c8;
+            width: 250px;
+            background-color: #ea51a1;
         }
 
-        .section-heading h4 {
-            font-weight: bolder;
-            font-size: 35px;
-            color: #4a51a1;
+        /*.section-heading h4 {
+            font-weight: 700;
+            font-size: 40px;
+            color: #4c5a8b;
             text-transform: uppercase;
         }
+
+        .section-heading h4 br {
+            padding-top: 20px;
+        }*/
     </style>
 </head>
 
@@ -503,8 +449,8 @@
                         <li class="scroll-to-section"><a href="../index.html">Trang Chủ</a></li>
                         <li class="scroll-to-section active"><a href="about-us.html">Về Chúng Tôi</a></li>
                         <li class="scroll-to-section"><a href="../index.html#services">Khóa Học</a></li>
-                        <li class="scroll-to-section"><a href="../index.html#study-france">Kho Tài Liệu</a></li>
-                        <li class="scroll-to-section"><a href="../index.html#study-abroad">Du học Pháp</a></li>
+                        <li class="scroll-to-section"><a href="nguon-hoc.html">Kho Tài Liệu</a></li>
+                        <li class="scroll-to-section"><a href="#">Du học Pháp</a></li>
                     </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -571,7 +517,10 @@
                          data-wow-delay="0.5s">
                         <div class="about-right-content">
                             <div class="section-heading">
-                                <h4>Founder Ngô Quỳnh Trang</h4>
+                                <h4>
+                                    Founder<br>
+                                    <em>Ngô Quỳnh Trang</em>
+                                </h4>
                                 <div class="line-dec"></div>
                             </div>
                             <p style="margin: 20px 0 10px 0;"><span style="font-weight: 600">Pháp ngữ Troong tự hào là trung tâm giảng dạy tiếng Pháp
@@ -641,8 +590,12 @@
 <section class="values-section">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="wow fadeInDown" data-wow-delay="0.3s">Giá Trị Cốt Lõi</h2>
+            <div class="col-lg-12 section-heading text-center">
+                <h4>
+                    <em>Giá Trị Cốt Lõi</em>
+                </h4>
+                <div class="line-dec"></div>
+
                 <p class="wow fadeIn" data-wow-delay="0.5s" style="max-width: 700px; margin: 0 auto 50px;">Những nguyên
                     tắc và triết lý giáo dục tạo nên sự khác biệt của Pháp Ngữ Troong</p>
             </div>
@@ -722,11 +675,11 @@
 <section class="teachers-section">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
-                <h2 class="wow fadeInDown" data-wow-delay="0.3s">Đội Ngũ Giáo Viên</h2>
-                <!--<p class="text-center wow fadeIn" data-wow-delay="0.5s" style="max-width: 700px; margin: 0 auto 50px;">
-                    Đội ngũ giáo viên tận tâm, giàu kinh nghiệm với trình độ chuyên môn cao và phương pháp giảng dạy
-                    sáng tạo</p>-->
+            <div class="col-lg-12 section-heading text-center">
+                <h4>
+                    <em>Đội Ngũ Giáo Viên</em>
+                </h4>
+                <div class="line-dec"></div>
             </div>
         </div>
 
@@ -788,23 +741,6 @@
     </div>
 </section>
 
-<!-- CTA Section -->
-<section class="contact" id="contact" style="padding: 80px 0;">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h2 class="wow fadeInDown animated" data-wow-delay="0.3s"
-                    style="visibility: visible;-webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;">
-                    Giá Trị Cốt Lõi
-                </h2>
-                <p class="text-center wow fadeIn" data-wow-delay="0.5s" style="max-width: 700px; margin: 0 auto 50px;">
-                    Những nguyên tắc và triết lý giáo dục tạo nên sự khác biệt của Pháp Ngữ Troong
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
 <footer>
     <div class="container">
         <div class="row">
@@ -827,9 +763,6 @@
 <script src="../assets/js/form-request.js"></script>
 <script src="../assets/js/course-details.js"></script>
 <script src="../assets/js/data-teachers.js"></script>
-
-<script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
-
 
 <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
 
