@@ -2,7 +2,8 @@
 
 /* Phần giới thiệu */
  .about-hero {
-     background: linear-gradient(135deg, #4c5a8b 30%, #ea51a1 100%);            padding: 120px 0 80px;
+     background: linear-gradient(135deg, #4c64cc 20%, #8d89ba 100%);
+     padding: 120px 0 80px;
      color: white;
      position: relative;
      overflow: hidden;
@@ -61,11 +62,11 @@
     left: 0;
     width: 5px;
     height: 100%;
-    background: linear-gradient(to bottom, #4c5a8b, #ea51a1);
+    background: linear-gradient(to bottom, #4c5a89, #e84797);
 }
 
 .about-intro h2 {
-    color: #4c5a8b;
+    color: #4c5a89;
     font-weight: 700;
     margin-bottom: 30px;
     padding-bottom: 15px;
@@ -81,7 +82,7 @@
     left: 0;
     width: 150px;
     height: 3px;
-    background: #ea51a1;
+    background: #e84797;
     margin-top: 20px;
 }
 
@@ -112,13 +113,13 @@
 .stat-number {
     font-size: 3rem;
     font-weight: 700;
-    color: #4c5a8b;
+    color: #e84797;
     margin-bottom: 10px;
 }
 
 .stat-label {
     font-size: 1.1rem;
-    color: #666;
+    color: #4a51a1;
 }
 
 /* Phần giáo viên */
@@ -149,7 +150,7 @@
     padding:28px 28px 24px;
     background:
             linear-gradient(#fff,#fff) padding-box,
-            linear-gradient(135deg,#ea51a1,#4c5a8b) border-box;
+            linear-gradient(135deg,#e84797,#4c5a89) border-box;
     border-right:1px solid #eef0f6;
     position:sticky;
     /*top:90px;*/
@@ -182,13 +183,13 @@
 .td-tags{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px}
 .td-tags .tag{
     padding:6px 12px; border-radius:999px; font-size:12px; font-weight:600;
-    border:1px solid #e7e9f2; background:#fafafe; color:#4c5a8b;
+    border:1px solid #e7e9f2; background:#fafafe; color:#4c5a89;
 }
 
 /* INFO LIST */
 .td-info{display:grid; row-gap:12px}
 .td-info .item{display:flex; gap:12px; align-items:flex-start}
-.td-info .item i{min-width:22px; color:#4c5a8b; margin-top:2px; opacity:.9}
+.td-info .item i{min-width:22px; color:#4c5a89; margin-top:2px; opacity:.9}
 .td-info .item b{display:block; color:#111}
 .td-info .item span{color:#525a70}
 
@@ -220,7 +221,7 @@
 .tcard.active{
     background:
             linear-gradient(#fff,#fff) padding-box,
-            linear-gradient(135deg,#ea51a1,#4c5a8b) border-box;
+            linear-gradient(135deg,#e84797,#4c5a89) border-box;
     border:2px solid transparent;
     box-shadow:0 18px 40px rgba(234,81,161,.12);
 }
@@ -245,7 +246,7 @@
 .pag-btn:disabled{opacity:.55; cursor:default; transform:none}
 .pag-num.active{
     color:#fff; border-color:transparent;
-    background:linear-gradient(135deg,#ea51a1,#4c5a8b);
+    background: linear-gradient(135deg, #4c64cc, #8d89ba);
 }
 
 /* ====== RESPONSIVE ====== */
@@ -318,7 +319,7 @@
 
 .values-section .section-heading p {
     text-align: center;
-    color: #4c5a8b;
+    color: #4a51a1;
     position: relative;
     font-size: 18px;
     margin: 30px 0 40px 0;
@@ -344,7 +345,7 @@
     left: 0;
     width: 100%;
     height: 5px;
-    background: linear-gradient(to right, #4c5a8b, #ea51a1);
+    background: linear-gradient(to right, #4c64cc, #8d89ba);
     z-index: 2;
 }
 
@@ -356,7 +357,7 @@
 .value-icon {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, #4c5a8b 0%, #ea51a1 100%);
+    background: linear-gradient(135deg, #4c64cc 0%, #8d89ba 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -369,7 +370,7 @@
 .value-title {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #4c5a8b;
+    color: #4c5a89;
     margin-bottom: 15px;
 }
 
@@ -449,20 +450,20 @@
     overflow: hidden;
 }
 
-#about .container:before {
+/*#about .container:before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 5px;
     height: 100%;
-    background: linear-gradient(to bottom, #4c5a8b, #ea51a1);
-}
+    background: linear-gradient(to bottom, #4c5a89, #e84797);
+}*/
 
 #about .section-heading .line-dec {
     height: 3px;
     width: 250px;
-    background-color: #ea51a1;
+    background-color: #e84797;
 }
 
 .section-heading h4 {
