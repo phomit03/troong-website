@@ -1155,6 +1155,9 @@ About Style
 
 .about-left-image img {
     margin-right: 45px;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .about-right-content p {
