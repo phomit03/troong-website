@@ -16,20 +16,24 @@ const COURSE_DETAILS = {
     },
     "beginner": {
         title: "Khoá Sơ Cấp",
-        level: "A0 – A1.1",
-        sessions: 15,
+        tracks: [
+            {level: "A0 – A1.1", sessions: 15},
+            {level: "A1.2 - A2.1", sessions: 15}
+        ],
         outcomes: [
             "Hiểu và áp dụng linh hoạt các quy tắc ngữ pháp quan trọng ở trình độ A1 và A2: chia động từ, thì cơ bản, và cấu trúc câu..., giúp xây dựng câu nói chính xác và tự nhiên.",
             "Thực hành giao tiếp thực tế với 9 chủ đề phổ biến: giới thiệu bản thân, gia đình, hỏi đường, hỏi giờ, nhà hàng, mua sắm, công việc, và du lịch,... nâng cao phản xạ nói trong các tình huống hàng ngày.",
             "Phát âm chuẩn như người bản xứ, nghe-nói lưu loát: Nhờ phương pháp giảng dạy tập trung vào phát âm và thực hành liên tục, học viên sẽ phát âm rõ ràng, tự tin, đồng thời cải thiện khả năng nghe và phản xạ nói nhanh nhạy.",
             "Nắm bắt ý chính từ các cuộc trò chuyện đơn giản, hiểu và phản hồi hiệu quả trong các ngữ cảnh quen thuộc, đáp ứng đầy đủ tiêu chuẩn A1-A2."
         ],
-        progress: "15%",
+        progress: "38%",
     },
     "intermediate": {
         title: "Khoá Trung Cấp",
-        level: "A2.2 – B1.1",
-        sessions: 17,
+        tracks: [
+            {level: "A2.1 – A2.2", sessions: 17},
+            {level: "A2.2 - B1.1", sessions: 17}
+        ],
         outcomes: [
             "Làm chủ các cấu trúc ngữ pháp từ trung cấp đến khá, bao gồm chia động từ phức tạp và các thì nâng cao",
             "Tự tin sử dụng tiếng Pháp nâng cao trong các chủ đề giao tiếp phức tạp thông qua luyện tập thực tế mỗi buổi học",
@@ -39,12 +43,14 @@ const COURSE_DETAILS = {
             "Luyện tập phát âm chuẩn như người bản xứ thông qua bài tập đọc theo đoạn hội thoại",
             "Đủ khả năng tham gia thi thử các chứng chỉ DELF, TCF A2 và ôn luyện đầu vào trình độ A2, B1"
         ],
-        progress: "50%",
+        progress: "59%",
     },
     "advanced": {
         title: "Khoá Nâng Cao",
-        level: "B1.2 - B2.1",
-        sessions: 17,
+        tracks: [
+            {level: "B1.1 - B1.2", sessions: 20},
+            {level: "B1.2 - B2.1", sessions: 20}
+        ],
         outcomes: [
             "Thành thạo các cấu trúc ngữ pháp phức tạp như các thì nâng cao, câu điều kiện, và câu bị động, giúp xây dựng câu chính xác, tự nhiên trong giao tiếp và viết lách, đạt trình độ trung cấp chỉ sau 5 tháng học tập chăm chỉ",
             "Tự tin giao tiếp cơ bản chỉ sau 1 tháng, phản ứng linh hoạt trong các tình huống đời thường như hỏi đường, đặt lịch hẹn, hoặc thảo luận ngắn gọn",
@@ -55,7 +61,7 @@ const COURSE_DETAILS = {
             "Sửa phát âm cẩn thận, kết hợp bài tập đọc theo hội thoại từ giáo trình để phát âm chuẩn, ngữ điệu tự nhiên như người bản xứ",
             "Sau khóa học, học viên đủ năng lực thi thử trong kỳ thi DELF, TCF trình độ B1-B2, đồng thời được hướng dẫn chi tiết để ôn luyện cho các kỳ thi chính thức"
         ],
-        progress: "75%",
+        progress: "81%",
     },
     "master": {
         title: "Khoá Làm Chủ",
@@ -95,7 +101,7 @@ const COURSE_DETAILS = {
             "- Viết: xây dựng bài viết mạch lạc, đúng cấu trúc và nắm được các dạng bài viết hay gặp khi đi thi\n" +
             "- Nói: phát biểu rõ ràng, logic, tự tin"
         ],
-        progress: "70%",
+        progress: "74%",
     },
     "tef": {
         title: "Khóa ôn thi TEF (TEFAQ)",
@@ -113,7 +119,7 @@ const COURSE_DETAILS = {
             "- Viết: xây dựng bài viết mạch lạc, đúng cấu trúc và nắm được các dạng bài viết hay gặp khi đi thi\n" +
             "- Nói: phát biểu rõ ràng, logic, tự tin"
         ],
-        progress: "70%",
+        progress: "74%",
     },
     "delf": {
         title: "Khoá ôn thi DELF",
@@ -131,7 +137,7 @@ const COURSE_DETAILS = {
             "- Viết: xây dựng bài viết mạch lạc, đúng cấu trúc và nắm được các dạng bài viết hay gặp khi đi thi\n" +
             "- Nói: phát biểu rõ ràng, logic, tự tin"
         ],
-        progress: "70%",
+        progress: "74%",
     },
 
 
