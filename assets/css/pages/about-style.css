@@ -19,7 +19,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../../../../assets/images/dots-pattern.jpg');
+    background-image: url('../../images/dots-pattern.jpg');
     opacity: 0.1;
     z-index: 1;
 }

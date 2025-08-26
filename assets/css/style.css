@@ -1167,6 +1167,7 @@ About Style
     width: 100%;
     height: auto;
     display: block;
+    border-radius: 15px;
 }
 
 .about-right-content p {
@@ -1178,7 +1179,48 @@ About Style
     padding-left: 0;
 }
 
+.about-right-content .button-about-wrapper .button-about{
+    position: relative;
+    display: inline-block;
+    padding: 8px 36px;
+    border-radius: 50px;
+    color: #4c5a89;
+    border: 1px solid #4c5a89;
+    background: none;
+    font-size: 16px;
+    transition: all .3s ease;
+    align-items: center;
+    text-align: left;
+    z-index: 0;
+}
+.about-right-content .button-about-wrapper .button-about:hover {
+    background:
+            linear-gradient(135deg, #4c64cc, #8d89ba) padding-box,
+            linear-gradient(135deg, #4c64cc, #8d89ba) border-box;
+    color: #fff;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 6px 14px rgba(76, 90, 139, .28);
+}
+
+/* active: nhấn xuống */
+.about-right-content .button-about-wrapper .button-about:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(76, 90, 139, .25);
+}
+
+/* focus: thêm viền sáng */
+.about-right-content .button-about-wrapper .button-about:focus-visible {
+    outline: 3px solid rgba(183, 228, 249, .5);
+    outline-offset: 3px;
+}
+
 /* === RESPONSIVE ABOUT START === */
+@media (max-width: 992px) {
+    .about-right-content .button-about-wrapper {
+        text-align: center;
+    }
+}
+
 @media (min-width: 992px) {
     .about-right-content {
         margin-left: 20px;
@@ -2071,10 +2113,10 @@ responsive
         display: none;
     }
 
-    .main-banner .right-image {
+    /*.main-banner .right-image {
         margin: 30px auto 0px auto;
         text-align: center;
-    }
+    }*/
 
     .features-item {
         margin-bottom: 45px;
@@ -2089,8 +2131,7 @@ responsive
         margin-bottom: 30px;
     }
 
-    .about-left-image img {
-
+    .main-banner .right-image, .about-left-image img {
         display: none;
     }
 
@@ -2721,13 +2762,13 @@ responsive
     }
 }
 
-@media only screen and (min-width: 576px) and (max-width: 1200px) {
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
     .main-banner .left-content h1 {
         font-size: 5rem;
     }
 
     .main-banner .left-content .troong-name {
-        font-size: 5rem;
+        font-size: 4.5rem;
     }
 
     .main-banner .left-content {
@@ -2736,6 +2777,24 @@ responsive
 
     .main-banner .left-content p {
         font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 1023px) {
+    .main-banner .left-content h1 {
+        font-size: 6rem;
+    }
+
+    .main-banner .left-content .troong-name {
+        font-size: 5.5rem;
+    }
+
+    .main-banner .left-content {
+        padding-right: 50px;
+    }
+
+    .main-banner .left-content p {
+        font-size: 20px;
     }
 }
 
