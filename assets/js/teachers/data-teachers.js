@@ -1,191 +1,188 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // ====== DATA ======
-    const teachers = [
-        { id: 1,  name: "Lê Phạm Hoàng Giang",   image: "assets/images/teacher/GV-Hoàng-Giang.jpg" },
-        { id: 2,  name: "Hoàng Hồng Linh",       image: "assets/images/teacher/GV-Hồng-Linh.jpg" },
-        { id: 3,  name: "Phạm Thị Kim Anh",      image: "assets/images/teacher/GV-Kim-Anh.jpg" },
-        { id: 4,  name: "Tôn Nữ Minh Thư",       image: "assets/images/teacher/GV-Minh-Thư.jpg" },
-        { id: 5,  name: "Lê Mỹ An",              image: "assets/images/teacher/GV-Mỹ-An.jpg" },
-        { id: 6,  name: "Nguyễn Thị Ngọc Nghi",  image: "assets/images/teacher/GV-Ngọc-Nghi.jpg" },
-        { id: 7,  name: "Nguyễn Thị Thơm",       image: "assets/images/teacher/GV-Thơm-Nguyễn.jpg" },
-        { id: 8,  name: "Phạm Hồng Thiên Phúc",  image: "assets/images/teacher/GV-Thiên-Phúc.jpg" },
-        { id: 9,  name: "Nguyễn Thị Thu Uyên",   image: "assets/images/teacher/GV-Thu-Uyên.jpg" },
-        { id: 10, name: "Nguyễn Trà My",         image: "assets/images/teacher/GV-Trà-My.jpg" }
-    ];
+// assets/js/data-teachers.js
 
-    // ====== DOM ======
-    const stackContainer = document.querySelector('.teacher-stack');
-    const thumbnailContainer = document.querySelector('.teacher-thumbnail-list');
-    const nextBtn = document.querySelector('.stack-next');
-    const prevBtn = document.querySelector('.stack-prev');
+// ======= DATA (ví dụ) =======
+window.TEACHERS = [
+    {
+        id: 1,
+        name: "Lê Phạm Hoàng Giang",
+        role: "Giáo viên tại Pháp Ngữ Troong",
+        image: "assets/images/teacher-avatar2/2.png",
+        badges: ["8.5 IELTS Overall", "Thạc sĩ Giảng dạy tiếng Anh", "Á khoa Ngôn ngữ Anh"]
+    },
+    {
+        id: 2,
+        name: "Hoàng Hồng Linh",
+        role: "Giáo viên tại Pháp Ngữ Troong",
+        image: "assets/images/teacher-avatar2/6.png",
+        badges: ["9.0 IELTS Overall", "8.5 IELTS Speaking"]
+    },
+    {
+        id: 3,
+        name: "Phạm Thị Kim Anh",
+        role: "Giáo viên tại Pháp Ngữ Troong",
+        image: "assets/images/teacher-avatar2/1.png",
+        badges: ["8.5 IELTS Overall", "Thạc sĩ Giảng dạy tiếng Anh", "Á khoa Ngôn ngữ Anh"]
+    },
+    {
+        id: 4,
+        name: "Tôn Nữ Minh Thư",
+        role: "Giáo viên tại Pháp Ngữ Troong",
+        image: "assets/images/teacher-avatar2/10.png",
+        badges: ["9.0 IELTS Overall", "8.5 IELTS Speaking"]
+    },
+    {
+        id: 5,
+        name: "Lê Mỹ An",
+        role: "Giáo viên tại Pháp Ngữ Troong",
+        image: "assets/images/teacher-avatar2/4.png",
+        badges: ["9.0 IELTS Overall", "8.5 IELTS Speaking"]
+    },
+    {
+        id: 6,
+        name: "Nguyễn Thị Ngọc Nghi",
+        role: "Giáo viên tại Pháp Ngữ Troong",
+        image: "assets/images/teacher-avatar2/8.png",
+        badges: ["8.5 IELTS Overall", "Thạc sĩ Giảng dạy tiếng Anh", "Á khoa Ngôn ngữ Anh"]
+    },
+    {
+        id: 7,
+        name: "Phạm Hồng Thiên Phúc",
+        role: "Giáo viên tại Pháp Ngữ Troong",
+        image: "assets/images/teacher-avatar2/3.png",
+        badges: ["9.0 IELTS Overall", "8.5 IELTS Speaking"]
+    },
+    {
+        id: 8,
+        name: "Phạm Bá Tùng",
+        role: "Giáo viên tại Pháp Ngữ Troong",
+        image: "assets/images/teacher-avatar2/11.png",
+        badges: ["9.0 IELTS Overall", "8.5 IELTS Speaking"]
+    },
+    {
+        id: 9,
+        name: "Nguyễn Trà My",
+        role: "Giáo viên tại Pháp Ngữ Troong",
+        image: "assets/images/teacher-avatar2/5.png",
+        badges: ["9.0 IELTS Overall", "8.5 IELTS Speaking"]
+    },
+    {
+        id: 10,
+        name: "Nguyễn Thị Thơm",
+        role: "Giáo viên tại Pháp Ngữ Troong",
+        image: "assets/images/teacher-avatar2/9.png",
+        badges: ["9.0 IELTS Overall", "8.5 IELTS Speaking"]
+    },
+    {
+        id: 11,
+        name: "Nguyễn Thị Hồng Vân",
+        role: "Giáo viên tại Pháp Ngữ Troong",
+        image: "assets/images/teacher-avatar2/7.png",
+        badges: ["9.0 IELTS Overall", "8.5 IELTS Speaking"]
+    }
+];
 
-    // ====== STATE ======
-    let currentIndex = 0;
-    let autoSlideInterval = null;
+// ======= VIEW/LOGIC =======
+(function(){
+    const rail     = document.getElementById('teacherRail');
+    const btnL     = document.getElementById('tPrev');
+    const btnR     = document.getElementById('tNext');
+    const viewport = document.querySelector('.teacher-viewport');
+    const data     = (window.TEACHERS || []);
 
-    // ====== CONFIG / RESPONSIVE ======
-    function getVisibleCount() {
-        const w = window.innerWidth;
-        if (w >= 1200) return 9;   // desktop
-        if (w >= 992)  return 7;   // tablet lớn
-        if (w >= 768)  return 5;   // tablet nhỏ
-        return 3;                  // mobile
+    // Chọn icon theo nội dung badge
+    function iconFor(bText) {
+        const t = (bText || "").toLowerCase();
+        if (t.includes('ielts')) return 'fa-language';           // IELTS
+        if (t.includes('thạc sĩ') || t.includes('master')) return 'fa-graduation-cap'; // MSc/Master
+        if (t.includes('cử nhân') || t.includes('bachelor')) return 'fa-user-graduate';
+        if (t.includes('giảng dạy') || t.includes('teaching')) return 'fa-chalkboard-teacher';
+        if (t.includes('giải') || t.includes('award')) return 'fa-award';
+        if (t.match(/\b(8|8\.5|9|9\.0)\b/)) return 'fa-star';    // điểm số nổi bật
+        return 'fa-certificate';                                  // mặc định
     }
 
-    // ====== UTILS ======
-    function getStartIndex() {
-        return (currentIndex - Math.floor(getVisibleCount() / 2) + teachers.length) % teachers.length;
+    // render card
+    function cardHtml(t){
+        const badgeHtml = (t.badges||[]).map(b=>{
+            const icon = iconFor(b);
+            return `<li><i class="fa ${icon}" aria-hidden="true"></i><span>${b}</span></li>`;
+        }).join("");
+        return `
+      <article class="teacher-card">
+        <div class="teacher-photo">
+          <img src="${t.image}" alt="${t.name}">
+          <div class="teacher-overlay">
+            <ul class="teacher-badges">${badgeHtml}</ul>
+          </div>
+        </div>
+        <div class="teacher-meta">
+          <div class="teacher-name">${t.name}</div>
+          <div class="teacher-role">${t.role||""}</div>
+        </div>
+      </article>`;
     }
 
-    function clampVisibleCount(len) {
-        return Math.min(len, getVisibleCount());
+    rail.innerHTML = data.map(cardHtml).join("");
+
+    /* ===== kéo chuột + momentum ===== */
+    let isDown=false, startX=0, startLeft=0, lastX=0, velocity=0, rAF;
+    const startDrag = (x)=>{ isDown=true; rail.classList.add('grabbing'); startX=x; startLeft=rail.scrollLeft; lastX=x; cancelMomentum(); };
+    const onMove = (x)=>{ if(!isDown) return; const dx=x-startX; rail.scrollLeft = startLeft - dx; velocity = x - lastX; lastX = x; };
+    const endDrag = ()=>{ if(!isDown) return; isDown=false; rail.classList.remove('grabbing'); momentum(); };
+
+    rail.addEventListener('mousedown', e=> startDrag(e.clientX));
+    window.addEventListener('mousemove', e=> onMove(e.clientX));
+    window.addEventListener('mouseup',   endDrag);
+    rail.addEventListener('mouseleave',  endDrag);
+
+    rail.addEventListener('touchstart', e=> startDrag(e.touches[0].clientX), {passive:true});
+    rail.addEventListener('touchmove',  e=> onMove(e.touches[0].clientX), {passive:true});
+    rail.addEventListener('touchend',   endDrag, {passive:true});
+
+    function momentum(){
+        const decay = 0.95;
+        const step = ()=>{
+            rail.scrollLeft -= velocity;
+            velocity *= decay;
+            if (Math.abs(velocity) > 0.5) rAF = requestAnimationFrame(step);
+        };
+        rAF = requestAnimationFrame(step);
     }
+    function cancelMomentum(){ if(rAF) cancelAnimationFrame(rAF); }
 
-    // ====== RENDER STACK (trên) ======
-    function createStack() {
-        if (!stackContainer) return;
-        stackContainer.innerHTML = '';
+    /* ===== bước cuộn theo 1 card (ổn định cho 4/3/2/1 cột) ===== */
+    const stepBy = ()=> {
+        const card = rail.querySelector('.teacher-card');
+        if(!card) return 300;
+        const gap = parseFloat(getComputedStyle(rail).gap || 16);
+        return card.getBoundingClientRect().width + gap;
+    };
 
-        const displayCount = clampVisibleCount(teachers.length);
-        const startIndex = getStartIndex();
+    /* ===== wrap-around (vòng tròn) ===== */
+    const atStart = ()=> rail.scrollLeft <= 1;
+    const atEnd   = ()=> (rail.scrollLeft + rail.clientWidth) >= (rail.scrollWidth - 1);
 
-        for (let i = 0; i < displayCount; i++) {
-            const teacherIndex = (startIndex + i) % teachers.length;
-            const t = teachers[teacherIndex];
-
-            const item = document.createElement('div');
-            item.className = 'teacher-stack-item';
-            item.innerHTML = `
-                    <div class="teacher-avatar">
-                      <img src="${t.image}" alt="${t.name}">
-                    </div>
-                  `;
-            stackContainer.appendChild(item);
+    btnL?.addEventListener('click', ()=>{
+        if(atStart()){
+            rail.scrollLeft = rail.scrollWidth - rail.clientWidth; // từ đầu -> nhảy cuối
+        } else {
+            rail.scrollBy({left:-stepBy(), behavior:'smooth'});
         }
-
-        renderThumbnailsWindow(); // khớp "cửa sổ" phía dưới
-    }
-
-    // ====== RENDER THUMBNAILS WINDOW (dưới) ======
-    function renderThumbnailsWindow() {
-        if (!thumbnailContainer) return;
-        thumbnailContainer.innerHTML = '';
-
-        const displayCount = clampVisibleCount(teachers.length);
-        const startIndex = getStartIndex();
-
-        for (let i = 0; i < displayCount; i++) {
-            const teacherIndex = (startIndex + i) % teachers.length;
-            const t = teachers[teacherIndex];
-
-            const thumb = document.createElement('div');
-            thumb.className = 'teacher-thumbnail text-center';
-            thumb.dataset.index = teacherIndex;
-
-            const isActive = teacherIndex === currentIndex;
-
-            thumb.innerHTML = `
-                  <img
-                    src="${t.image}"
-                    alt="${t.name}"
-                    class="rounded-circle ${isActive ? 'is-active' : ''}"
-                    style="width:70px;height:70px;object-fit:cover;"
-                  >
-                  <p style="font-size:13px;margin-top:5px;color:#4c5a8b;font-weight:600;">${t.name}</p>
-                `;
-
-            if (isActive) thumb.classList.add('active-thumb');
-
-            thumb.addEventListener('click', () => {
-                currentIndex = teacherIndex;   // nhảy đúng index thực
-                createStack();
-                resetAutoSlide();
-            });
-
-            thumbnailContainer.appendChild(thumb);
-        }
-    }
-
-    // ====== NAVIGATION ======
-    function nextTeacher() {
-        currentIndex = (currentIndex + 1) % teachers.length;
-        createStack();
-    }
-
-    function prevTeacher() {
-        currentIndex = (currentIndex - 1 + teachers.length) % teachers.length;
-        createStack();
-    }
-
-    // ====== AUTOSLIDE ======
-    function startAutoSlide() {
-        stopAutoSlide();
-        autoSlideInterval = setInterval(nextTeacher, 4000);
-    }
-
-    function stopAutoSlide() {
-        if (autoSlideInterval) {
-            clearInterval(autoSlideInterval);
-            autoSlideInterval = null;
-        }
-    }
-
-    function resetAutoSlide() {
-        startAutoSlide();
-    }
-
-    // ====== EVENTS ======
-    if (nextBtn) nextBtn.addEventListener('click', () => { nextTeacher(); resetAutoSlide(); });
-    if (prevBtn) prevBtn.addEventListener('click', () => { prevTeacher(); resetAutoSlide(); });
-
-    // Hover để tạm dừng auto (desktop)
-    if (stackContainer) {
-        stackContainer.addEventListener('mouseenter', stopAutoSlide);
-        stackContainer.addEventListener('mouseleave', startAutoSlide);
-    }
-
-    // Vuốt (swipe) chuyển giáo viên (mobile)
-    function bindSwipe(el) {
-        if (!el) return;
-        let startX = 0, endX = 0;
-
-        el.addEventListener('touchstart', (e) => {
-            startX = e.changedTouches[0].clientX;
-        }, { passive: true });
-
-        el.addEventListener('touchend', (e) => {
-            endX = e.changedTouches[0].clientX;
-            const dx = endX - startX;
-            if (Math.abs(dx) > 40) {
-                if (dx < 0) nextTeacher(); else prevTeacher();
-                resetAutoSlide();
-            }
-        }, { passive: true });
-    }
-    bindSwipe(stackContainer);
-    bindSwipe(thumbnailContainer);
-
-    // Responsive: render lại khi đổi kích thước
-    let resizeTimer;
-    window.addEventListener('resize', () => {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(() => {
-            createStack(); // re-render theo visible count mới
-        }, 150);
     });
 
-    // ====== SAFETY: set overflow hidden để che phần tràn (nếu CSS chưa có) ======
-    if (stackContainer) {
-        stackContainer.style.overflow = 'hidden';
-        stackContainer.style.position = 'relative';
-    }
-    if (thumbnailContainer) {
-        thumbnailContainer.style.overflow = 'hidden';
-        thumbnailContainer.style.position = 'relative';
-        thumbnailContainer.style.flexWrap = 'nowrap';
-    }
+    btnR?.addEventListener('click', ()=>{
+        if(atEnd()){
+            rail.scrollLeft = 0; // từ cuối -> nhảy đầu
+        } else {
+            rail.scrollBy({left:+stepBy(), behavior:'smooth'});
+        }
+    });
 
-    // ====== INIT ======
-    createStack();
-    startAutoSlide();
-});
+    /* ===== auto-play 4s, dừng khi hover viewport ===== */
+    let timer;
+    const startAuto = ()=> { timer = setInterval(()=> btnR?.click(), 1000); };
+    const stopAuto  = ()=> { if(timer) clearInterval(timer); };
+    startAuto();
+    viewport?.addEventListener('mouseenter', stopAuto, {passive:true});
+    viewport?.addEventListener('mouseleave', startAuto, {passive:true});
+})();

@@ -2,8 +2,8 @@
 const TEACHERS = [
     {
         id: 'le-pham-hoang-giang', name: 'Lê Phạm Hoàng Giang', role: 'Giáo viên',
-        avatar: '../assets/images/teacher-avatar/Hoàng-Giang.jpg',
-        cover: '../assets/images/teacher/GV-Hoàng-Giang.jpg',
+        avatar: '../assets/images/teacher-avatar2/2.png',
+        cover: '../assets/images/teacher/2.png',
         tags: ['10 năm kinh nghiệm', 'Chuyên TOEIC/TCF'],
         info: [
             {icon: 'fa-solid fa-graduation-cap', title: 'Học vị', text: 'Thạc sĩ Ngôn ngữ Pháp - ĐH Sư Phạm Hà Nội'},
@@ -21,8 +21,8 @@ const TEACHERS = [
     },
     {
         id: 'hoang-hong-linh', name: 'Hoàng Hồng Linh', role: 'Giáo viên',
-        avatar: '../assets/images/teacher-avatar/Hồng-Linh.jpg',
-        cover: '../assets/images/teacher/GV-Hồng-Linh.jpg',
+        avatar: '../assets/images/teacher-avatar2/6.png',
+        cover: '../assets/images/teacher/10.png',
         tags: ['DELF C1', 'Du học Pháp'],
         info: [
             {icon: 'fa-solid fa-user-graduate', title: 'Cử nhân', text: 'Ngôn ngữ & Văn hoá Pháp - ĐH Quốc Gia Hà Nội'},
@@ -31,8 +31,8 @@ const TEACHERS = [
     },
     {
         id: 'pham-thi-kim-anh', name: 'Phạm Thị Kim Anh', role: 'Giáo viên',
-        avatar: '../assets/images/teacher-avatar/Kim-Anh.jpg',
-        cover: '../assets/images/teacher/GV-Kim-Anh.jpg',
+        avatar: '../assets/images/teacher-avatar2/1.png',
+        cover: '../assets/images/teacher/1.png',
         tags: ['Giao tiếp thực hành', 'DELF B2'],
         info: [
             {icon: 'fa-solid fa-book-open', title: 'Chuyên môn', text: 'Kỹ năng giao tiếp & phỏng vấn du học'},
@@ -41,8 +41,8 @@ const TEACHERS = [
     },
     {
         id: 'ton-nu-minh-thu', name: 'Tôn Nữ Minh Thư', role: 'Giáo viên',
-        avatar: '../assets/images/teacher-avatar/Minh-Thư.jpg',
-        cover: '../assets/images/teacher/GV-Minh-Thư.jpg',
+        avatar: '../assets/images/teacher-avatar2/10.png',
+        cover: '../assets/images/teacher/8.png',
         tags: ['IELTS 8.0 Overall', 'Song ngữ Việt – Pháp'],
         info: [
             {icon: 'fa-solid fa-award', title: 'Giải thưởng', text: 'Học bổng Erasmus Mundus'},
@@ -51,8 +51,8 @@ const TEACHERS = [
     },
     {
         id: 'le-my-an', name: 'Lê Mỹ An', role: 'Giáo viên',
-        avatar: '../assets/images/teacher-avatar/Mỹ-An.jpg',
-        cover: '../assets/images/teacher/GV-Mỹ-An.jpg',
+        avatar: '../assets/images/teacher-avatar2/4.png',
+        cover: '../assets/images/teacher/5.png',
         tags: ['Chuyên gia phát âm', '5 năm kinh nghiệm'],
         info: [
             {icon: 'fa-solid fa-microphone', title: 'Kỹ năng', text: 'Phát âm & ngữ điệu tiếng Pháp'},
@@ -61,8 +61,8 @@ const TEACHERS = [
     },
     {
         id: 'nguyen-thi-ngoc-nghi', name: 'Nguyễn Thị Ngọc Nghi', role: 'Giáo viên',
-        avatar: '../assets/images/teacher-avatar/Ngọc-Nghi.jpg',
-        cover: '../assets/images/teacher/GV-Ngọc-Nghi.jpg',
+        avatar: '../assets/images/teacher-avatar2/8.png',
+        cover: '../assets/images/teacher/4.png',
         tags: ['DELF C1', 'Chuyên luyện thi TCF/TEF'],
         info: [
             {icon: 'fa-solid fa-chalkboard-user', title: 'Kinh nghiệm', text: '7 năm giảng dạy luyện thi chứng chỉ'},
@@ -71,8 +71,8 @@ const TEACHERS = [
     },
     {
         id: 'nguyen-thi-thom', name: 'Nguyễn Thị Thơm', role: 'Giáo viên',
-        avatar: '../assets/images/teacher-avatar/Thơm-Nguyễn.jpg',
-        cover: '../assets/images/teacher/GV-Thơm-Nguyễn.jpg',
+        avatar: '../assets/images/teacher-avatar2/9.png',
+        cover: '../assets/images/teacher/7.png',
         tags: ['Du học sinh Pháp', 'Giáo viên giao tiếp'],
         info: [
             {icon: 'fa-solid fa-school', title: 'Đại học', text: 'ĐH Lyon 2, ngành Ngôn ngữ học ứng dụng'},
@@ -81,8 +81,8 @@ const TEACHERS = [
     },
     {
         id: 'pham-hong-thien-phuc', name: 'Phạm Hồng Thiên Phúc', role: 'Giáo viên',
-        avatar: '../assets/images/teacher-avatar/Thiên-Phúc.jpg',
-        cover: '../assets/images/teacher/GV-Thiên-Phúc.jpg',
+        avatar: '../assets/images/teacher-avatar2/3.png',
+        cover: '../assets/images/teacher/3.png',
         tags: ['Chuyên môn ngữ pháp', '8 năm giảng dạy'],
         info: [
             {icon: 'fa-solid fa-book', title: 'Giáo trình', text: 'Biên soạn hơn 200 tài liệu ôn luyện ngữ pháp'},
@@ -90,9 +90,9 @@ const TEACHERS = [
         ]
     },
     {
-        id: 'nguyen-thi-thu-uyen', name: 'Nguyễn Thị Thu Uyên', role: 'Giáo viên',
-        avatar: '../assets/images/teacher-avatar/Thu-Uyên.jpg',
-        cover: '../assets/images/teacher/GV-Thu-Uyên.jpg',
+        id: 'pham-ba-tung', name: 'Phạm Bá Tùng', role: 'Giáo viên',
+        avatar: '../assets/images/teacher-avatar2/11.png',
+        cover: '../assets/images/teacher/9.png',
         tags: ['Ngữ âm học', 'TCF Canada'],
         info: [
             {icon: 'fa-solid fa-microphone-lines', title: 'Nghiên cứu', text: 'Ngữ âm & phương pháp giảng dạy hiện đại'},
@@ -101,8 +101,18 @@ const TEACHERS = [
     },
     {
         id: 'nguyen-tra-my', name: 'Nguyễn Trà My', role: 'Giáo viên',
-        avatar: '../assets/images/teacher-avatar/Trà-My.jpg',
-        cover: '../assets/images/teacher/GV-Trà-My.jpg',
+        avatar: '../assets/images/teacher-avatar2/5.png',
+        cover: '../assets/images/teacher/6.png',
+        tags: ['Luyện thi TCF/TEF', 'Giao tiếp'],
+        info: [
+            {icon: 'fa-solid fa-graduation-cap', title: 'Bằng cấp', text: 'Thạc sĩ Ngôn ngữ học - Sorbonne Université'},
+            {icon: 'fa-solid fa-globe', title: 'Kinh nghiệm', text: 'Giảng dạy 6 năm tại Việt Nam & Pháp'}
+        ]
+    },
+    {
+        id: 'nguyen-thi-hong-van', name: 'Nguyễn Thị Hồng Vân', role: 'Giáo viên',
+        avatar: '../assets/images/teacher-avatar2/7.png',
+        cover: '../assets/images/teacher/11.png',
         tags: ['Luyện thi TCF/TEF', 'Giao tiếp'],
         info: [
             {icon: 'fa-solid fa-graduation-cap', title: 'Bằng cấp', text: 'Thạc sĩ Ngôn ngữ học - Sorbonne Université'},

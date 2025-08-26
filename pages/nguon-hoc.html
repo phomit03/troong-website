@@ -32,11 +32,14 @@
     <style>
         /* Hero */
         .resources-hero {
-            background: linear-gradient(135deg, #4c5a8b 30%, #ea51a1 100%);
+            background: linear-gradient(135deg, #4c64cc 20%, #8d89ba 100%);
             padding: 120px 0 80px;
             color: white;
             position: relative;
             overflow: hidden;
+            justify-content: center; /* căn giữa ngang */
+            align-items: center; /* căn giữa dọc */
+            text-align: center;
         }
 
         .resources-hero:before {
@@ -54,12 +57,13 @@
         .resources-hero-content {
             position: relative;
             z-index: 2;
-        }
+            padding: 20px;
 
+        }
         .resources-hero h1 {
             font-size: 3.5rem;
             font-weight: 800;
-            margin-bottom: 20px;
+            /*margin-bottom: 20px;*/
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
             font-family: 'Paytone One', sans-serif;
         }
@@ -76,6 +80,11 @@
             background: #f9f9f9;
         }
 
+        .news-item {
+            display: flex;
+            margin: 0 0 30px 0;
+        }
+
         .news-card {
             background: #fff;
             border-radius: 15px;
@@ -83,6 +92,9 @@
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
             margin-bottom: 30px;
             transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
 
         .news-card:hover {
@@ -98,6 +110,9 @@
 
         .news-content {
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .news-category {
@@ -107,6 +122,9 @@
             font-size: 0.85rem;
             font-weight: 600;
             margin-bottom: 8px;
+            width: auto;             /* bỏ chiếm hết ngang */
+            max-width: fit-content;
+            white-space: nowrap;
         }
 
         /* Màu đa dạng */
@@ -176,6 +194,29 @@
             color: white;
         }
 
+        @media (max-width: 992px) {
+            .resources-hero {
+                padding: 100px 0 0;
+            }
+
+            .resources-hero-content {
+                padding: 60px;
+            }
+
+            .resources-hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .resources-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .resources-hero p {
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 
@@ -247,7 +288,7 @@
 <section class="resources-hero">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 mt-lg-5 text-center resources-hero-content">
+            <div class="col-lg-12 mt-lg-5 text-center align-items-center resources-hero-content">
                 <h1 class="wow fadeInDown" data-wow-delay="0.3s">Kho Tài Liệu Nguồn Học</h1>
             </div>
         </div>
@@ -261,12 +302,11 @@
             <!-- Box 1 -->
             <div class="col-lg-4 col-md-6 news-item">
                 <div class="news-card">
-                    <img src="../assets/images/services-image.jpg" alt="Blog 1">
+                    <img src="../assets/images/nguonhoc/hoctiengphap.jpg" alt="Blog 1">
                     <div class="news-content">
-                        <span class="news-category cat-blue">Mẹo ôn thi</span>
-                        <h3 class="news-title">Chiến lược đạt DELF B2 trong 6 tháng</h3>
-                        <p class="news-description">Bí quyết học và luyện đề giúp bạn tự tin đạt chứng chỉ DELF B2 ngay từ lần thi
-                            đầu tiên...</p>
+                        <span class="news-category cat-blue">Nguồn học tiếng & tìm hiểu đất nước Pháp</span>
+                        <h3 class="news-title">📍5 kênh youtubes học tiếng Pháp giúp các françeurs vừa luyện tiếng vừa bổ sung kiến thức về đời sống - xã hội</h3>
+                        <p class="news-description">Salut, lại là Troong đây 🙆‍♀️...</p>
                     </div>
                 </div>
             </div>
@@ -274,12 +314,12 @@
             <!-- Box 2 -->
             <div class="col-lg-4 col-md-6 news-item">
                 <div class="news-card">
-                    <img src="../assets/images/services-image.jpg" alt="Blog 2">
+                    <img src="../assets/images/nguonhoc/luyendoc.jpg" alt="Blog 2">
                     <div class="news-content">
-                        <span class="news-category cat-purple">Tài liệu</span>
-                        <h3 class="news-title">Tổng hợp 50 đề thi thử TCF mới nhất</h3>
-                        <p class="news-description">Bộ tài liệu luyện thi TCF sát với đề thi thật, được biên soạn bởi đội ngũ giáo
-                            viên Troong...</p>
+                        <span class="news-category cat-purple">Tài liệu luyện đọc</span>
+                        <h3 class="news-title">4 KÊNH LUYỆN ĐỌC TIẾNG PHÁP CỰC XỊN 🌻</h3>
+                        <p class="news-description">(Đặc biệt dành cho dân ôn thi TCF/TEF/DELF/DALF)
+                            Ai cũng biết, ĐỌC HIỂU (CE) là một kĩ năng cùng quan trọng liên quan trọng liên quan đến nhiều kĩ năng NGHE-NÓI-VIẾT....</p>
                     </div>
                 </div>
             </div>
@@ -287,12 +327,11 @@
             <!-- Box 3 -->
             <div class="col-lg-4 col-md-6 news-item">
                 <div class="news-card">
-                    <img src="../assets/images/services-image.jpg" alt="Blog 3">
+                    <img src="../assets/images/nguonhoc/luyennghe.jpg" alt="Blog 3">
                     <div class="news-content">
-                        <span class="news-category cat-green">Kinh nghiệm</span>
-                        <h3 class="news-title">Chia sẻ hành trình du học Pháp</h3>
-                        <p class="news-description">Nghe câu chuyện thực tế từ cựu học viên Troong đã thành công giành học bổng và
-                            du học Pháp...</p>
+                        <span class="news-category cat-green">Nguồn luyện nghe</span>
+                        <h3 class="news-title">Đập tan nỗi sợ nghe với các trang luyện nghe tiếng Pháp 'au top' trình độ a1 - c2</h3>
+                        <p class="news-description">Mỗi ngày mình đều luyện nghe tiếng Pháp từ French audio book, bài hát, bản tin cho đến Youtube, tiktok, instagram... Và điều gì đến rồi cũng phải đến...</p>
                     </div>
                 </div>
             </div>
@@ -300,12 +339,12 @@
             <!-- Box 4 -->
             <div class="col-lg-4 col-md-6 news-item">
                 <div class="news-card">
-                    <img src="../assets/images/services-image.jpg" alt="Blog 1">
+                    <img src="../assets/images/nguonhoc/suadethi.jpg" alt="Blog 1">
                     <div class="news-content">
                         <span class="news-category cat-orange">Mẹo ôn thi</span>
-                        <h3 class="news-title">Chiến lược đạt DELF B2 trong 6 tháng</h3>
-                        <p class="news-description">Bí quyết học và luyện đề giúp bạn tự tin đạt chứng chỉ DELF B2 ngay từ lần thi
-                            đầu tiên...</p>
+                        <h3 class="news-title">Cấu trúc chi tiết đề thi TCF TP</h3>
+                        <p class="news-description">Chuyên mục thức khuya sẽ có quà xịn.
+                            Món quà dành cho các sĩ tử chuẩn bị thi TCF. Khum đâu phân tích đề chi tiết như Troong đâu nè....</p>
                     </div>
                 </div>
             </div>
@@ -313,12 +352,11 @@
             <!-- Box 5 -->
             <div class="col-lg-4 col-md-6 news-item">
                 <div class="news-card">
-                    <img src="../assets/images/services-image.jpg" alt="Blog 2">
+                    <img src="../assets/images/nguonhoc/5kenhytb-nguonhoc.jpg" alt="Blog 2">
                     <div class="news-content">
-                        <span class="news-category cat-red">Tài liệu</span>
-                        <h3 class="news-title">Tổng hợp 50 đề thi thử TCF mới nhất</h3>
-                        <p class="news-description">Bộ tài liệu luyện thi TCF sát với đề thi thật, được biên soạn bởi đội ngũ giáo
-                            viên Troong...</p>
+                        <span class="news-category cat-red">Tài liệu nguồn học</span>
+                        <h3 class="news-title">5 kênh youtubes hỗ trợ ôn thi TCF-TEF A2 -> C2 mà bạn không nên bỏ lỡ</h3>
+                        <p class="news-description">Lại thêm những nguồn học bổ ích giúp các françeurs đang ôn thi TCF-TEF thậm chí là DELF luyện các kĩ năng (nghe-nói-đọc) cực xịn không nên bỏ lỡ nha...</p>
                     </div>
                 </div>
             </div>

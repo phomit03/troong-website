@@ -94,7 +94,7 @@
 </header>
 
 <!--====== BANNER ======-->
-<div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+<section class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -139,10 +139,10 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <!--====== GIOI THIEU ======-->
-<div id="about" class="about section">
+<section id="about" class="about section">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -183,7 +183,7 @@
                                 trường đại học hàng đầu Việt Nam và Pháp, cam kết mang đến trải nghiệm học tập hiệu quả
                                 với mức học phí hợp lý nhất.
                             </p>
-                            <p style="margin: 10px 0 30px 0">
+                            <p style="margin: 10px 0 0 0">
                                 Hãy để Pháp ngữ Troong đồng hành cùng bạn, biến giấc mơ chinh phục tiếng Pháp và khám
                                 phá các quốc gia nói tiếng Pháp thành hiện thực! Liên hệ ngay để được tư vấn và đăng ký
                                 khóa học phù hợp.</p>
@@ -201,10 +201,10 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <!--====== KHÓA HOC ======-->
-<div id="services" class="services section">
+<section id="services" class="services section">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -215,7 +215,7 @@
                     </div>
             </div>
             <div class="col-lg-12 courses ">
-                <div class="container py-3">
+                <div class="container">
                     <div class="row justify-content-center align-items-stretch position-relative wow fadeInUp"
                          data-wow-duration="1s" data-wow-delay="0.5s">
                         <!-- Card Giao Tiếp -->
@@ -364,10 +364,10 @@
 
         </div>
     </div>
-</div>
+</section>
 
 <!--====== TÌM HIỂU TIẾNG PHÁP ======-->
-<div id="study-france" class="study-france section">
+<section id="study-france" class="study-france section">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -415,7 +415,7 @@
                                     cựu du học sinh của Pháp ngữ Troong.
                                 </li>
                             </ul>
-                            <p style="margin: 10px 0 30px 0">
+                            <p style="margin: 10px 0 0 0">
                                 <span>Pháp ngữ Troong</span> sẽ đồng hành cùng bạn trên từng bước hành trình khám phá và
                                 nuôi dưỡng
                                 niềm đam mê với ngôn ngữ của Molière, Victor Hugo và nhiều học giả Pháp lừng danh thế
@@ -430,10 +430,10 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <!--====== DU HỌC PHÁP ======-->
-<div id="study-abroad" class="study-abroad section">
+<section id="study-abroad" class="study-abroad section">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -459,7 +459,7 @@
                                 Troong luôn ở bên, hỗ trợ tận tâm và hiệu quả. Với đội ngũ giàu kinh nghiệm, chúng tôi
                                 đảm bảo hành trình của bạn rõ ràng, suôn sẻ và tràn đầy tự tin.
                             </p>
-                            <p style="margin: 10px 0 30px 0"><span>Hãy để Troong biến giấc mơ du học Pháp của bạn thành hiện
+                            <p style="margin: 10px 0 0 0"><span>Hãy để Troong biến giấc mơ du học Pháp của bạn thành hiện
                                 thực! Liên hệ ngay hôm nay để bắt đầu.</span></p>
                         </div>
                     </div>
@@ -482,10 +482,10 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <!--====== LIÊN HỆ CHÚNG TÔI ======-->
-<div id="contact" class="contact">
+<section id="contact" class="contact">
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-lg-6">
@@ -581,50 +581,30 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <!--====== ĐỘI NGŨ GIÁO VIÊN ======-->
-<div id="teacher-team" class="teacher-team-section wow fadeIn">
-    <!-- Phần tiêu đề -->
+<section id="teachers" class="section teachers">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-heading">
-                    <!--<h6>Về Chúng Tôi</h6>-->
-                    <h4><em>Đội Ngũ Giáo Viên&nbsp;</em> Nhà Troong</h4>
-                    <div class="line-dec"></div>
-                </div>
+        <div class="section-heading text-center">
+            <h4><em>&nbsp;Đội ngũ Giáo viên&nbsp;</em> Nhà Troong</h4>
+            <div class="line-dec"></div>
+        </div>
+
+        <div class="teacher-viewport">
+            <div class="teacher-rail" id="teacherRail">
+                <!-- JS sẽ render tối đa 5 card trong khung, dư thì kéo ngang -->
             </div>
+
+            <!-- nút điều hướng (tuỳ chọn) -->
+            <button class="teacher-nav left"  type="button" aria-label="Prev"  id="tPrev">‹</button>
+            <button class="teacher-nav right" type="button" aria-label="Next"  id="tNext">›</button>
         </div>
     </div>
-
-    <!-- Phần hiển thị giáo viên dạng stack -->
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-12">
-                <div class="teacher-stack-container">
-                    <div class="teacher-stack">
-                        <!-- Các ảnh giáo viên sẽ được thêm bằng JS -->
-                    </div>
-
-                    <!-- Nút điều khiển -->
-                    <button class="stack-nav stack-prev"><i class="fa fa-chevron-left"></i></button>
-                    <button class="stack-nav stack-next"><i class="fa fa-chevron-right"></i></button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Phần thông tin giáo viên active -->
-    <div class="container">
-        <div class="teacher-thumbnail-list d-flex justify-content-center flex-wrap gap-3 mt-4">
-            <!-- Thumbnails sẽ được thêm bằng JS -->
-        </div>
-    </div>
-</div>
+</section>
 
 <!--======  PHẢN HỒI HỌC SINH ======-->
-<div id="feedback" class="feedback-section">
+<section id="feedback" class="feedback-section">
     <div class="container">
         <div class="row">
             <div class="col-lg-12  wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.3s" style="visibility: visible;-webkit-animation-duration: 1s; -moz-animation-duration: 1s; animation-duration: 1s;-webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;">
@@ -642,180 +622,109 @@
                         <!-- Feedback Item 1 -->
                         <div class="feedback-item">
                             <div class="feedback-content">
-                                <div class="quote-icon">
-                                    <i class="fa fa-quote-left"></i>
-                                </div>
-                                <p class="feedback-text">Khóa học tại Troong giúp mình từ không biết gì tiếng Pháp đã đạt TCF B2 chỉ sau 6 tháng. Phương pháp dạy rất dễ hiểu, giáo viên nhiệt tình!</p>
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
+                                <div class="quote-icon"><i class="fa fa-quote-left"></i></div>
+                                <p class="feedback-text">Lúc mới đăng ký học ở Troong mình còn phân vân vì chưa từng học tiếng Pháp bao giờ. Sau vài buổi, mình nhận ra giáo trình ở đây rất dễ theo, thầy cô giảng từ từ, có ví dụ gắn với đời sống nên mình hiểu nhanh. Sau 6 tháng, mình thi thử TCF và bất ngờ đạt B2. Điều làm mình ấn tượng nhất là lớp học nhỏ, giáo viên nhớ tên từng học viên, luôn nhắc nhở nếu mình lười học bài. Nhờ vậy mà mình có động lực học đều đặn chứ không bỏ ngang như trước kia.</p>
+                                <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
                             </div>
                             <div class="feedback-author">
-                                <div class="author-avatar">
-                                    <img src="assets/images/teacher/GV-Hoàng-Giang.jpg" alt="Nguyễn Thị Mai">
-                                </div>
-                                <div class="author-info">
-                                    <h5>Nguyễn Thị Mai</h5>
-                                    <span>Khóa TCF B2</span>
-                                </div>
+                                <div class="author-avatar"><img src="assets/images/feedback-avt/nguyenminhngoc.png" alt="Nguyễn Thị Mai"></div>
+                                <div class="author-info"><h5>Nguyễn Minh Ngọc</h5><span>Khóa TCF B2</span></div>
                             </div>
                         </div>
 
                         <!-- Feedback Item 2 -->
                         <div class="feedback-item">
                             <div class="feedback-content">
-                                <div class="quote-icon">
-                                    <i class="fa fa-quote-left"></i>
-                                </div>
-                                <p class="feedback-text">Mình rất hài lòng với khóa giao tiếp tại Troong. Sau 3 tháng đã tự tin nói chuyện với người Pháp. Giáo viên bản ngữ phát âm chuẩn, lớp học vui!</p>
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-half-o"></i>
-                                </div>
+                                <div class="quote-icon"><i class="fa fa-quote-left"></i></div>
+                                <p class="feedback-text">Mình vốn ngại giao tiếp, đặc biệt là bằng ngoại ngữ. Tham gia khóa giao tiếp tại Troong, những ngày đầu mình hầu như chỉ ngồi nghe. Nhưng nhờ cách giảng vui nhộn của thầy người Pháp, cộng với việc cả lớp luôn phải tham gia hội thoại nhóm, mình dần mở miệng nhiều hơn. Sau 3 tháng, mình đã đủ tự tin để trò chuyện với du khách Pháp trong chuyến công tác. Các bài tập tình huống trong lớp cực kỳ thực tế, giúp mình phản xạ nhanh chứ không phải học thuộc lòng. Điều mình quý nhất là sự kiên nhẫn của giáo viên khi sửa phát âm từng âm nhỏ cho mình.</p>
+                                <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></div>
                             </div>
                             <div class="feedback-author">
-                                <div class="author-avatar">
-                                    <img src="assets/images/teacher/GV-Hoàng-Giang.jpg" alt="Trần Văn Nam">
-                                </div>
-                                <div class="author-info">
-                                    <h5>Trần Văn Nam</h5>
-                                    <span>Khóa Giao Tiếp B1</span>
-                                </div>
+                                <div class="author-avatar"><img src="assets/images/feedback-avt/duongminhkhanh.jpg" alt="Trần Văn Nam"></div>
+                                <div class="author-info"><h5>Dương Minh Khánh</h5><span>Khóa Giao Tiếp B1</span></div>
                             </div>
                         </div>
 
                         <!-- Feedback Item 3 -->
                         <div class="feedback-item">
                             <div class="feedback-content">
-                                <div class="quote-icon">
-                                    <i class="fa fa-quote-left"></i>
-                                </div>
-                                <p class="feedback-text">Nhờ Troong mà mình đã đạt DELF B1 ngay lần thi đầu tiên. Tài liệu ôn thi sát đề thật, thầy cô hỗ trợ nhiệt tình cả trong và ngoài giờ học.</p>
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
+                                <div class="quote-icon"><i class="fa fa-quote-left"></i></div>
+                                <p class="feedback-text">Mục tiêu của mình là lấy chứng chỉ DELF B1 để nộp hồ sơ du học. Trước khi học ở Troong mình đã tự học 6 tháng nhưng kiến thức rời rạc, đi thi thử thì trượt. Sau khi vào khóa, giáo viên hướng dẫn mình cách phân bổ thời gian khi làm bài, đưa ra tài liệu bám sát đề thi. Đặc biệt, mình được luyện nói hàng tuần với nhóm nhỏ nên đỡ căng thẳng khi thi thật. Kết quả thi lần đầu mình đã đậu, thậm chí phần viết còn được điểm khá cao. Nếu không có sự đồng hành tận tình của thầy cô, chắc mình phải mất thêm vài kỳ thi nữa.</p>
+                                <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
                             </div>
                             <div class="feedback-author">
-                                <div class="author-avatar">
-                                    <img src="assets/images/teacher/GV-Hoàng-Giang.jpg" alt="Lê Thị Hương">
-                                </div>
-                                <div class="author-info">
-                                    <h5>Lê Thị Hương</h5>
-                                    <span>Khóa DELF B1</span>
-                                </div>
+                                <div class="author-avatar"><img src="assets/images/feedback-avt/thaithidung.png" alt="Lê Thị Hương"></div>
+                                <div class="author-info"><h5>Thái Thị Dung</h5><span>Khóa DELF B1</span></div>
                             </div>
                         </div>
 
                         <!-- Feedback Item 4 -->
                         <div class="feedback-item">
                             <div class="feedback-content">
-                                <div class="quote-icon">
-                                    <i class="fa fa-quote-left"></i>
-                                </div>
-                                <p class="feedback-text">Mình đã học nhiều trung tâm nhưng Troong là nơi dạy phát âm bài bản nhất. Sau khóa học mình phát âm chuẩn và tự tin giao tiếp hơn hẳn.</p>
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-o"></i>
-                                </div>
+                                <div class="quote-icon"><i class="fa fa-quote-left"></i></div>
+                                <p class="feedback-text">Mình từng tự học phát âm qua YouTube nhưng mãi không sửa được giọng Việt. Khi đến Troong, giáo viên kiểm tra từng âm mình đọc sai, chỉ cách đặt lưỡi và khẩu hình miệng. Ban đầu hơi ngại vì bị sửa liên tục, nhưng sau vài tuần mình thấy rõ sự khác biệt. Bạn bè nói giọng mình nghe “tây” hơn, không còn lẫn giọng Việt. Lớp phát âm có nhiều bài tập nghe - lặp lại, kết hợp thu âm để so sánh, nên rất hiệu quả. Đây là khóa học mình thấy đáng tiền nhất.</p>
+                                <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></div>
                             </div>
                             <div class="feedback-author">
-                                <div class="author-avatar">
-                                    <img src="assets/images/teacher/GV-Hoàng-Giang.jpg" alt="Phạm Quang Minh">
-                                </div>
-                                <div class="author-info">
-                                    <h5>Phạm Quang Minh</h5>
-                                    <span>Khóa Phát Âm</span>
-                                </div>
+                                <div class="author-avatar"><img src="assets/images/feedback-avt/nguyentien.PNG" alt="Phạm Quang Minh"></div>
+                                <div class="author-info"><h5>Nguyễn Ngọc Tiên</h5><span>Khóa Phát Âm</span></div>
                             </div>
                         </div>
 
                         <!-- Feedback Item 5 -->
                         <div class="feedback-item">
                             <div class="feedback-content">
-                                <div class="quote-icon">
-                                    <i class="fa fa-quote-left"></i>
-                                </div>
-                                <p class="feedback-text">Cảm ơn Troong đã đồng hành cùng mình từ A0 lên C1. Giáo trình khoa học, lộ trình rõ ràng, đặc biệt là kỹ năng viết luận được cải thiện đáng kể.</p>
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
+                                <div class="quote-icon"><i class="fa fa-quote-left"></i></div>
+                                <p class="feedback-text">Mình theo lộ trình từ A0 lên C1 tại Troong trong gần 2 năm. Ban đầu học từ vựng đơn giản, đến cuối mình có thể viết essay học thuật dài 300–400 từ. Cách tổ chức khóa học rất rõ ràng, có bài test định kỳ để mình biết mình đang ở đâu. Đặc biệt, giáo viên luôn dành thời gian nhận xét chi tiết từng bài viết của mình, từ cấu trúc đến cách dùng từ. Nhờ đó, khi thi C1 mình không bị khớp. Điều tuyệt vời là mình đã dùng chứng chỉ này để nộp đơn xin học bổng thành công.</p>
+                                <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
                             </div>
                             <div class="feedback-author">
-                                <div class="author-avatar">
-                                    <img src="assets/images/teacher/GV-Hoàng-Giang.jpg" alt="Hoàng Thị Lan">
-                                </div>
-                                <div class="author-info">
-                                    <h5>Hoàng Thị Lan</h5>
-                                    <span>Lộ trình A0-C1</span>
-                                </div>
+                                <div class="author-avatar"><img src="assets/images/feedback-avt/nguyentuanh.png" alt="Hoàng Thị Lan"></div>
+                                <div class="author-info"><h5>Nguyễn Tú Anh</h5><span>Lộ trình A0–C1</span></div>
+                            </div>
+                        </div>
+
+                        <!-- Feedback Item 6 -->
+                        <div class="feedback-item">
+                            <div class="feedback-content">
+                                <div class="quote-icon"><i class="fa fa-quote-left"></i></div>
+                                <p class="feedback-text">Mình học TCF để chuẩn bị định cư tại Canada. Trước đó mình rất lo lắng vì kỹ năng nghe yếu. Ở Troong, mình được làm quen với đề thi mẫu, luyện nghe nhiều giọng khác nhau nên thi thật không còn quá áp lực. Giáo viên còn dạy cách quản lý thời gian, giúp mình bình tĩnh hơn. Khi nhận kết quả đủ điểm, mình thấy nhẹ cả người. Điều khiến mình cảm động là cô giáo vẫn nhắn tin hỏi thăm sau khi mình đã hoàn thành khóa học, cảm giác như có một người bạn đồng hành thật sự.</p>
+                                <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                            </div>
+                            <div class="feedback-author">
+                                <div class="author-avatar"><img src="assets/images/feedback-avt/student6.jpg" alt="Ngô Thanh Bình"></div>
+                                <div class="author-info"><h5>Ngô Thanh Bình</h5><span>Khóa TCF Chuẩn Bị Du Học</span></div>
+                            </div>
+                        </div>
+
+                        <!-- Feedback Item 7 -->
+                        <div class="feedback-item">
+                            <div class="feedback-content">
+                                <div class="quote-icon"><i class="fa fa-quote-left"></i></div>
+                                <p class="feedback-text">Mình làm trong ngành khách sạn, thường xuyên tiếp khách Pháp. Trước đây chỉ dừng lại ở chào hỏi cơ bản, nhưng sau 4 tháng học, mình đã tự tin giới thiệu dịch vụ và giải quyết các yêu cầu bằng tiếng Pháp. Giáo viên tạo nhiều tình huống giả lập như “khách phàn nàn về phòng” hay “hỏi thông tin địa điểm du lịch”, nhờ vậy mình phản xạ nhanh và tự nhiên hơn. Học xong, mình được sếp khen vì xử lý khách Pháp trôi chảy, đây là bước ngoặt lớn trong công việc của mình.</p>
+                                <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></div>
+                            </div>
+                            <div class="feedback-author">
+                                <div class="author-avatar"><img src="assets/images/feedback-avt/khanhvy.jpg" alt="Đỗ Thị Thu"></div>
+                                <div class="author-info"><h5>Nguyễn Thị Khánh Vy</h5><span>Khoá Trung Cấp — A2.2 - B1.1</span></div>
+                            </div>
+                        </div>
+
+                        <!-- Feedback Item 8 -->
+                        <div class="feedback-item">
+                            <div class="feedback-content">
+                                <div class="quote-icon"><i class="fa fa-quote-left"></i></div>
+                                <p class="feedback-text">Vì bận công việc nên mình chọn khóa online. Ban đầu sợ học online không hiệu quả, nhưng Troong có hệ thống ghi hình bài giảng và nhóm học viên nhỏ, giáo viên theo sát từng người. Mình hay vắng buổi tối, nhưng hôm sau vẫn xem lại được và gửi bài tập qua hệ thống. Giáo viên vẫn chấm rất chi tiết, góp ý cụ thể. Nhờ đó mình không bị tụt lại. Sau 5 tháng, mình đã thi đạt DELF B2. Thật sự bất ngờ vì mình nghĩ chỉ có học trực tiếp mới hiệu quả, nhưng ở Troong thì online vẫn chất lượng như thường.</p>
+                                <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                            </div>
+                            <div class="feedback-author">
+                                <div class="author-avatar"><img src="assets/images/feedback-avt/manhcuong.png" alt="Vũ Hoàng Anh"></div>
+                                <div class="author-info"><h5>Trần Mạnh Cường</h5><span>Khoá ôn thi DELF — A0 - B2</span></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Video Testimonials -->
-            <!--<div class="col-lg-12">
-                <div class="video-testimonials">
-                    <h4 class="text-center mb-8">Feedback Video từ học viên</h4>
-                    <div class="row">
-                        <div class="col-md-4 mb-4">
-                            <div class="video-thumbnail" data-video="https://www.youtube.com/embed/v_QruFR_9ak?si=znVgHm7AKgx0rZLb">
-                                <img src="assets/images/teacher/GV-Trà-My.jpg" alt="Video feedback 1">
-                                <div class="play-button">
-                                    <i class="fa fa-play"></i>
-                                </div>
-                                <div class="video-info">
-                                    <h6>Nguyễn Văn A</h6>
-                                    <span>TCF B2</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="video-thumbnail" data-video="https://www.youtube.com/embed/VIDEO_ID_2">
-                                <img src="assets/images/teacher/GV-Trà-My.jpg" alt="Video feedback 2">
-                                <div class="play-button">
-                                    <i class="fa fa-play"></i>
-                                </div>
-                                <div class="video-info">
-                                    <h6>Trần Thị B</h6>
-                                    <span>DELF B1</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="video-thumbnail" data-video="https://www.youtube.com/embed/VIDEO_ID_3">
-                                <img src="assets/images/teacher/GV-Trà-My.jpg" alt="Video feedback 3">
-                                <div class="play-button">
-                                    <i class="fa fa-play"></i>
-                                </div>
-                                <div class="video-info">
-                                    <h6>Lê Văn C</h6>
-                                    <span>Giao tiếp B1</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>-->
 
             <!-- Photo Testimonials -->
             <div class="col-lg-12">
@@ -825,58 +734,42 @@
                     <div class="photo-grid">
                         <!-- Hàng 1: 3 ô vuông -->
                         <figure class="photo-item">
-                            <img src="assets/images/teacher/GV-Trà-My.jpg" alt="Lớp học & hoạt động 1">
+                            <img src="assets/images/feedback/fb-1.png" alt="Lớp học & hoạt động 1">
                         </figure>
                         <figure class="photo-item">
-                            <img src="assets/images/teacher/GV-Trà-My.jpg" alt="Lớp học & hoạt động 2">
+                            <img src="assets/images/feedback/fb-2.png" alt="Lớp học & hoạt động 2">
                         </figure>
                         <figure class="photo-item">
-                            <img src="assets/images/teacher/GV-Trà-My.jpg" alt="Lớp học & hoạt động 3">
+                            <img src="assets/images/feedback/fb-3.png" alt="Lớp học & hoạt động 3">
                         </figure>
 
                         <!-- Hàng 2: 3 ô cao (gấp đôi) -->
                         <figure class="photo-item tall">
-                            <img src="assets/images/teacher/GV-Trà-My.jpg" alt="Khoảnh khắc tại châu Âu">
+                            <img src="assets/images/feedback/fb4-2.PNG" alt="Khoảnh khắc tại châu Âu">
                         </figure>
                         <figure class="photo-item tall">
-                            <img src="assets/images/teacher/GV-Trà-My.jpg" alt="Trao chứng chỉ/giải thưởng">
+                            <img src="assets/images/feedback/fb5-2.jpg" alt="Trao chứng chỉ/giải thưởng">
                         </figure>
                         <figure class="photo-item tall">
-                            <img src="assets/images/teacher/GV-Trà-My.jpg" alt="Chứng chỉ tiếng Pháp">
+                            <img src="assets/images/feedback/fb6-2.jpg" alt="Chứng chỉ tiếng Pháp">
                         </figure>
 
                         <!-- Hàng 3: 3 ô vuông -->
                         <figure class="photo-item">
-                            <img src="assets/images/teacher/GV-Trà-My.jpg" alt="Sự kiện lớp học 1">
+                            <img src="assets/images/feedback/fb7-2.PNG" alt="Sự kiện lớp học 1">
                         </figure>
                         <figure class="photo-item">
-                            <img src="assets/images/teacher/GV-Trà-My.jpg" alt="Sự kiện lớp học 2">
+                            <img src="assets/images/feedback/fb8.JPG" alt="Sự kiện lớp học 2">
                         </figure>
                         <figure class="photo-item">
-                            <img src="assets/images/teacher/GV-Trà-My.jpg" alt="Sự kiện lớp học 3">
+                            <img src="assets/images/feedback/fb9.jpg" alt="Sự kiện lớp học 3">
                         </figure>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-<!-- Video Modal -->
-<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-body">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" id="videoFrame" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+</section>
 
 <!--====== FOOTER ======-->
 <footer>
@@ -909,6 +802,7 @@
 <script src="assets/js/forms/form-request.js"></script>
 <script src="assets/js/courses/course-details.js"></script>
 <script src="assets/js/teachers/data-teachers.js"></script>
+<script src="assets/js/feedback/feedback-owl.js"></script>
 
 <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
 
