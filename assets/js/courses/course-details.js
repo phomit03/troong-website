@@ -7,10 +7,11 @@ const COURSE_DETAILS = {
         level: "Cơ bản (Dành cho người mới bắt đầu)",
         sessions: 5,
         outcomes: [
-            "Nắm được những quy tắc phát âm cơ bản trong tiếng Pháp và cải thiện rõ rệt so với trước khi tham gia",
-            "Biết cách áp dụng ngữ điệu tự nhiên và nhấn trọng âm đúng trong câu nói, có thể phát âm một cách thoải mái",
-            "Thực hành các câu giao tiếp cơ bản với phát âm rõ ràng, dù còn hạn chế về từ vựng nhưng có thể giao tiếp tự tin với người Pháp",
-            "Tự nhận diện được các lỗi phát âm cá nhân và điều chỉnh theo hướng chuẩn hơn, hạn chế việc phát âm sai (điều sẽ ảnh hưởng tới các kĩ năng khác như Nghe - Viết)"
+            "Nắm được các quy tắc phát âm và ghép âm cơ bản trong tiếng Pháp, cải thiện rõ rệt so với trước khi tham gia.",
+            "Biết cách áp dụng ngữ điệu tự nhiên và nhấn trọng âm đúng trong câu nói, có thể phát âm một cách thoải mái.",
+            "Thực hành luyện phát âm các câu cơ bản với phát âm rõ ràng và chính xác",
+            "Tự nhận diện được các lỗi phát âm cá nhân và điều chỉnh theo hướng chuẩn hơn, hạn chế việc phát âm sai (điều sẽ ảnh hưởng tới các kĩ năng khác như Nghe - Viết - Đọc hiểu)",
+            "Mỗi buổi học được thực hành liên tục trong 60 phút cùng các giáo viên giàu kinh nghiệm"
         ],
         progress: "5%"
     },
@@ -31,55 +32,45 @@ const COURSE_DETAILS = {
     "intermediate": {
         title: "Khoá Trung Cấp",
         tracks: [
-            {level: "A2.1 – A2.2", sessions: 17},
-            {level: "A2.2 - B1.1", sessions: 17}
+            {level: "A2.1 – A2.2", sessions: 15},
+            {level: "A2.2 - B1.1", sessions: 15}
         ],
         outcomes: [
-            "Làm chủ các cấu trúc ngữ pháp từ trung cấp đến khá, bao gồm chia động từ phức tạp và các thì nâng cao",
-            "Tự tin sử dụng tiếng Pháp nâng cao trong các chủ đề giao tiếp phức tạp thông qua luyện tập thực tế mỗi buổi học",
-            "Nắm vững kỹ thuật trình bày quan điểm, suy nghĩ cá nhân qua các bài nói, được hướng dẫn chi tiết để diễn đạt mạch lạc và thuyết phục",
-            "Thực hành ngôn ngữ với 9+ chủ đề thực tế: Giới thiệu bản thân và gia đình; Mua sắm, ăn uống và văn hóa ẩm thực Pháp; Công việc, học tập và kế hoạch tương lai; Du lịch - khám phá các thành phố và phong tục địa phương; Sức khỏe; thể thao và lối sống lành mạnh; Quan hệ xã hội, tình bạn và tình yêu; Môi trường và trách nhiệm cộng đồng; Công nghệ và truyền thông hiện đại; Nghệ thuật, âm nhạc và giải trí",
-            "Nhận phản hồi chi tiết: mỗi bài viết được giáo viên chấm chữa kỹ lưỡng về từ vựng, ngữ pháp và nội dung; bài nói được sửa phát âm chi tiết",
-            "Luyện tập phát âm chuẩn như người bản xứ thông qua bài tập đọc theo đoạn hội thoại",
-            "Đủ khả năng tham gia thi thử các chứng chỉ DELF, TCF A2 và ôn luyện đầu vào trình độ A2, B1"
+            "Nắm vững các cấu trúc ngữ pháp từ A2 lên B1, từ chia động từ phức tạp đến các thì/ thời nâng cao.",
+            "Nắm vững kỹ thuật trình bày quan điểm, suy nghĩ cá nhân qua các bài nói, được hướng dẫn chi tiết để diễn đạt mạch lạc và thuyết phục.",
+            "Thực hành ngôn ngữ với 9+ chủ đề thực tế: Giới thiệu bản thân và gia đình; Mua sắm, ăn uống và văn hóa ẩm thực Pháp; Công việc, học tập và kế hoạch tương lai; Du lịch - khám phá các thành phố và phong tục địa phương; Sức khỏe; thể thao và lối sống lành mạnh; Quan hệ xã hội, tình bạn và tình yêu; Môi trường và trách nhiệm cộng đồng; Công nghệ và truyền thông hiện đại; Nghệ thuật, âm nhạc và giải trí....",
+            "Mỗi bài viết được giáo viên chấm chữa kỹ lưỡng về từ vựng, ngữ pháp và nội dung; bài nói được sửa phát âm chi tiết, kèm bài tập đọc theo đoạn hội thoại để phát âm chuẩn như người bản xứ.",
+            "Sau khóa học, học viên có thể tham gia thi thử các chứng chỉ DELF, TCF A2, và ôn luyện đầu vào A2, B1."
         ],
         progress: "59%",
     },
     "advanced": {
         title: "Khoá Nâng Cao",
         tracks: [
-            {level: "B1.1 - B1.2", sessions: 20},
-            {level: "B1.2 - B2.1", sessions: 20}
+            {level: "B1.1 - B1.2", sessions: 15},
+            {level: "B1.2 - B2.1", sessions: 15}
         ],
         outcomes: [
-            "Thành thạo các cấu trúc ngữ pháp phức tạp như các thì nâng cao, câu điều kiện, và câu bị động, giúp xây dựng câu chính xác, tự nhiên trong giao tiếp và viết lách, đạt trình độ trung cấp chỉ sau 5 tháng học tập chăm chỉ",
-            "Tự tin giao tiếp cơ bản chỉ sau 1 tháng, phản ứng linh hoạt trong các tình huống đời thường như hỏi đường, đặt lịch hẹn, hoặc thảo luận ngắn gọn",
-            "Nắm vững phương pháp trình bày quan điểm rõ ràng, logic và thuyết phục, áp dụng hiệu quả trong các chủ đề học thuật (giáo dục, văn hóa) và đời sống (gia đình, công việc)",
-            "Luyện tập thực hành Nói - Viết đa dạng với hơn 9 chủ đề thực tế",
-            "Tập trung vào các chủ đề như du lịch (lên kế hoạch chuyến đi), công việc (phỏng vấn xin việc), giáo dục (thảo luận về trường học), môi trường (bảo vệ thiên nhiên), sức khỏe (chế độ ăn uống), truyền thông (mạng xã hội), văn hóa (lễ hội Pháp), mua sắm (so sánh giá cả), và quan hệ xã hội (gặp gỡ bạn bè)",
-            "Giáo viên chấm chữa chi tiết về từ vựng, ngữ pháp, và nội dung, giúp cải thiện chất lượng bài viết từng bước",
-            "Sửa phát âm cẩn thận, kết hợp bài tập đọc theo hội thoại từ giáo trình để phát âm chuẩn, ngữ điệu tự nhiên như người bản xứ",
-            "Sau khóa học, học viên đủ năng lực thi thử trong kỳ thi DELF, TCF trình độ B1-B2, đồng thời được hướng dẫn chi tiết để ôn luyện cho các kỳ thi chính thức"
+            "Thành thạo các cấu trúc ngữ pháp phức tạp như các thì nâng cao, câu điều kiện, và câu bị động, giúp xây dựng câu chính xác, tự nhiên trong giao tiếp và viết lách, đạt trình độ trung cấp chỉ sau 5 tháng học tập chăm chỉ.",
+            "Nắm vững phương pháp trình bày quan điểm rõ ràng, logic và thuyết phục, áp dụng hiệu quả trong các chủ đề học thuật (giáo dục, văn hóa) và đời sống (gia đình, công việc), phản ứng linh hoạt trong các tình huống đời thường như hỏi đường, đặt lịch hẹn, hoặc thảo luận ngắn gọn.",
+            "Tập trung vào các chủ đề như du lịch (lên kế hoạch chuyến đi), công việc (phỏng vấn xin việc), giáo dục (thảo luận về trường học), môi trường (bảo vệ thiên nhiên), sức khỏe (chế độ ăn uống), truyền thông (mạng xã hội), văn hóa (lễ hội Pháp), mua sắm (so sánh giá cả), và quan hệ xã hội (gặp gỡ bạn bè),...",
+            "Giáo viên chấm chữa chi tiết về từ vựng, ngữ pháp, và nội dung, giúp cải thiện chất lượng bài viết từng bước.",
+            "Sau khóa học, học viên đủ năng lực thi thử trong kỳ thi DELF, TCF trình độ B1-B2, đồng thời được hướng dẫn chi tiết để ôn luyện cho các kỳ thi chính thức."
         ],
         progress: "81%",
     },
     "master": {
         title: "Khoá Làm Chủ",
         tracks: [
-            {level: "B2.1 - B2.2", sessions: 20},
-            {level: "B2.2 - C1.1", sessions: 20}
+            {level: "B2.1 - B2.2", sessions: 15},
+            {level: "B2.2 - C1.1", sessions: 15}
         ],
         outcomes: [
             "Linh hoạt trong ngôn ngữ và giao tiếp rất tự nhiên khi thảo luận về những chủ đề xã hội, văn hoá và chuyên môn chuyên sâu có tính tranh luận",
             "Hiểu và phân tích tốt được nội dung phức tạp của các bài luận, bài báo, thư từ chuyên nghiệp",
             "Viết được các bài luận, báo cáo hoặc thuyết trình với ngôn từ phong phú và ở trình độ cao cấp",
-            "Củng cố các kỹ năng trước khi tham gia các kỳ thi DELF B2, DALF C1, TCF/TEF mục tiêu B2 hoặc C1",
-            "Phát triển đồng đều 4 kỹ năng: " +
-            "- Nghe: hiểu podcast, đoạn hội thoại về chủ đề thời sự, học thuật\n" +
-            "- Nói: thảo luận nhóm hiệu quả\n" +
-            "- Đọc: phân tích bài báo phức tạp\n" +
-            "- Viết: bài luận bày tỏ quan điểm, thư từ chuyên nghiệp.\n" +
-            "Với trọng tâm nâng cao giao tiếp thực tế, giúp tự tin sử dụng tiếng Pháp trong công việc và cuộc sống"
+            "Củng cố các kỹ năng trước khi tham gia các kỳ thi DELF B2, DALF C1, TCF/ TEF mục tiêu B2 hoặc C1.",
+            "Phát triển đồng đều 4 kỹ năng: nghe (hiểu podcast, đoạn hội thoại trao đổi về một chủ đề thời sự, học thuật) - nói (thảo luận nhóm) - đọc (bài báo phức tạp) - viết (bài luận bày tỏ quan điểm cá nhân, thư từ chuyên nghiệp), với trọng tâm nâng cao giao tiếp thực tế, giúp học viên tự tin sử dụng tiếng Pháp trong công việc và cuộc sống hàng ngày."
         ],
         progress: "100%",
     },
@@ -89,8 +80,8 @@ const COURSE_DETAILS = {
         title: "Khoá ôn thi TCF TP/IRN/Canada",
         tracks: [
             {level: "A0 - A2", sessions: 55},
-            {level: "A0 - B1", sessions: 75},
-            {level: "A0 - B2", sessions: 95}
+            {level: "A0 - B1", sessions: 85},
+            {level: "A0 - B2", sessions: 115}
         ],
         outcomes: [
             "Nắm vững ngữ pháp và từ vựng tiếng Pháp ở trình độ từ A1 đến B2 để làm bài thi một cách chính xác",
@@ -107,8 +98,8 @@ const COURSE_DETAILS = {
         title: "Khóa ôn thi TEF (TEFAQ)",
         tracks: [
             {level: "A0 - A2", sessions: 55},
-            {level: "A0 - B1", sessions: 75},
-            {level: "A0 - B2", sessions: 95}
+            {level: "A0 - B1", sessions: 85},
+            {level: "A0 - B2", sessions: 115}
         ],
         outcomes: [
             "Nắm vững ngữ pháp và từ vựng tiếng Pháp ở trình độ từ A1 đến B2 để làm bài thi một cách chính xác",
@@ -125,8 +116,8 @@ const COURSE_DETAILS = {
         title: "Khoá ôn thi DELF",
         tracks: [
             {level: "A0 - A2", sessions: 55},
-            {level: "A0 - B1", sessions: 75},
-            {level: "A0 - B2", sessions: 95}
+            {level: "A0 - B1", sessions: 85},
+            {level: "A0 - B2", sessions: 115}
         ],
         outcomes: [
             "Nắm vững ngữ pháp và từ vựng tiếng Pháp ở trình độ từ A1 đến B2 để làm bài thi một cách chính xác",
