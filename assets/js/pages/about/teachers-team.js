@@ -1,92 +1,117 @@
 /* ===== DATA (giữ nguyên theo bạn) ===== */
 const TEACHERS = [
     {
-        id: 'le-pham-hoang-giang', name: 'Lê Phạm Hoàng Giang', role: 'Giáo viên',
+        id: 'le-pham-hoang-giang',
+        name: 'Lê Phạm Hoàng Giang',
+        role: 'Giáo viên',
         avatar: '../assets/images/teacher-avatar2/2.png',
         cover: '../assets/images/teacher/2.png',
-        tags: ['10 năm kinh nghiệm', 'Chuyên TOEIC/TCF'],
+        tags: ['Nhiều năm kinh nghiệm', 'Dạy giao tiếp', 'Ôn thi TCF'],
         info: [
-            {icon: 'fa-solid fa-graduation-cap', title: 'Học vị', text: 'Thạc sĩ Ngôn ngữ Pháp - ĐH Sư Phạm Hà Nội'},
-            {icon: 'fa-solid fa-award', title: 'Thành tích', text: 'Đào tạo hơn 500 học viên đạt TCF B2+'},
-            {icon: 'fa-solid fa-language', title: 'Mảng dạy', text: 'Giao tiếp, luyện thi'},
-            {icon: 'fa-solid fa-microphone', title: 'Kỹ năng', text: 'Phát âm & ngữ điệu tiếng Pháp'},
-            {icon: 'fa-solid fa-book', title: 'Sách biên soạn', text: 'Giáo trình “Pháp ngữ giao tiếp nhanh”'},
-            {icon: 'fa-solid fa-microphone-lines', title: 'Nghiên cứu', text: 'Ngữ âm & phương pháp giảng dạy hiện đại'},
-            {icon: 'fa-solid fa-user-graduate', title: 'Cử nhân', text: 'Ngôn ngữ Pháp - ĐH Hà Nội'},
-            {icon: 'fa-solid fa-chalkboard-user', title: 'Kinh nghiệm', text: '7 năm giảng dạy luyện thi chứng chỉ'},
-            {icon: 'fa-solid fa-school', title: 'Đại học', text: 'ĐH Lyon 2, ngành Ngôn ngữ học ứng dụng'},
-            {icon: 'fa-solid fa-book-open', title: 'Chuyên môn', text: 'Kỹ năng giao tiếp & phỏng vấn du học'},
-            {icon: 'fa-solid fa-user-tie', title: 'Vai trò', text: 'Cố vấn học viên chuẩn bị hồ sơ du học'},
+            {icon: 'fa-solid fa-graduation-cap', title: 'Trình độ chuyên môn', text: 'Tốt nghiệp Thạc sĩ sư phạm tiếng Pháp tại Đại học Sư phạm TP Hồ Chí Minh'},
+            {icon: 'fa-solid fa-award', title: 'Thành tích', text: 'Biên dịch từ do cho các công ty Pháp (Bouygues Construction IT, Hiventy Asia) và các tập đoàn Pháp (TV5monde, Spotting, Netflix,...)'},
+            {icon: 'fa-solid fa-language', title: 'Mảng dạy', text: 'Giao tiếp, ôn thi tiếng Pháp TCF'},
+            {icon: 'fa-solid fa-microphone', title: 'Kỹ năng', text: 'Trình độ ngôn ngữ Pháp C1'},
+            {icon: 'fa-solid fa-chalkboard-user', title: 'Kinh nghiệm', text: 'Đã có nhiều năm kinh nghiệm trong giảng dạy các lớp giao tiếp và ôn thi tiếng Pháp TCF tại các trung tâm tiếng Pháp'},
+            {icon: 'fa-solid fa-user-tie', title: 'Vai trò', text: 'Giáo viên'},
         ]
     },
     {
-        id: 'hoang-hong-linh', name: 'Hoàng Hồng Linh', role: 'Giáo viên',
+        id: 'hoang-hong-linh',
+        name: 'Hoàng Hồng Linh',
+        role: 'Giáo viên',
         avatar: '../assets/images/teacher-avatar2/6.png',
         cover: '../assets/images/teacher/10.png',
-        tags: ['DELF C1', 'Du học Pháp'],
+        tags: ['Nhiều năm kinh nghiệm', 'Dạy giao tiếp', 'Ôn thi DELF'],
         info: [
-            {icon: 'fa-solid fa-user-graduate', title: 'Cử nhân', text: 'Ngôn ngữ & Văn hoá Pháp - ĐH Quốc Gia Hà Nội'},
-            {icon: 'fa-solid fa-globe', title: 'Kinh nghiệm', text: '5 năm học tập & làm việc tại Paris'}
+            {icon: 'fa-solid fa-graduation-cap', title: 'Trình độ chuyên môn', text: 'Tốt nghiệp tại Đại học Hà Nội'},
+            {icon: 'fa-solid fa-award', title: 'Thành tích', text: 'Cử nhân Ngôn ngữ tiếng Pháp tại Đại học Hà Nội loại giỏi. Đạt chứng chỉ HANU Test C1 tiếng Pháp. Đạt giải Nhất cuộc thi “Concours Parlons français ensemble”'},
+            {icon: 'fa-solid fa-language', title: 'Mảng dạy', text: 'Dạy giao tiếp A1-B1, hỗ trợ ôn thi DELF'},
+            {icon: 'fa-solid fa-microphone', title: 'Kỹ năng', text: 'Trình độ ngôn ngữ Pháp DELF B2'},
+            {icon: 'fa-solid fa-chalkboard-user', title: 'Kinh nghiệm', text: 'Có nhiều kinh nghiệm dạy giao tiếp từ A1-B1, hỗ trợ ôn thi DELF'},
+            {icon: 'fa-solid fa-user-tie', title: 'Vai trò', text: 'Giáo viên'},
         ]
     },
     {
-        id: 'pham-thi-kim-anh', name: 'Phạm Thị Kim Anh', role: 'Giáo viên',
+        id: 'pham-thi-kim-anh',
+        name: 'Phạm Thị Kim Anh',
+        role: 'Giáo viên',
         avatar: '../assets/images/teacher-avatar2/1.png',
         cover: '../assets/images/teacher/1.png',
-        tags: ['Giao tiếp thực hành', 'DELF B2'],
+        tags: ['Nhiều năm kinh nghiệm', 'Dạy giao tiếp', 'Luyện thi'],
         info: [
-            {icon: 'fa-solid fa-book-open', title: 'Chuyên môn', text: 'Kỹ năng giao tiếp & phỏng vấn du học'},
-            {icon: 'fa-solid fa-user-tie', title: 'Vai trò', text: 'Cố vấn học viên chuẩn bị hồ sơ du học'}
+            {icon: 'fa-solid fa-graduation-cap', title: 'Trình độ chuyên môn', text: 'Tiến sĩ ngành Luật quốc tế tư nhân tại Trường Đại học Luật Hà Nội'},
+            {icon: 'fa-solid fa-award', title: 'Thành tích', text: 'Đạt học bổng Tiến sĩ của Chính phủ Pháp. Master 2 ngành Luật Thương mại quốc tế tại Đại học Francois Rabelais (Tours, Pháp). Cựu giảng viên tiếng Pháp tại Đại học Hà Nội, Đại học Bách khoa, Đại học Dược Hà Nội, Đại học Luật và nhiều trường đại học khác'},
+            {icon: 'fa-solid fa-chalkboard-user', title: 'Kinh nghiệm', text: 'Đã có rất nhiều năm kinh nghiệm luyện thi TCF/TEFAQ B1-C2, DELF A1-B1-B2 và DALF C1. Giám khảo kỳ thi DELF B1/B2 - DALF'},
+            {icon: 'fa-solid fa-user-tie', title: 'Vai trò', text: 'Giáo viên'},
         ]
     },
     {
-        id: 'ton-nu-minh-thu', name: 'Tôn Nữ Minh Thư', role: 'Giáo viên',
+        id: 'ton-nu-minh-thu',
+        name: 'Tôn Nữ Minh Thư',
+        role: 'Giáo viên',
         avatar: '../assets/images/teacher-avatar2/10.png',
         cover: '../assets/images/teacher/8.png',
-        tags: ['IELTS 8.0 Overall', 'Song ngữ Việt – Pháp'],
+        tags: ['Nhiều năm kinh nghiệm', 'Luyện thi DELF A1, A2', 'Dạy giao tiếp'],
         info: [
-            {icon: 'fa-solid fa-award', title: 'Giải thưởng', text: 'Học bổng Erasmus Mundus'},
-            {icon: 'fa-solid fa-graduation-cap', title: 'Bằng cấp', text: 'Cử nhân Sư phạm tiếng Pháp'}
+            {icon: 'fa-solid fa-microphone', title: 'Kỹ năng', text: 'Trình độ ngôn ngữ Pháp DELF B2. Hot-face của các lớp sơ cấp với giọng nói nhẹ nhàng, truyền cảm hứng'},
+            {icon: 'fa-solid fa-award', title: 'Kinh nghiệm', text: 'Đã có kinh nghiệm luyện thi DELF A1, A2 và giảng dạy các lớp giao tiếp các trình độ Sơ cấp, Trung cấp và Nâng cao'},
+            {icon: 'fa-solid fa-user-tie', title: 'Vai trò', text: 'Giáo viên'},
         ]
     },
     {
-        id: 'le-my-an', name: 'Lê Mỹ An', role: 'Giáo viên',
+        id: 'le-my-an',
+        name: 'Lê Mỹ An',
+        role: 'Giáo viên',
         avatar: '../assets/images/teacher-avatar2/4.png',
         cover: '../assets/images/teacher/5.png',
-        tags: ['Chuyên gia phát âm', '5 năm kinh nghiệm'],
+        tags: ['Nhiều năm kinh nghiệm', 'Dạy giao tiếp A1-B2'],
         info: [
-            {icon: 'fa-solid fa-microphone', title: 'Kỹ năng', text: 'Phát âm & ngữ điệu tiếng Pháp'},
-            {icon: 'fa-solid fa-book', title: 'Sách biên soạn', text: 'Giáo trình “Pháp ngữ giao tiếp nhanh”'}
+            {icon: 'fa-solid fa-graduation-cap', title: 'Trình độ chuyên môn', text: 'Cử nhân ngành Digital Marketing, Entrepreneuriat et E-Commerce'},
+            {icon: 'fa-solid fa-award', title: 'Thành tích', text: 'Đạt Thủ khoa và Giải Nhất cuộc thi HSG cấp tỉnh tiếng Pháp'},
+            {icon: 'fa-solid fa-chalkboard-user', title: 'Kinh nghiệm', text: 'Trình độ ngôn ngữ Pháp DELF B2. Có nhiều kinh nghiệm luyện giao tiếp từ A1-B2'},
+            {icon: 'fa-solid fa-user-tie', title: 'Vai trò', text: 'Giáo viên'},
         ]
     },
     {
-        id: 'nguyen-thi-ngoc-nghi', name: 'Nguyễn Thị Ngọc Nghi', role: 'Giáo viên',
+        id: 'nguyen-thi-ngoc-nghi',
+        name: 'Nguyễn Thị Ngọc Nghi',
+        role: 'Giáo viên',
         avatar: '../assets/images/teacher-avatar2/8.png',
         cover: '../assets/images/teacher/4.png',
-        tags: ['DELF C1', 'Chuyên luyện thi TCF/TEF'],
+        tags: ['Nhiều năm kinh nghiệm', 'Dạy giao tiếp', 'Ôn thi TCF'],
         info: [
-            {icon: 'fa-solid fa-chalkboard-user', title: 'Kinh nghiệm', text: '7 năm giảng dạy luyện thi chứng chỉ'},
-            {icon: 'fa-solid fa-award', title: 'Thành tích', text: '95% học viên đạt kết quả mong muốn'}
+            {icon: 'fa-solid fa-graduation-cap', title: 'Trình độ chuyên môn', text: 'Tốt nghiệp Thạc sĩ sư phạm tiếng Pháp tại Đại học Cần Thơ'},
+            {icon: 'fa-solid fa-award', title: 'Thành tích', text: 'Giáo viên tiếng Pháp tại trường trung học Huỳnh Thúc Kháng và các trung tâm tiếng Pháp'},
+            {icon: 'fa-solid fa-chalkboard-user', title: 'Kinh nghiệm', text: 'Trình độ ngôn ngữ Pháp C1. Hơn 6 năm kinh nghiệm giảng dạy các lớp giao tiếp và ôn thi tiếng Pháp TCF (trình độ Sơ cấp, Trung cấp và Nâng cao)'},
+            {icon: 'fa-solid fa-user-tie', title: 'Vai trò', text: 'Giáo viên'},
         ]
     },
     {
-        id: 'nguyen-thi-thom', name: 'Nguyễn Thị Thơm', role: 'Giáo viên',
+        id: 'nguyen-thi-thom',
+        name: 'Nguyễn Thị Thơm',
+        role: 'Giáo viên',
         avatar: '../assets/images/teacher-avatar2/9.png',
         cover: '../assets/images/teacher/7.png',
-        tags: ['Du học sinh Pháp', 'Giáo viên giao tiếp'],
+        tags: ['Nhiều kinh nghiệm', 'A1', 'B2', 'Hỗ trợ ôn thi'],
         info: [
-            {icon: 'fa-solid fa-school', title: 'Đại học', text: 'ĐH Lyon 2, ngành Ngôn ngữ học ứng dụng'},
-            {icon: 'fa-solid fa-globe', title: 'Trải nghiệm', text: 'Từng làm việc tại tổ chức giáo dục quốc tế'}
+            {icon: 'fa-solid fa-graduation-cap', title: 'Trình độ chuyên môn', text: 'Cử nhân và hiện đang theo học Thạc sĩ chuyên ngành Ngôn ngữ Pháp tại Đại học Hà Nội'},
+            {icon: 'fa-solid fa-award', title: 'Kinh nghiệm', text: 'Có nhiều kinh nghiệm dạy tiếng Pháp (trình độ A1 đến B2) với trình độ chuyên môn vững'},
+            {icon: 'fa-solid fa-user-tie', title: 'Vai trò', text: 'Giáo viên'},
         ]
     },
     {
-        id: 'pham-hong-thien-phuc', name: 'Phạm Hồng Thiên Phúc', role: 'Giáo viên',
+        id: 'pham-hong-thien-phuc',
+        name: 'Phạm Hồng Thiên Phúc',
+        role: 'Giáo viên',
         avatar: '../assets/images/teacher-avatar2/3.png',
         cover: '../assets/images/teacher/3.png',
-        tags: ['Chuyên môn ngữ pháp', '8 năm giảng dạy'],
+        tags: ['Nhiều kinh nghiệm', 'Dạy giao tiếp', 'Hỗ trợ ôn thi'],
         info: [
-            {icon: 'fa-solid fa-book', title: 'Giáo trình', text: 'Biên soạn hơn 200 tài liệu ôn luyện ngữ pháp'},
-            {icon: 'fa-solid fa-award', title: 'Kinh nghiệm', text: 'Từng giảng dạy tại Alliance Française'}
+            {icon: 'fa-solid fa-graduation-cap', title: 'Trình độ chuyên môn', text: 'Thạc sĩ Tài chính tại Đại học Công nghệ Sydney (Úc). Cử nhân Kinh tế và Quản lý tại Đại học Lumiere Lyon 2 (Pháp)'},
+            {icon: 'fa-solid fa-award', title: 'Thành tích', text: 'Từng là Phó Chủ tịch Hội sinh viên Việt Nam tại Lyon'},
+            {icon: 'fa-solid fa-microphone', title: 'Kỹ năng', text: 'Trình độ ngôn ngữ Pháp DELF B2, tiếng Anh IELTS 7.0. Accent tiếng Pháp cực kỳ mê'},
+            {icon: 'fa-solid fa-user-tie', title: 'Vai trò', text: 'Giáo viên'},
         ]
     },
     {
@@ -100,38 +125,45 @@ const TEACHERS = [
         ]
     },
     {
-        id: 'nguyen-tra-my', name: 'Nguyễn Trà My', role: 'Giáo viên',
+        id: 'nguyen-tra-my',
+        name: 'Nguyễn Trà My',
+        role: 'Giáo viên',
         avatar: '../assets/images/teacher-avatar2/5.png',
         cover: '../assets/images/teacher/6.png',
-        tags: ['Luyện thi TCF/TEF', 'Giao tiếp'],
+        tags: ['Nhiều năm kinh nghiệm', 'Dạy giao tiếp', 'Luyện thi'],
         info: [
-            {icon: 'fa-solid fa-graduation-cap', title: 'Bằng cấp', text: 'Thạc sĩ Ngôn ngữ học - Sorbonne Université'},
-            {icon: 'fa-solid fa-globe', title: 'Kinh nghiệm', text: 'Giảng dạy 6 năm tại Việt Nam & Pháp'}
+            {icon: 'fa-solid fa-graduation-cap', title: 'Trình độ chuyên môn', text: 'Thạc sĩ FLE: Nghiên cứu tiếng Pháp và Pháp ngữ (EZF). Thạc sĩ FLE: Học và giảng dạy tiếng Pháp (ADFLE)'},
+            {icon: 'fa-solid fa-award', title: 'Thành tích', text: 'Đạt 2 bằng cấp chứng nhận trình độ tiếng Pháp DALF C1 và TCF C1, được công nhận bởi Bộ giáo dục Pháp'},
+            {icon: 'fa-solid fa-microphone', title: 'Kỹ năng', text: 'Trình độ tiếng Pháp DALF C1 và TCF C1. Hiện đang sinh sống tại Pháp và sử dụng tiếng Pháp với accent cực mê'},
+            {icon: 'fa-solid fa-user-tie', title: 'Vai trò', text: 'Quản lý Phòng đào tạo & sản phẩm của trung tâm Pháp ngữ Troong'},
         ]
     },
     {
-        id: 'nguyen-thi-hong-van', name: 'Nguyễn Thị Hồng Vân', role: 'Giáo viên',
+        id: 'nguyen-thi-hong-van',
+        name: 'Nguyễn Thị Hồng Vân',
+        role: 'Giáo viên',
         avatar: '../assets/images/teacher-avatar2/7.png',
         cover: '../assets/images/teacher/11.png',
-        tags: ['Luyện thi TCF/TEF', 'Giao tiếp'],
+        tags: ['Nhiều năm kinh nghiệm', 'Dạy giao tiếp A1-B2', 'Luyện thi TEF', 'Luyện thi DELF A2-B1', 'Luyện thi TCF'],
         info: [
-            {icon: 'fa-solid fa-graduation-cap', title: 'Bằng cấp', text: 'Thạc sĩ Ngôn ngữ học - Sorbonne Université'},
-            {icon: 'fa-solid fa-globe', title: 'Kinh nghiệm', text: 'Giảng dạy 6 năm tại Việt Nam & Pháp'}
+            {icon: 'fa-solid fa-graduation-cap', title: 'Trình độ chuyên môn', text: 'Thạc sĩ Khoa xã hội - Nhân văn tại Đại học Strasbourg (Pháp)'},
+            {icon: 'fa-solid fa-award', title: 'Thành tích', text: 'Sở hữu bằng DALF C1. Từng giảng dạy tại các trường tiểu học của Pháp'},
+            {icon: 'fa-solid fa-chalkboard-user', title: 'Kinh nghiệm', text: 'Có nhiều năm kinh nghiệm luyện thi TCF/TEF/DELF A2-B1 và các lớp giao tiếp từ A1 đến B2'},
+            {icon: 'fa-solid fa-user-tie', title: 'Vai trò', text: 'Giáo viên'},
         ]
     }
-
 ];
 
-/* ===== RENDER ===== */
+/* ===== RENDER / STATE ===== */
 const PER_PAGE = 8;
 let currentPage = 1;
 let currentActiveId = null;
 
-const $grid = document.getElementById('teacherGrid');
+const $grid   = document.getElementById('teacherGrid');
 const $detail = document.getElementById('teacherDetail');
-const $pages = document.getElementById('pageNumbers');
-const $prev = document.getElementById('prevPage');
-const $next = document.getElementById('nextPage');
+const $pages  = document.getElementById('pageNumbers');
+const $prev   = document.getElementById('prevPage');
+const $next   = document.getElementById('nextPage');
 
 const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
 
@@ -140,6 +172,27 @@ function paginate(arr, size, page) {
     return arr.slice(start, start + size);
 }
 
+/* ===== URL helpers ===== */
+function getURLTeacher() {
+    const url = new URL(window.location.href);
+    const raw = url.searchParams.get('teacher');
+    if (!raw) return null;
+    const q = decodeURIComponent(raw).trim().toLowerCase();
+    return (
+        TEACHERS.find(t => t.id.toLowerCase() === q) ||
+        TEACHERS.find(t => t.name.trim().toLowerCase() === q) ||
+        null
+    );
+}
+function setURLTeacher(t, {push = false} = {}) {
+    const url = new URL(window.location.href);
+    url.searchParams.set('teacher', t.id);  // ưu tiên id gọn gàng
+    url.hash = 'teachers';
+    if (push) history.pushState({teacher: t.id}, '', url);
+    else history.replaceState({teacher: t.id}, '', url);
+}
+
+/* ===== view ===== */
 function renderPages() {
     const totalPages = Math.ceil(TEACHERS.length / PER_PAGE);
     $pages.innerHTML = '';
@@ -173,13 +226,8 @@ function renderList() {
     // click chọn giáo viên
     $grid.querySelectorAll('.tcard').forEach(card => {
         card.onclick = () => {
-            currentActiveId = card.getAttribute('data-id');
-            renderDetail(currentActiveId);
-            $grid.querySelectorAll('.tcard').forEach(c => c.classList.remove('active'));
-            card.classList.add('active');
-            if (isMobile()) {
-                document.getElementById('teacherDetail').scrollIntoView({behavior: 'smooth', block: 'start'});
-            }
+            const id = card.getAttribute('data-id');
+            selectTeacher(id, {push: true, scroll: isMobile()});
         };
     });
 
@@ -210,6 +258,30 @@ function renderDetail(id) {
         </div>`).join('')}
     </div>
   `;
+}
+
+/* ===== chọn giáo viên (1 chỗ dùng chung) ===== */
+function selectTeacher(idOrObj, {push = false, scroll = false} = {}) {
+    const t = typeof idOrObj === 'string'
+        ? (TEACHERS.find(x => x.id === idOrObj) || TEACHERS[0])
+        : idOrObj;
+
+    currentActiveId = t.id;
+    renderDetail(t.id);
+
+    // cập nhật active card
+    $grid.querySelectorAll('.tcard').forEach(c => {
+        c.classList.toggle('active', c.getAttribute('data-id') === t.id);
+    });
+
+    // cập nhật URL
+    setURLTeacher(t, {push});
+
+    // scroll tới phần chi tiết nếu cần
+    if (scroll) {
+        document.getElementById('teacherDetail')
+            .scrollIntoView({behavior: 'smooth', block: 'start'});
+    }
 }
 
 /* Nút điều hướng:
@@ -256,10 +328,27 @@ window.addEventListener('resize', () => {
     }
 });
 
+/* ===== URL -> UI (Back/Forward) ===== */
+window.addEventListener('popstate', () => {
+    // đọc lại teacher từ URL và hiển thị
+    const t = getURLTeacher();
+    if (t) {
+        selectTeacher(t, {push: false, scroll: false});
+    }
+});
+
 /* Init */
 (function init() {
     renderList();
-    // luôn chọn giáo viên 1 (TEACHERS[0]) làm active mặc định
+
+    // Ưu tiên: nếu URL có ?teacher=... thì chọn theo đó
+    const tFromURL = getURLTeacher();
+    if (tFromURL) {
+        selectTeacher(tFromURL, {push: false, scroll: true});
+        return;
+    }
+
+    // Mặc định: chọn giáo viên đầu tiên
     const firstId = TEACHERS[0]?.id;
     if (firstId) {
         currentActiveId = firstId;
@@ -268,5 +357,8 @@ window.addEventListener('resize', () => {
         // gắn class active cho card đầu tiên
         const firstCard = document.querySelector('.tcard[data-id="' + firstId + '"]');
         if (firstCard) firstCard.classList.add('active');
+
+        // ghi URL mặc định (không thêm lịch sử)
+        setURLTeacher(TEACHERS[0], {push: false});
     }
 })();

@@ -3,77 +3,77 @@
 // ======= DATA (ví dụ) =======
 window.TEACHERS = [
     {
-        id: 1,
+        id: "le-pham-hoang-giang",
         name: "Lê Phạm Hoàng Giang",
         role: "Giáo viên tại Pháp Ngữ Troong",
         image: "assets/images/teacher-avatar2/2.png",
         badges: ["8.5 IELTS Overall", "Thạc sĩ Giảng dạy tiếng Anh", "Á khoa Ngôn ngữ Anh"]
     },
     {
-        id: 2,
+        id: "hoang-hong-linh",
         name: "Hoàng Hồng Linh",
         role: "Giáo viên tại Pháp Ngữ Troong",
         image: "assets/images/teacher-avatar2/6.png",
         badges: ["9.0 IELTS Overall", "8.5 IELTS Speaking"]
     },
     {
-        id: 3,
+        id: "pham-thi-kim-anh",
         name: "Phạm Thị Kim Anh",
         role: "Giáo viên tại Pháp Ngữ Troong",
         image: "assets/images/teacher-avatar2/1.png",
         badges: ["8.5 IELTS Overall", "Thạc sĩ Giảng dạy tiếng Anh", "Á khoa Ngôn ngữ Anh"]
     },
     {
-        id: 4,
+        id: "ton-nu-minh-thu",
         name: "Tôn Nữ Minh Thư",
         role: "Giáo viên tại Pháp Ngữ Troong",
         image: "assets/images/teacher-avatar2/10.png",
         badges: ["9.0 IELTS Overall", "8.5 IELTS Speaking"]
     },
     {
-        id: 5,
+        id: "le-my-an",
         name: "Lê Mỹ An",
         role: "Giáo viên tại Pháp Ngữ Troong",
         image: "assets/images/teacher-avatar2/4.png",
         badges: ["9.0 IELTS Overall", "8.5 IELTS Speaking"]
     },
     {
-        id: 6,
+        id: "nguyen-thi-ngoc-nghi",
         name: "Nguyễn Thị Ngọc Nghi",
         role: "Giáo viên tại Pháp Ngữ Troong",
         image: "assets/images/teacher-avatar2/8.png",
         badges: ["8.5 IELTS Overall", "Thạc sĩ Giảng dạy tiếng Anh", "Á khoa Ngôn ngữ Anh"]
     },
     {
-        id: 7,
+        id: "pham-hong-thien-phuc",
         name: "Phạm Hồng Thiên Phúc",
         role: "Giáo viên tại Pháp Ngữ Troong",
         image: "assets/images/teacher-avatar2/3.png",
         badges: ["9.0 IELTS Overall", "8.5 IELTS Speaking"]
     },
     {
-        id: 8,
+        id: "pham-ba-tung",
         name: "Phạm Bá Tùng",
         role: "Giáo viên tại Pháp Ngữ Troong",
         image: "assets/images/teacher-avatar2/11.png",
         badges: ["9.0 IELTS Overall", "8.5 IELTS Speaking"]
     },
     {
-        id: 9,
+        id: "nguyen-tra-my",
         name: "Nguyễn Trà My",
         role: "Giáo viên tại Pháp Ngữ Troong",
         image: "assets/images/teacher-avatar2/5.png",
         badges: ["9.0 IELTS Overall", "8.5 IELTS Speaking"]
     },
     {
-        id: 10,
+        id: "nguyen-thi-thom",
         name: "Nguyễn Thị Thơm",
         role: "Giáo viên tại Pháp Ngữ Troong",
         image: "assets/images/teacher-avatar2/9.png",
         badges: ["9.0 IELTS Overall", "8.5 IELTS Speaking"]
     },
     {
-        id: 11,
+        id: "nguyen-thi-hong-van",
         name: "Nguyễn Thị Hồng Vân",
         role: "Giáo viên tại Pháp Ngữ Troong",
         image: "assets/images/teacher-avatar2/7.png",
@@ -123,6 +123,15 @@ window.TEACHERS = [
     }
 
     rail.innerHTML = data.map(cardHtml).join("");
+
+    // Deep-link: click 1 giáo viên -> sang about-us và mang theo tham số ?teacher=
+    rail.querySelectorAll('.teacher-card').forEach((card, i) => {
+        const t = data[i]; // chính là teacher object
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', () => {
+            window.location.href = `pages/about-us.html?teacher=${t.id}#teachers`;
+        });
+    });
 
     /* ===== kéo chuột + momentum ===== */
     let isDown=false, startX=0, startLeft=0, lastX=0, velocity=0, rAF;
@@ -180,7 +189,7 @@ window.TEACHERS = [
 
     /* ===== auto-play 4s, dừng khi hover viewport ===== */
     let timer;
-    const startAuto = ()=> { timer = setInterval(()=> btnR?.click(), 1000); };
+    const startAuto = ()=> { timer = setInterval(()=> btnR?.click(), 3000); };
     const stopAuto  = ()=> { if(timer) clearInterval(timer); };
     startAuto();
     viewport?.addEventListener('mouseenter', stopAuto, {passive:true});
