@@ -223,11 +223,11 @@ function renderList() {
     </article>
   `).join('');
 
-    // click chọn giáo viên
+    // click chọn giáo viên -> cập nhật URL + hash + cuộn
     $grid.querySelectorAll('.tcard').forEach(card => {
         card.onclick = () => {
             const id = card.getAttribute('data-id');
-            selectTeacher(id, {push: true, scroll: isMobile()});
+            selectTeacher(id, {push: true, scroll: true, updateUrl: true});
         };
     });
 
@@ -261,7 +261,7 @@ function renderDetail(id) {
 }
 
 /* ===== chọn giáo viên (1 chỗ dùng chung) ===== */
-function selectTeacher(idOrObj, {push = false, scroll = false} = {}) {
+function selectTeacher(idOrObj, {push = false, scroll = false, updateUrl = true} = {}) {
     const t = typeof idOrObj === 'string'
         ? (TEACHERS.find(x => x.id === idOrObj) || TEACHERS[0])
         : idOrObj;
@@ -274,13 +274,13 @@ function selectTeacher(idOrObj, {push = false, scroll = false} = {}) {
         c.classList.toggle('active', c.getAttribute('data-id') === t.id);
     });
 
-    // cập nhật URL
-    setURLTeacher(t, {push});
+    // cập nhật URL nếu cần
+    if (updateUrl) setURLTeacher(t, {push});
 
     // scroll tới phần chi tiết nếu cần
     if (scroll) {
-        document.getElementById('teacherDetail')
-            .scrollIntoView({behavior: 'smooth', block: 'start'});
+        document.getElementById('teachers')
+            ?.scrollIntoView({behavior: 'smooth', block: 'start'});
     }
 }
 
@@ -330,10 +330,10 @@ window.addEventListener('resize', () => {
 
 /* ===== URL -> UI (Back/Forward) ===== */
 window.addEventListener('popstate', () => {
-    // đọc lại teacher từ URL và hiển thị
+    // đọc lại teacher từ URL và hiển thị, KHÔNG thêm lịch sử hay cuộn
     const t = getURLTeacher();
     if (t) {
-        selectTeacher(t, {push: false, scroll: false});
+        selectTeacher(t, {push: false, scroll: false, updateUrl: false});
     }
 });
 
@@ -341,24 +341,19 @@ window.addEventListener('popstate', () => {
 (function init() {
     renderList();
 
-    // Ưu tiên: nếu URL có ?teacher=... thì chọn theo đó
     const tFromURL = getURLTeacher();
     if (tFromURL) {
-        selectTeacher(tFromURL, {push: false, scroll: true});
+        // Có tham số -> render & cuộn; KHÔNG ghi lại URL để tránh thêm lịch sử
+        selectTeacher(tFromURL, {push: false, scroll: true, updateUrl: false});
         return;
     }
 
-    // Mặc định: chọn giáo viên đầu tiên
+    // Không có tham số -> chỉ render người đầu, KHÔNG cuộn, KHÔNG set hash/URL
     const firstId = TEACHERS[0]?.id;
     if (firstId) {
         currentActiveId = firstId;
         renderDetail(firstId);
-
-        // gắn class active cho card đầu tiên
-        const firstCard = document.querySelector('.tcard[data-id="' + firstId + '"]');
-        if (firstCard) firstCard.classList.add('active');
-
-        // ghi URL mặc định (không thêm lịch sử)
-        setURLTeacher(TEACHERS[0], {push: false});
+        document.querySelector(`.tcard[data-id="${firstId}"]`)?.classList.add('active');
+        // (bỏ setURLTeacher mặc định để nút "Xem thêm..." không bị cuộn)
     }
 })();

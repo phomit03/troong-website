@@ -130,40 +130,35 @@ window.TEACHERS = [
 
     function iconFor(bText) {
         const t = (bText || "")
-            .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+            .normalize('NFD').replace(/[\u0300-\u036f]/g, '') // bỏ dấu
             .toLowerCase();
 
-        // ===== Bằng cấp =====
-        if (t.includes('tiến sĩ') || t.includes('phd') || t.includes('doctor'))
-            return 'fa-user-graduate';
-        if (t.includes('thạc sĩ') || t.includes('master') || t.includes('french fle'))
-            return 'fa-graduation-cap';
-        if (t.includes('cử nhân') || t.includes('bachelor'))
-            return 'fa-user';
+        // ===== Học vị / văn bằng =====
+        if (/\b(phd|doctor)\b/.test(t) || t.includes('tien si')) return 'fa-user-graduate';
+        if (t.includes('thac si') || t.includes('master') || /\bfle\b/.test(t)) return 'fa-graduation-cap';
+        if (t.includes('cu nhan') || t.includes('bachelor')) return 'fa-user';
 
-        // ===== Trình độ ngôn ngữ =====
-        if (t.includes('delf') || t.includes('dalf') || t.includes('tcf') || t.includes('tef'))
-            return 'fa-language';
-        if (t.includes('trình độ') || t.match(/\bc1\b|\bb2\b|\bb1\b|\ba1\b/))
-            return 'fa-language';
+        // ===== Trình độ / chứng chỉ ngôn ngữ =====
+        if (t.includes('delf') || t.includes('dalf') || t.includes('tcf') || t.includes('tef')) return 'fa-language';
+        if (t.includes('trinh do') || /\b(a1|a2|b1|b2|c1|c2)\b/.test(t)) return 'fa-language';
 
-        // ===== Kinh nghiệm giảng dạy =====
-        if (t.includes('giảng dạy') || t.includes('luyện thi') || t.includes('teaching') || t.includes('giáo viên'))
+        // ===== Kinh nghiệm / giảng dạy =====
+        if (t.includes('giang day') || t.includes('luyen thi') || t.includes('teaching') || t.includes('giao vien'))
             return 'fa-chalkboard-user';
-        if (t.includes('cựu giảng viên'))
-            return 'fa-chalkboard';
+        if (t.includes('cuu giang vien')) return 'fa-chalkboard';
 
-        // ===== Giải thưởng, thành tích =====
-        if (t.includes('giải') || t.includes('thủ khoa') || t.includes('chứng chỉ') || t.includes('award'))
+        // ===== Thành tích / giải thưởng / chứng chỉ =====
+        if (t.includes('giai') || t.includes('thu khoa') || t.includes('chung chi') || t.includes('award') || t.includes('hanu'))
             return 'fa-award';
 
-        // ===== Đặc điểm khác =====
-        if (t.includes('accent') || t.includes('hot-face') || t.includes('truyền cảm hứng'))
-            return 'fa-microphone';
-        if (t.includes('biên dịch') || t.includes('dịch'))
-            return 'fa-book';
+        // ===== Dịch thuật / đặc điểm =====
+        if (t.includes('bien dich') || /\bdich\b/.test(t)) return 'fa-book';
+        if (t.includes('accent') || t.includes('truyen cam hung') || t.includes('hot-face')) return 'fa-microphone';
 
-        // fallback
+        // ===== Học/ Làm ở Pháp (địa danh) – tuỳ chọn =====
+        if (t.includes('phap') || t.includes('paris') || t.includes('lyon') || t.includes('rennes') || t.includes('strasbourg'))
+            return 'fa-globe';
+
         return 'fa-certificate';
     }
 
