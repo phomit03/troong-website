@@ -4418,7 +4418,7 @@ Modal Courses Style
 
 .contact-bell i {
     font-size: 20px;
-    animation: bellRing 2s infinite ease-in-out;
+    animation: bellRing 1s infinite ease-in-out;
 }
 
 .contact-bell:hover {
