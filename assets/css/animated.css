@@ -3156,3 +3156,30 @@ Copyright (c) 2014 Daniel Eden
   -webkit-animation-name: slideOutUp;
           animation-name: slideOutUp;
 }
+
+/*************** Page fade + stagger helper (nhẹ, không đụng gì layout) ************/
+
+/* Toàn trang mờ dần khi load */
+html { scroll-behavior: smooth; }
+body.page-fade-in { opacity: 0; }
+body.page-fade-in.ready {
+    animation: pageFadeIn .6s ease forwards;
+}
+@keyframes pageFadeIn { to { opacity: 1; } }
+
+/* Nhóm cần so-le: dùng data-stagger để auto set delay */
+[data-stagger] > * { will-change: opacity, transform; }
+/* Nhẹ nhàng hơn cho ảnh/figure */
+.fade-figure { opacity: 0; }
+.wow.fadeInUpSmall { animation-name: fadeInUp; }
+/* fallback nhỏ cho các item lẻ */
+.wow.fadeInSm { animation-name: fadeIn; }
+
+/* Giảm “dịch chuyển mạnh” với animate.css mặc định */
+.wow.fadeInUp, .wow.fadeInUpSmall { --animate-duration: .8s; }
+.wow.fadeInLeft, .wow.fadeInRight, .wow.fadeInDown, .wow.fadeIn {
+    --animate-duration: .8s;
+}
+
+/* Nhẹ tay cho header sticky khi xuất hiện */
+.header-area.header-sticky { will-change: transform, opacity; }

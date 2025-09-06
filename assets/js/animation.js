@@ -191,3 +191,37 @@ wow = new WOW(
   }
 );
 wow.init();
+
+<!-- Auto stagger + page fade init (siêu gọn) -->
+(function () {
+  // Khi preload xong, fade toàn trang vào
+  document.addEventListener('DOMContentLoaded', function () {
+    document.body.classList.add('ready');
+  });
+
+  // Tự động so-le delay cho các nhóm có data-stagger
+  var groups = document.querySelectorAll('[data-stagger]');
+  groups.forEach(function (g) {
+    var children = Array.from(g.children).filter(function (el) { return el.nodeType === 1; });
+    children.forEach(function (el, idx) {
+      // Nếu phần tử chưa có lớp wow thì thêm fadeInUpSmall nhẹ nhàng
+      if (!el.classList.contains('wow')) {
+        el.classList.add('wow', 'fadeInUpSmall');
+        el.setAttribute('data-wow-duration', el.getAttribute('data-wow-duration') || '0.7s');
+      }
+      // Nếu chưa set delay thì set so-le 0.08s
+      if (!el.hasAttribute('data-wow-delay')) {
+        el.setAttribute('data-wow-delay', (0.08 * idx).toFixed(2) + 's');
+      }
+    });
+  });
+
+  // Optional: làm dịu ảnh grid (khi dùng figure)
+  var figures = document.querySelectorAll('.fade-figure');
+  figures.forEach(function (f) {
+    if (!f.classList.contains('wow')) {
+      f.classList.add('wow', 'fadeInUpSmall');
+      f.setAttribute('data-wow-duration', '0.7s');
+    }
+  });
+})();
