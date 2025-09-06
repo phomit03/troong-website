@@ -215,6 +215,13 @@ body {
     margin-top: 20px;
 }
 
+@media (max-width: 992px) {
+    .section-heading .line-dec {
+        width: 35%;
+        height: 3px;
+    }
+}
+
 .border-first-button a {
     display: inline-block !important;
     padding: 10px 20px !important;
@@ -1113,6 +1120,9 @@ Banner Style
     z-index: 2;
     position: relative;
     font-weight: 800;
+    text-shadow:
+            1px 1px 0 #bfc8e1,   /* lớp bóng nhạt xanh xám */
+            3px 3px 0 #e0e3f3;
     font-size: 6rem;
     text-transform: uppercase;
     color: #e8ac9e;
@@ -1130,6 +1140,7 @@ Banner Style
     margin-bottom: 15px;
     letter-spacing: 1px;
     text-shadow: 3px 3px 0 #bfc8e1, 6px 6px 0 #e0e3f3;
+    z-index: 3;
 }
 
 .main-banner .left-content p {
@@ -1221,7 +1232,7 @@ About Style
 /* === RESPONSIVE ABOUT START === */
 @media (max-width: 992px) {
     .about-right-content .button-about-wrapper {
-        text-align: center;
+        text-align: left;
     }
 }
 
@@ -2634,7 +2645,7 @@ responsive
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 #contact-form .main-button:hover {
@@ -2714,6 +2725,7 @@ responsive
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
     margin-bottom: 10px;
 }
 
@@ -2832,7 +2844,7 @@ responsive
     }
 
     .main-banner .left-content .troong-name {
-        font-size: 3.5rem;
+        font-size: 3rem;
         margin-bottom: 10px;
     }
 
@@ -4096,9 +4108,6 @@ Modal Courses Style
     }
 }
 
-
-
-
 @keyframes cmv2-reveal {
     to {
         transform: none;
@@ -4150,6 +4159,18 @@ Modal Courses Style
     }
 }
 
+@media (max-width: 991.98px) {
+    .cmv2-body {
+        overflow-y: auto;   /* Cho phép cuộn toàn phần body */
+        -webkit-overflow-scrolling: touch; /* mượt mà hơn trên iOS */
+    }
+
+    #cm-outcomes {
+        max-height: 40vh;   /* giới hạn chiều cao outcomes để cuộn */
+        overflow-y: auto;
+    }
+}
+
 @media (max-width: 575.98px) {
     .cmv2-chip {
         font-size: 13px;
@@ -4161,6 +4182,10 @@ Modal Courses Style
 
     .cmv2-progress-scale {
         font-size: 11px;
+    }
+
+    .cmv2-panel {
+        height: 40vh;
     }
 }
 
@@ -4532,7 +4557,7 @@ Modal Courses Style
         margin-bottom: 10px !important;
     }*/
     .courses-box {
-        padding-top: 50px;
+        padding-top: 40px;
     }
 
     .courses .col-lg-6 {
@@ -4566,7 +4591,7 @@ Modal Courses Style
     }
 
     .feedback-section {
-        padding-top: 40px;
+        padding-top: 50px;
     }
 
     .feedback-item {
@@ -4681,9 +4706,22 @@ nguonhoc*/
 
 .sf-thumb{ flex:0 0 220px; max-width:220px; }
 
-/* Fade-in (đã có base) dùng luôn */
-/* .fade-in {opacity:0; transform:translateY(30px); transition:opacity .6s, transform .6s;}
-.fade-in.appear {opacity:1; transform:none;} */
+/* Card container: chia dọc */
+.study-flag-card {
+    display: flex;
+    flex-direction: column;
+}
+.sf-body.vertical {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.sf-body.vertical ul {
+    flex: 1;
+}
+.sf-thumb {
+    margin-top: auto;
+}
 
 /* Responsive giống ảnh: 5 -> 3 -> 2 -> 1 */
 @media (max-width: 1400px){
@@ -4709,7 +4747,4 @@ nguonhoc*/
     .study-flag-card{ padding:24px 18px 18px; }
     .sf-title{ margin-top:32px; }
     .sf-body.vertical .sf-thumb img {height: 120px}
-    .study-france .button-mobile {
-        margin-top: 25px;
-    }
 }
