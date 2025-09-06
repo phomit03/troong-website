@@ -1232,7 +1232,7 @@ About Style
 /* === RESPONSIVE ABOUT START === */
 @media (max-width: 992px) {
     .about-right-content .button-about-wrapper {
-        text-align: left;
+        text-align: center;
     }
 }
 
