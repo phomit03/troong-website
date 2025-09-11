@@ -187,17 +187,36 @@ window.TEACHERS = [
 
     // Deep-link: click 1 giáo viên -> sang about-us và mang theo tham số ?teacher=
     rail.querySelectorAll('.teacher-card').forEach((card, i) => {
-        const t = data[i]; // chính là teacher object
+        const t = data[i];
         card.style.cursor = 'pointer';
-        card.addEventListener('click', () => {
+        card.addEventListener('click', (e) => {
+            // Nếu vừa kéo thì chặn click
+            if (moved) { e.preventDefault(); return; }
             window.location.href = `pages/about-us.html?teacher=${t.id}#teachers`;
         });
     });
 
+
     /* ===== kéo chuột + momentum ===== */
+    let moved = false;
+
     let isDown=false, startX=0, startLeft=0, lastX=0, velocity=0, rAF;
-    const startDrag = (x)=>{ isDown=true; rail.classList.add('grabbing'); startX=x; startLeft=rail.scrollLeft; lastX=x; cancelMomentum(); };
-    const onMove = (x)=>{ if(!isDown) return; const dx=x-startX; rail.scrollLeft = startLeft - dx; velocity = x - lastX; lastX = x; };
+    const startDrag = (x)=>{
+        isDown=true; rail.classList.add('grabbing');
+        startX=x; startLeft=rail.scrollLeft; lastX=x;
+        moved = false; // reset
+        cancelMomentum();
+    };
+
+    const onMove = (x)=>{
+        if(!isDown) return;
+        const dx=x-startX;
+        // Đánh dấu là đã kéo nếu di chuyển đủ 5px
+        if (Math.abs(dx) > 5) moved = true;
+        rail.scrollLeft = startLeft - dx;
+        velocity = x - lastX;
+        lastX = x;
+    };
     const endDrag = ()=>{ if(!isDown) return; isDown=false; rail.classList.remove('grabbing'); momentum(); };
 
     rail.addEventListener('mousedown', e=> startDrag(e.clientX));

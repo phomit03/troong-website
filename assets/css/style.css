@@ -12,20 +12,9 @@ Table of contents
 09. footer
 10. preloader
 11. search
-12. portfolio
+12. teacher
 --------------------------------------------- */
-/* 
----------------------------------------------
-font & reset css
---------------------------------------------- 
-*/
-/* === FONT & RESET START === */
-/* === FONT & RESET END === */
-/* 
----------------------------------------------
-reset
---------------------------------------------- 
-*/
+
 /* === RESET START === */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
@@ -37,7 +26,6 @@ figure, header, nav, section, article, aside, footer, figcaption {
     outline: 0;
 }
 
-/* clear fix */
 .grid:after {
     content: '';
     display: block;
@@ -128,11 +116,8 @@ img {
 }
 
 /* === RESET END === */
-/* 
----------------------------------------------
-global styles
---------------------------------------------- 
-*/
+
+
 /* === GLOBAL START === */
 html,
 body {
@@ -169,8 +154,8 @@ body {
         margin-bottom: 60px;
     }
 }
-
 /* === RESPONSIVE GLOBAL END === */
+
 .page-section {
     margin-top: 120px;
 }
@@ -181,7 +166,7 @@ body {
 }
 
 .section-heading h6 {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 700;
     color: #e84797;
     text-transform: uppercase;
@@ -198,7 +183,7 @@ body {
 
 .section-heading h4 {
     font-weight: bolder;
-    font-size: 30px;
+    font-size: 35px;
     color: #4a51a1;
     text-transform: uppercase;
 }
@@ -209,17 +194,10 @@ body {
 }
 
 .section-heading .line-dec {
-    width: 25%;
-    height: 3px;
+    width: 120px;
+    height: 2px;
     background: linear-gradient(135deg, #4a51a1, #e84797);
     margin-top: 20px;
-}
-
-@media (max-width: 992px) {
-    .section-heading .line-dec {
-        width: 35%;
-        height: 3px;
-    }
 }
 
 .border-first-button a {
@@ -244,7 +222,7 @@ body {
     }
 
     .section-heading h4 {
-        font-size: 22px;
+        font-size: 35px;
     }
 
     .courses-box {
@@ -255,6 +233,10 @@ body {
 @media (max-width: 576px) {
     .section-heading h4 em {
         font-size: 35px;
+    }
+
+    .section-heading h4 {
+        font-size: 30px;
     }
 
     .courses-box .section-heading h4 {
@@ -272,11 +254,7 @@ body {
 }
 
 /* === GLOBAL END === */
-/*
----------------------------------------------
-intro
----------------------------------------------
-*/
+
 .intro-banner {
     text-align: center;
     padding-top: 200px;
@@ -364,11 +342,6 @@ intro
     text-transform: uppercase;
 }
 
-/*
----------------------------------------------
-header
----------------------------------------------
-*/
 /* === HEADER START === */
 .pre-header {
     background-color: #efefef;
@@ -742,11 +715,6 @@ header
     margin-top: 30px;
 }
 
-/*.header-area.header-sticky .nav li a.active {
-    color: #4c5a89 !important;
-    background: white;
-}*/
-
 /* === RESPONSIVE HEADER START === */
 @media (max-width: 1200px) {
     .header-area .main-nav .nav li {
@@ -757,7 +725,7 @@ header
     .header-area .main-nav .nav.nav-fx li:after,.header-area .main-nav .nav.nav-fx li:active,
     .header-area .main-nav .nav.nav-fx li:focus, .header-area .main-nav .nav.nav-fx li:hover:before{
         color: white;
-        background: #4c5a8b;
+        background: #4c5a89;
     }
 
     .header-area .main-nav:before {
@@ -929,7 +897,6 @@ header
 }
 /* === RESPONSIVE HEADER END === */
 
-
 /* === RESPONSIVE HEADER START === */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
 
@@ -938,7 +905,6 @@ header
     }
 }
 /* === RESPONSIVE HEADER END === */
-
 
 /* === RESPONSIVE HEADER START === */
 @media only screen and (min-width: 768px) and (max-width: 992px) {
@@ -953,11 +919,8 @@ header
 /* === RESPONSIVE HEADER END === */
 
 /* === HEADER END === */
-/*
----------------------------------------------
-preloader
----------------------------------------------
-*/
+
+
 /* === PRELOADER START === */
 .js-preloader {
     position: fixed;
@@ -1054,11 +1017,8 @@ preloader
 }
 
 /* === PRELOADER END === */
-/*
----------------------------------------------
-Banner Style
----------------------------------------------
-*/
+
+
 /* === BANNER START === */
 .main-banner {
     background-repeat: no-repeat;
@@ -1079,7 +1039,7 @@ Banner Style
     top: 60px;
     width: 262px;
     height: 625px;
-    z-index: 1;
+    z-index: -1;
 }
 
 .main-banner:before {
@@ -1121,11 +1081,11 @@ Banner Style
     position: relative;
     font-weight: 800;
     text-shadow:
-            1px 1px 0 #bfc8e1,   /* lớp bóng nhạt xanh xám */
+            2px 2px 0 #bfc8e1,   /* lớp bóng nhạt xanh xám */
             3px 3px 0 #e0e3f3;
     font-size: 6rem;
     text-transform: uppercase;
-    color: #e8ac9e;
+    color: #e84797;
     margin: 0;
     font-style: normal;
 }
@@ -1139,7 +1099,7 @@ Banner Style
     margin-top: -20px;
     margin-bottom: 15px;
     letter-spacing: 1px;
-    text-shadow: 3px 3px 0 #bfc8e1, 6px 6px 0 #e0e3f3;
+    text-shadow: 2px 2px 0 #bfc8e1, 4px 4px 0 #e0e3f3;
     z-index: 3;
 }
 
@@ -1147,13 +1107,14 @@ Banner Style
     font-family: 'Roboto Slab', serif;
     font-size: 20px;
     margin-bottom: 15px;
-    color: #e84797;
+    color: #e8ac9e;
     font-kerning: none;
     text-decoration-line: none;
     text-decoration-thickness: initial;
     text-decoration-style: initial;
     font-style: italic;
-    text-shadow: 1px 1px 0px #d68bb7, 2px 2px 0px #f3c4e0;
+    font-weight: bold;
+    /*text-shadow: 1px 1px 0px #d68bb7, 1px 1px 0px #f3c4e0;*/
 }
 
 .main-banner .right-image {
@@ -1167,11 +1128,8 @@ Banner Style
 }
 
 /* === BANNER END === */
-/*
----------------------------------------------
-About Style
----------------------------------------------
-*/
+
+
 /* === ABOUT START === */
 #about {
     padding-top: 120px;
@@ -1192,15 +1150,16 @@ About Style
 
 .about-right-content {
     padding-left: 0;
+    margin-top: 30px;
 }
 
 .about-right-content .button-about-wrapper .button-about{
     position: relative;
     display: inline-block;
-    padding: 8px 36px;
+    padding: 6px 22px;
     border-radius: 50px;
     color: #4c5a89;
-    border: 1px solid #4c5a89;
+    border: 1px solid #2a2a2a;
     background: none;
     font-size: 16px;
     transition: all .3s ease;
@@ -1210,20 +1169,19 @@ About Style
 }
 .about-right-content .button-about-wrapper .button-about:hover {
     background:
-            linear-gradient(135deg, #4c64cc, #8d89ba) padding-box,
-            linear-gradient(135deg, #4c64cc, #8d89ba) border-box;
+            linear-gradient(135deg, #4a51a1, #8d89ba) padding-box,
+            linear-gradient(135deg, #4a51a1, #8d89ba) border-box;
     color: #fff;
     transform: translateY(-2px) scale(1.02);
     box-shadow: 0 6px 14px rgba(76, 90, 139, .28);
+    border: none;
 }
 
-/* active: nhấn xuống */
 .about-right-content .button-about-wrapper .button-about:active {
     transform: translateY(0);
     box-shadow: 0 4px 10px rgba(76, 90, 139, .25);
 }
 
-/* focus: thêm viền sáng */
 .about-right-content .button-about-wrapper .button-about:focus-visible {
     outline: 3px solid rgba(183, 228, 249, .5);
     outline-offset: 3px;
@@ -1243,6 +1201,7 @@ About Style
 }
 
 /* === RESPONSIVE ABOUT END === */
+
 .skills-content {
     position: relative;
     z-index: 1;
@@ -1505,17 +1464,18 @@ Due to the split circle of progress-left and progress right, we must use the ani
 }
 
 /* === ABOUT END === */
-/*
----------------------------------------------
-courses-box Style
----------------------------------------------
-*/
+
+
 /* === courses-box START === */
 .courses-box {
     padding-top: 100px;
     position: relative;
     overflow: visible;
     scroll-margin-top: 100px;
+}
+
+.courses-box .section-heading .line-dec {
+    width: 100px !important;
 }
 
 .courses-box:after {
@@ -1688,14 +1648,10 @@ courses-box Style
 }
 
 /* === courses-box END === */
-/*
----------------------------------------------
-Free Quote
----------------------------------------------
-*/
-/* === CONTACT START === */
+
+/* === Contact Start === */
 .contact {
-    background-image: url(../images/contact-bg.jpg);
+    background-image: url(../images/contact-bg.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -1727,23 +1683,19 @@ Free Quote
     background: #fff ;
     margin-top: 20px;
 }
+/* === Contact END === */
 
-/* === CONTACT END === */
-/*
----------------------------------------------
-Portfolio
----------------------------------------------
-*/
-/* === PORTFOLIO START === */
-.our-portfolio {
-    padding-top: 130px;
+
+/* === Teachers Style === */
+.our-teacher {
+    padding-top: 100px;
     overflow: hidden;
     position: relative;
 }
 
-.our-portfolio:before {
+.our-teacher:before {
     content: '';
-    background-image: url(../images/portfolio-right-dec.jpg);
+    background-image: url(../images/teacher-right-dec.jpg);
     background-repeat: no-repeat;
     position: absolute;
     right: 0;
@@ -1753,9 +1705,9 @@ Portfolio
     z-index: 1;
 }
 
-.our-portfolio:after {
+.our-teacher:after {
     content: '';
-    background-image: url(../images/portfolio-left-dec.jpg);
+    background-image: url(../images/teacher-left-dec.jpg);
     background-repeat: no-repeat;
     position: absolute;
     left: 0;
@@ -1765,44 +1717,53 @@ Portfolio
     z-index: 1;
 }
 
-.our-portfolio .section-heading {
+.our-teacher .section-heading {
     margin-bottom: 80px;
 }
 
-.our-portfolio .container-fluid {
+.our-teacher .container-fluid {
     padding-right: 15px;
     padding-left: 15px;
     position: relative;
     z-index: 2;
 }
 
-.our-portfolio .item {
+.our-teacher .item {
     position: relative;
     z-index: 222;
 }
 
-.portfolio-item {
+.teacher-item {
     border-radius: 25px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-    margin: 15px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+    margin: 0 15px;
 }
 
-.portfolio-item .thumb {
+.teacher-item .thumb {
     position: relative;
     border-radius: 50px;
 }
 
-.portfolio-item:hover .down-content h4,
-.portfolio-item:hover .down-content span {
+.teacher-item:hover .down-content h4,
+.teacher-item:hover .down-content span {
     color: #4c5a89;
 }
 
-.portfolio-item .thumb img {
-    border-radius: 23px;
+.teacher-item .thumb img {
+    border-top-right-radius: 23px;
+    border-top-left-radius: 23px;
     overflow: hidden;
 }
 
-.portfolio-item .down-content h4 {
+.teacher-item .down-content {
+    background-color: #fff;
+    text-align: center;
+    padding: 18px 0px;
+    border-bottom-right-radius: 23px;
+    border-bottom-left-radius: 23px;
+}
+
+.teacher-item .down-content h4 {
     font-size: 20px;
     font-weight: 700;
     color: #2a2a2a;
@@ -1810,262 +1771,190 @@ Portfolio
     transition: all .3s;
 }
 
-.portfolio-item .down-content span {
+.teacher-item .down-content span {
     font-size: 15px;
     color: #2a2a2a;
     transition: all .3s;
 }
 
-.our-portfolio .owl-nav {
-    display: inline-block !important;
+.our-teacher .owl-dots {
+    display: none;
+}
+
+.our-teacher .owl-nav {
+    display: inline-block!important;
     position: absolute;
     top: -125px;
     right: 15%;
     max-width: 1320px;
 }
 
-.our-portfolio .owl-nav .owl-next {
+.our-teacher .owl-nav .owl-next {
     margin-left: 10px;
 }
 
-.our-portfolio .owl-nav span {
+.our-teacher .owl-nav span {
     width: 46px;
     height: 46px;
     display: inline-block;
     text-align: center;
     line-height: 46px;
     font-size: 30px;
-    background-color: #eee;
+    background-color: #4c5a89;
     border-radius: 50%;
     color: #fff;
     transition: all 0.5s;
 }
 
-.our-portfolio .owl-nav span:hover {
+.our-teacher .owl-nav span:hover {
     color: #fff;
-    background-color: #4c5a89;
+    background-color: #e84797;
 }
 
-/* === PORTFOLIO END === */
-/*
----------------------------------------------
-Blog
----------------------------------------------
-*/
-.blog:before {
-    content: '';
-    background-image: url(../images/blog-left-dec.jpg);
-    background-repeat: no-repeat;
+/*teacher Card v2 (hover)*/
+
+.teacher-item.v2 {
+    position: relative;
+    border-radius: 18px;
+    background: linear-gradient(180deg, #ffffff 0%, #f5f8ff 100%);
+    border: 1px solid #e5e9f6;
+    overflow: hidden;
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    box-shadow: none;
+}
+
+.teacher-item.v2 .thumb {
+    position: relative;
+    border-radius: 18px 18px 0 0;
+    overflow: hidden;
+}
+
+.teacher-item.v2 .thumb img {
+    width: 100%;
+    height: 320px;              /* tuỳ ý: 260–380px */
+    object-fit: cover;
+    display: block;
+    transition: transform .35s ease;
+    border-radius: 16px 16px 0 0;
+}
+
+/* vòng sáng khi hover */
+.teacher-item.v2 .pf-ring {
+    pointer-events: none;
     position: absolute;
-    left: 0;
-    top: 0px;
-    width: 961px;
-    height: 1020px;
-    z-index: 0;
+    inset: 0;
+    border-radius: 16px;
+    box-shadow: inset 0 0 0 0 rgba(76, 100, 204, 0);
+    transition: box-shadow .35s ease;
 }
 
-.blog {
-    position: relative;
-    padding-top: 110px;
+/* overlay phủ nền */
+.teacher-item.v2 .pf-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+            linear-gradient(180deg, rgba(16,24,40,0.0) 20%, rgba(16,24,40,.65) 100%),
+            radial-gradient(40% 40% at 50% 60%, rgba(76,100,204,.22), rgba(76,100,204,0) 70%);
+    opacity: 0;
+    transition: opacity .35s ease;
 }
 
-.blog .section-heading {
+/* badges + icon */
+.teacher-item.v2 .pf-badges {
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-width: 82%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.teacher-item.v2 .pf-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(255,255,255,.96);
+    color: #2a2a2a;
+    font-weight: 600;
+    font-size: 13px;
+    border: 1px solid #eaeef7;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.teacher-item.v2 .pf-badge i {
+    min-width: 14px;
+    font-size: 14px;
+    color: #4c5a89;
+}
+
+/* hover: phóng ảnh + hiện overlay + nhấn viền */
+.teacher-item.v2:hover .thumb img {
+    transform: scale(1.06);
+}
+.teacher-item.v2:hover .pf-overlay {
+    opacity: 1;
+}
+.teacher-item.v2:hover .pf-ring {
+    box-shadow: inset 0 0 0 1px rgba(104, 121, 189, 0.6), 0 8px 24px rgba(156, 159, 211, 0.18);
+}
+.teacher-item.v2:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(rgb(246, 250, 255) 0%, rgb(238, 244, 255) 100%);
+    border-color: rgb(214, 227, 255);
+    outline-color: rgb(207, 224, 255);
+}
+
+/* phần dưới tên + vai trò */
+.teacher-item.v2 .down-content {
+    background-color: #f5f8ff;
     text-align: center;
-    margin-bottom: 80px;
+    padding: 14px 10px 18px;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
 }
-
-.blog .section-heading .line-dec {
-    margin: 0 auto;
-    margin-top: 20px;
-}
-
-.show-up {
-    position: relative;
-    z-index: 200;
-}
-
-.blog-post {
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 25px;
-}
-
-.blog-post .thumb img {
-    border-top-right-radius: 23px;
-    border-top-left-radius: 23px;
-}
-
-.blog-post .thumb img {
-    height: 450px;
-    width: auto;
-}
-
-@media (max-width: 1280px) {
-    .post-item .right-content span.category {
-        margin-top: 20px;
-    }
-
-    .post-item .right-content span.date {
-        display: none;
-    }
-}
-
-@media (min-width: 1024px) and (max-width: 1280px) {
-    .blog-post .thumb img:nth-child(1) {
-        height: 350px;
-        width: 100%;
-    }
-
-    .blog-posts .post-item .thumb img {
-        height: 250px;
-        width: auto;
-    }
-
-    .blog-posts .post-item .thumb img:last-child {
-        height: 250px;
-        width: 250px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 992px) {
-    .blog-post .thumb img:nth-child(1) {
-        height: 450px;
-        width: 100%;
-    }
-
-    .blog-posts .post-item .thumb img {
-        height: 230px;
-        width: auto;
-    }
-
-    .blog-posts .post-item .thumb img:last-child {
-        height: 230px;
-        width: 230px;
-    }
-}
-
-@media (max-width: 768px) {
-    .blog-post .thumb img:nth-child(1) {
-        height: 300px;
-        width: 100%;
-    }
-
-    .blog-posts .post-item .thumb img:last-child {
-        height: 250px;
-        width: 250px;
-    }
-}
-
-.blog-post .down-content {
-    border-bottom-right-radius: 23px;
-    border-bottom-left-radius: 23px;
-    background-color: #fff;
-    padding: 30px;
-}
-
-.blog-post .down-content span.category {
-    font-size: 15px;
-    color: #fff;
-    padding: 8px 12px;
-    background-color: #e84797;
-    border-radius: 18px;
-    display: inline-block;
-}
-
-.blog-post .down-content span.date {
-    font-size: 15px;
+.teacher-item.v2 .down-content h4 {
+    font-size: 18px;
+    font-weight: 800;
     color: #2a2a2a;
-    text-align: right;
-    float: right;
-    margin-top: 4px;
+    margin: 0 0 4px 0;
+}
+.teacher-item.v2 .down-content span {
+    font-size: 14px;
+    color: #666;
 }
 
-.blog-post .down-content h4 {
-    font-size: 20px;
-    font-weight: 700;
-    color: #2a2a2a;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    line-height: 30px;
+/* responsive */
+@media (max-width: 576px) {
+    .teacher-item.v2 .thumb img { height: 380px; }
+    .teacher-item.v2 .pf-badges { max-width: 88%; }
 }
 
-.blog-post .down-content p {
-    margin-bottom: 30px;
-}
-
-.blog-post .down-content span.author {
-    font-size: 15px;
-    color: #2a2a2a;
-}
-
-.blog-post .down-content span.author img {
-    max-width: 56px;
-    border-radius: 50%;
-    margin-right: 15px;
-}
-
-.blog-post .down-content .border-first-button {
+/* Ellipsis cho text trong badges */
+.pf-badges .pf-badge span {
     display: inline-block;
-    float: right;
+    max-width: 220px;            /* chỉnh theo layout thực tế */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: bottom;
 }
 
-.blog-posts {
-    margin-left: 30px;
+/* Có thể tinh chỉnh theo breakpoint */
+@media (max-width: 575.98px) {
+    .pf-badges .pf-badge span { max-width: 160px; }
 }
 
-.post-item {
-    margin-bottom: 62px;
-}
 
-.last-post-item {
-    margin-bottom: 0px;
-}
+/* === Teachers End === */
 
-.post-item .thumb {
-    display: inline-block;
-    float: left;
-    margin-right: 30px;
-}
 
-.post-item .thumb img {
-    border-radius: 23px;
-    display: inline-block;
-}
-
-.post-item .right-content {
-    padding-top: 20px;
-}
-
-.post-item .right-content span.category {
-    font-size: 15px;
-    color: #fff;
-    padding: 8px 12px;
-    background-color: #e84797;
-    border-radius: 18px;
-    display: inline-block;
-}
-
-.post-item .right-content span.date {
-    font-size: 15px;
-    color: #2a2a2a;
-    text-align: right;
-    float: right;
-    margin-top: 4px;
-}
-
-.post-item .right-content h4 {
-    font-size: 20px;
-    font-weight: 700;
-    color: #2a2a2a;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    line-height: 30px;
-}
-
-/*
----------------------------------------------
-Footer Style
----------------------------------------------
-*/
+/* === Footer Start === */
 footer {
     background-image: url(../images/footer-bg.jpg);
     background-position: center center;
@@ -2084,6 +1973,8 @@ footer p a {
     color: #fff;
     transition: all .5s;
 }
+/* === Footer End === */
+
 
 /*
 ---------------------------------------------
@@ -2150,7 +2041,7 @@ responsive
         display: none;
     }
 
-    .courses-box .naccs .menu div {
+    .services .naccs .menu div {
         font-size: 15px;
         font-weight: 500;
     }
@@ -2179,7 +2070,7 @@ responsive
         margin-bottom: 70px;
     }
 
-    .our-portfolio .owl-nav {
+    .our-teacher .owl-nav {
         display: none !important;
     }
 
@@ -2221,27 +2112,27 @@ responsive
         display: inline-block;
     }
 
-    .courses-box .naccs .menu div .thumb {
+    .services .naccs .menu div .thumb {
         padding: 5px;
     }
 
-    .courses-box .icon img {
+    .services .icon img {
         margin: 0px;
     }
 
-    .courses-box ul.nacc li.active {
+    .services ul.nacc li.active {
         padding: 45px;
     }
 
-    .courses-box .naccs .menu div {
+    .services .naccs .menu div {
         font-size: 0px;
     }
 
-    .courses-box ul.nacc li .right-image img {
+    .services ul.nacc li .right-image img {
         float: none;
     }
 
-    .our-portfolio .section-heading,
+    .our-teacher .section-heading,
     .about-us .section-heading,
     .about-us .about-item,
     .about-us p,
@@ -2249,12 +2140,12 @@ responsive
         text-align: center;
     }
 
-    .our-portfolio .section-heading .line-dec {
+    .our-teacher .section-heading .line-dec {
         margin: 0 auto;
         margin-top: 20px;
     }
 
-    .our-courses-box .section-heading {
+    .our-services .section-heading {
         margin-left: 15px;
         margin-right: 15px;
     }
@@ -2311,7 +2202,7 @@ responsive
 }
 
 .card-custom {
-    background: linear-gradient(to bottom, #4c64cca3, #8d89babd); /* dùng màu chủ đạo mới */
+    background: linear-gradient(to bottom, #4a51a1a3, #8d89babd); /* dùng màu chủ đạo mới */
     border-radius: 15px; /* giữ 15px đẹp hơn 10px */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -2378,6 +2269,28 @@ responsive
     padding-right: 0;
 }
 
+.button-study-france {
+    position: relative;
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 50px;
+    color: #4c5a89;
+    border: 1px solid #2a2a2a;
+    background: none;
+    font-size: 16px;
+    transition: all .3s ease;
+    align-items: center;
+    text-align: left;
+    z-index: 0;
+}
+.button-study-france:hover {
+    background: linear-gradient(135deg, #4a51a1, #8d89ba);
+    color: #fff;
+    transform: translateY(-1px) scale(1.02);
+    box-shadow: 0 6px 14px rgba(76, 90, 139, .28);
+    border: none;
+}
+
 @media (min-width: 992px) {
     .study-france-left-image {
         margin-right: 20px;
@@ -2392,7 +2305,7 @@ responsive
     margin-bottom: 50px;
 }
 
-/* Phần Du học Pháp */
+/* === Du Hoc Phap Start === */
 .study-abroad {
     padding-top: 100px;
     padding-bottom: 80px;
@@ -2419,6 +2332,7 @@ responsive
     align-items: center;
     margin-bottom: 50px;
 }
+/* === Du Hoc Phap End === */
 
 /******* button ********/
 .button-wrapper {
@@ -2449,11 +2363,11 @@ responsive
     padding: 12px 34px;
     border-radius: 999px;
     border: 0;
-    background: linear-gradient(130deg, #4c64ccdb, #8d89bae0); /* màu chủ đạo mới */
+    background: linear-gradient(130deg, #4a51a1db, #8d89bae0); /* màu chủ đạo mới */
     color: #fff;
     font-size: 16px;
     font-weight: 600;
-    letter-spacing: .3px;
+    /*letter-spacing: .3px;*/
     cursor: pointer;
     text-decoration: none;
     outline: none;
@@ -2461,7 +2375,6 @@ responsive
     z-index: 0;
 }
 
-/* lớp phát sáng */
 .btn-more::after {
     content: "";
     position: absolute;
@@ -2473,20 +2386,16 @@ responsive
     animation: glow-pulse 3s ease-in-out infinite alternate;
     z-index: -1;
 }
-
-/* hover: nổi + sáng */
 .btn-more:hover {
     transform: translateY(-2px) scale(1.02);
-    background: linear-gradient(130deg, #4c64cc, #8d89ba); /* hover sáng hơn */
+    background: linear-gradient(130deg, #4a51a1, #8d89ba); /* hover sáng hơn */
 }
 
-/* active */
 .btn-more:active {
     transform: translateY(0);
     box-shadow: 0 8px 18px rgba(76, 90, 139, .28), 0 2px 6px rgba(0, 0, 0, .10);
 }
 
-/* focus */
 .btn-more:focus-visible {
     outline: 3px solid rgba(183, 228, 249, .5);
     outline-offset: 3px;
@@ -2506,9 +2415,6 @@ responsive
         0 0 0 rgba(183, 228, 249, 0);
     }
 }
-
-
-
 /* mobile */
 @media (max-width: 768px) {
     .btn-more {
@@ -2516,9 +2422,8 @@ responsive
         font-size: 16px;
     }
 }
+/******* button end ********/
 
-
-/* end button */
 /* ROCKET TIM HIEU TIENG PHAP */
 .rocket-heading {
     position: relative;
@@ -2537,7 +2442,6 @@ responsive
     transition: all 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
-/* Hiệu ứng khi hover toàn bộ heading */
 .rocket-heading:hover .heading-rocket {
     animation: headingRocketLaunch 1s forwards;
 }
@@ -2628,7 +2532,7 @@ responsive
 
 #contact-form select.form-control {
     appearance: none;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234c5a8b'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234c5a89'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
     background-repeat: no-repeat;
     background-position: right 20px center;
     background-size: 20px;
@@ -2637,7 +2541,7 @@ responsive
 #contact-form .main-button {
     width: 30%;
     height: 50px;
-    background-color: #4c5a89;
+    background: linear-gradient(135deg, #4a51a1, #8d89ba);
     color: white;
     border: none;
     border-radius: 25px;
@@ -2649,8 +2553,8 @@ responsive
 }
 
 #contact-form .main-button:hover {
-    background-color: #3a486b;
-    transform: translateY(-3px);
+    background-color: #4a51a1;
+    transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -2684,7 +2588,6 @@ responsive
     transition: all 0.3s ease;
 }
 
-/* Màu nền khi hover cho từng loại icon */
 .icon-link:hover {
     transform: translateY(-3px);
 }
@@ -2709,7 +2612,6 @@ responsive
     background: #D44638;
 }
 
-/* Đảm bảo icon không bị invert màu khi hover */
 .icon-link:hover .contact-icon {
     filter: none !important;
 }
@@ -2987,21 +2889,6 @@ dotlottie-wc {
     color: white;
 }
 
-/*.header-area .main-nav .nav.nav-fx li a::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%) scaleX(0);
-    transform-origin: center;
-    bottom: -6px;
-    width: 70%;
-    height: 2px;
-    background: white;
-
-    box-shadow: 0 0 10px rgba(76, 90, 139, .35);
-    transition: transform .35s ease;
-}*/
-
 .header-area .main-nav .nav.nav-fx li:hover a::after {
     transform: translateX(-50%) scaleX(1);
 }
@@ -3089,267 +2976,6 @@ dotlottie-wc {
 
 /*
 ---------------------------------------------
-Teacher
----------------------------------------------
-*/
-.teachers {
-    padding: 0;
-    padding-top: 100px;
-    position: relative;
-    z-index: 0;
-    isolation: isolate;
-}
-
-.teachers .line-dec {
-    margin: 20px auto 0;
-    /*width: 20%;*/
-}
-
-.teachers:before,
-.teachers:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    background-repeat: no-repeat;
-    pointer-events: none;
-    z-index: -1;
-}
-.teachers:before {
-    right: 0;
-    width: 414px;
-    height: 861px;
-    background-image: url(../images/portfolio-right-dec.jpg);
-}
-.teachers:after {
-    left: 0;
-    width: 677px;
-    height: 759px;
-    background-image: url(../images/portfolio-left-dec.jpg);
-}
-
-.teacher-viewport {
-    position: relative;
-    overflow: hidden;
-    margin-top: 60px;
-    z-index: 0;
-}
-
-.teacher-rail {
-    position: relative;
-    display: flex;
-    gap: 24px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-    /*padding-top: 30px;*/
-    z-index: 1;
-}
-.teacher-rail::-webkit-scrollbar { display: none; }
-
-.teacher-card {
-    flex: 0 0 calc((100% - 3*24px) / 4);
-    border-radius: 18px;
-    background: linear-gradient(180deg, #ffffff 0%, #f5f8ff 100%);
-    border: 1px solid #e5e9f6;
-    outline: 1px solid transparent;
-    overflow: hidden;
-    cursor: grab;
-    transition: background .25s ease, outline-color .25s ease, border-color .25s ease;
-    box-shadow: none !important;
-}
-.teacher-card:active { cursor: grabbing; }
-
-.teacher-card:hover {
-    background: linear-gradient(180deg, #f6faff 0%, #eef4ff 100%);
-    border-color: #d6e3ff;
-    outline-color: #cfe0ff;
-}
-
-.teacher-photo {
-    position: relative;
-    width: 100%;
-    height: 320px;
-    overflow: hidden;
-}
-.teacher-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform .35s ease;
-}
-.teacher-card:hover .teacher-photo img { transform: scale(1.06); }
-
-.teacher-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(60, 90, 200, .18), rgba(60, 90, 200, 0));
-    opacity: 0;
-    transition: opacity .25s ease;
-    pointer-events: none;
-}
-.teacher-card:hover .teacher-overlay { opacity: 1; }
-
-.teacher-badges {
-    position: absolute;
-    left: 12px;
-    bottom: 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    max-width: 80%;
-    pointer-events: none;
-}
-.teacher-badges li {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 6px 10px;
-    border-radius: 999px;
-    background: rgba(255,255,255,.96);
-    color: #2a2a2a;
-    font-weight: 600;
-    font-size: 13px;
-    max-width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    border: 1px solid #eaeef7;
-}
-.teacher-badges li i { flex: 0 0 auto; color: #4c5a89; }
-.teacher-badges li span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.teacher-meta { padding: 14px; text-align: center; }
-.teacher-name { font-weight: 800; font-size: 18px; color: #2a2a2a; }
-.teacher-role { font-size: 14px; color: #666; margin-top: 4px; min-height: 36px; }
-
-.teacher-nav {
-    border: 0;
-    border-radius: 50%;
-    background: #4c5a89;
-    color: #fff;
-    cursor: pointer;
-    transition: transform .15s ease, background .25s ease, box-shadow .25s ease;
-    z-index: 3;
-}
-.teacher-nav:hover { background: #e84797; }
-
-@media (min-width: 1024px) {
-    .teacher-viewport::before,
-    .teacher-viewport::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 80px;
-        z-index: 2;
-        pointer-events: none;
-    }
-    .teacher-viewport::before {
-        left: 0;
-        background: linear-gradient(to right, rgba(255,255,255,0.92), rgba(255,255,255,0));
-    }
-    .teacher-viewport::after {
-        right: 0;
-        background: linear-gradient(to left, rgba(255,255,255,0.92), rgba(255,255,255,0));
-    }
-
-    .teacher-nav {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        line-height: 50px;
-        font-size: 30px;
-        box-shadow: 0 0 0 1px rgba(255,255,255,.9);
-    }
-    .teacher-nav.left  { left: 12px; }
-    .teacher-nav.right { right: 12px; }
-}
-
-@media (min-width: 1201px) {
-    .teacher-card { flex-basis: calc((100% - 3*24px) / 4); }
-    .teacher-photo { height: 300px; }
-}
-
-@media (min-width: 1024px) and (max-width: 1200px) {
-    .teacher-card { flex-basis: calc((100% - 2*24px) / 3); }
-    .teacher-photo { height: 320px; }
-}
-
-@media (min-width: 769px) and (max-width: 1023px) {
-    .teacher-viewport {
-        overflow: visible;
-        padding-bottom: 72px;
-    }
-    .teacher-card { flex-basis: calc((100% - 24px) / 2); }
-    .teacher-photo { height: 350px; }
-    .teacher-nav {
-        position: absolute;
-        bottom: -8px;
-        width: 44px;
-        height: 44px;
-        line-height: 44px;
-        font-size: 20px;
-        transform: none;
-        box-shadow: 0 0 0 2px rgba(255,255,255,.95);
-    }
-    .teacher-nav.left  { right: 56px; left: auto; }
-    .teacher-nav.right { right: 8px; }
-}
-
-@media (min-width: 577px) and (max-width: 768px) {
-    .teacher-viewport { padding-bottom: 64px; overflow: visible; }
-    .teacher-card { flex-basis: calc((100% - 24px) / 2); }
-    .teacher-photo { height: 400px; }
-    .teacher-nav {
-        position: absolute;
-        bottom: -6px;
-        width: 42px;
-        height: 42px;
-        line-height: 42px;
-        font-size: 19px;
-        transform: none;
-        box-shadow: 0 0 0 2px rgba(255,255,255,.95);
-    }
-    .teacher-nav.left  { right: 52px; left: auto; }
-    .teacher-nav.right { right: 8px; }
-}
-
-@media (max-width: 576px) {
-    .teacher-viewport { padding-bottom: 60px; overflow: visible; }
-    .teacher-card { flex-basis: 100%; margin: 0 auto; }
-    .teacher-photo { height: 400px; }
-    .teacher-nav {
-        position: absolute;
-        bottom: -6px;
-        width: 40px;
-        height: 40px;
-        line-height: 40px;
-        font-size: 18px;
-        transform: none;
-        box-shadow: 0 0 0 2px rgba(255,255,255,.95);
-    }
-    .teacher-nav.left  { right: 50px; left: auto; }
-    .teacher-nav.right { right: 8px; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .teacher-photo img,
-    .teacher-rail { transition: none !important; scroll-behavior: auto; }
-}
-
-
-/*
----------------------------------------------
-End teacher
----------------------------------------------
-*/
-
-
-
-/*
----------------------------------------------
 Feedback Style
 ---------------------------------------------
 */
@@ -3362,7 +2988,7 @@ Feedback Style
 
 .feedback-section:before {
     content: '';
-    background-image: url(../images/portfolio-left-dec.jpg);
+    background-image: url(../images/teacher-left-dec.jpg);
     background-repeat: no-repeat;
     position: absolute;
     left: 0;
@@ -3558,8 +3184,8 @@ Feedback Style
 }
 
 .feedback-slider .owl-nav button {
-    width: 40px;
-    height: 40px;
+    width: 46px;
+    height: 46px;
     background: #4c5a89 !important;
     color: white !important;
     border-radius: 50% !important;
@@ -3572,12 +3198,8 @@ Feedback Style
 }
 
 .feedback-slider .owl-nav span {
-    font-size: 1.5rem !important;
+    font-size: 30px !important;
 }
-
-/*.feedback-slider .owl-dots {
-    margin-top: 30px;
-}*/
 
 .feedback-slider .owl-dot span {
     width: 12px;
@@ -3736,6 +3358,7 @@ Feedback Style
     /* mobile: tất cả cao như nhau cho gọn */
 }
 
+
 /*
 ---------------------------------------------
 Modal Courses Style
@@ -3761,9 +3384,9 @@ Modal Courses Style
 .cmv2-hero-bg {
     position: absolute;
     inset: 0;
-    background: radial-gradient(80% 120% at 10% -10%, #4c64cc40 0%, transparent 60%),
+    background: radial-gradient(80% 120% at 10% -10%, #4a51a140 0%, transparent 60%),
     radial-gradient(80% 120% at 100% 10%, #8d89ba5c 0%, transparent 65%),
-    linear-gradient(135deg, #4c64ccd4 0%, #8d89bad6 100%);
+    linear-gradient(135deg, #4a51a1d4 0%, #8d89bad6 100%);
     filter: saturate(1.1);
 }
 
@@ -3921,7 +3544,7 @@ Modal Courses Style
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #4c64cc, #8d89ba);
+    background: linear-gradient(135deg, #4a51a1, #8d89ba);
     box-shadow: 0 4px 10px rgba(76, 90, 139, .35);
 }
 
@@ -4044,7 +3667,7 @@ Modal Courses Style
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #4c64cc, #8d89ba);
+    background: linear-gradient(135deg, #4a51a1, #8d89ba);
     box-shadow: 0 8px 18px rgba(76, 90, 139, .35);
 }
 
@@ -4064,7 +3687,7 @@ Modal Courses Style
 
 .cmv2-cta {
     position: relative;
-    background: linear-gradient(130deg, #4c64ccdb, #8d89bae0);
+    background: linear-gradient(130deg, #4a51a1db, #8d89bae0);
     color: #fff;
     font-weight: 700;
     padding: 12px 28px;
@@ -4390,7 +4013,7 @@ Modal Courses Style
     position: fixed;
     right: 30px;
     bottom: 30px;
-    background: linear-gradient(135deg, #4c64cc, #8d89ba); /* màu chủ đạo */
+    background: linear-gradient(135deg, #4a51a1, #8d89ba); /* màu chủ đạo */
     color: white;
     border-radius: 50px;
     display: flex;
@@ -4422,7 +4045,7 @@ Modal Courses Style
 }
 
 .contact-bell:hover {
-    background: linear-gradient(135deg, #8d89ba, #4c64cc); /* đảo gradient khi hover */
+    background: linear-gradient(135deg, #8d89ba, #4a51a1); /* đảo gradient khi hover */
     transform: translateY(-3px);
     color: white;
 }
@@ -4484,8 +4107,11 @@ Modal Courses Style
         padding: 80px 0;
     }
 
-    .teachers {
+    .our-teacher {
         padding-top: 80px;
+    }
+    .our-teacher .section-heading {
+        margin-bottom: 60px;
     }
 
     .feedback-section {
@@ -4529,8 +4155,11 @@ Modal Courses Style
         padding: 60px 0;
     }
 
-    .teachers {
+    .our-teacher {
         padding-top: 60px;
+    }
+    .our-teacher .section-heading {
+        margin-bottom: 40px;
     }
 
     .feedback-section {
@@ -4548,7 +4177,7 @@ Modal Courses Style
 
 @media (max-width: 576px) {
     #about {
-        padding-top: 40px;
+        padding-top: 50px;
     }
     /*.about-right-content p {
         margin: 10px 0;
@@ -4557,170 +4186,190 @@ Modal Courses Style
         margin-bottom: 10px !important;
     }*/
     .courses-box {
-        padding-top: 40px;
+        padding-top: 50px;
     }
 
     .courses .col-lg-6 {
-        margin-top: 40px;
+        margin-top: 50px;
     }
     .courses .col-lg-6:nth-of-type(2) {
         margin: 0 !important;
     }
 
     #study-france {
-        padding-top: 50px;
+        padding-top: 60px;
     }
     /*.study-france-right-content p {
         margin: 10px 0;
     }*/
     .study-abroad {
-        padding: 40px 0;
+        padding: 50px 0;
     }
     /*.study-abroad-left-content p {
         margin: 10px 0;
     }*/
     .contact {
-        padding: 40px 0;
+        padding: 50px 0;
     }
 
-    .teachers {
-        padding-top: 40px;
+    .our-teacher {
+        padding-top: 50px;
+    }
+    .our-teacher .section-heading {
+        margin-bottom: 50px;
     }
     .teacher-viewport {
-        margin-top: 40px;
+        margin-top: 50px;
     }
 
     .feedback-section {
-        padding-top: 50px;
+        padding-top: 60px;
     }
 
     .feedback-item {
-        margin-top: 40px;
+        margin-top: 50px;
     }
 }
 
-/*
-nguonhoc*/
 
-/* ====== STUDY FRANCE — layout giống mock ====== */
-.study-france-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:28px;
+/* ====== STUDY FRANCE ====== */
+.study-france-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
     margin-top: 30px;
 }
-.study-france-grid .button-wrapper {
-    width: 100%;
-    text-align: left;
+
+/* Card có đổ bóng giống nacc */
+.study-flag-card {
     position: relative;
-    z-index: 30;
-}
-/* Card có viền xanh + 2 “đinh” đen trên mép */
-.study-flag-card{
-    position:relative;
-    background:#fff;
-    border:3px solid #4c5a89;
-    border-radius:18px;
-    padding:28px 22px 22px;
-    box-shadow:0 8px 18px rgba(0,0,0,.06);
-    transition:transform .25s ease, box-shadow .25s ease;
-    height:100%;
-}
-.study-flag-card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 16px 28px rgba(0,0,0,.12);
+    background: #fff;
+    border-radius: 15px;
+    padding: 0;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Đổ bóng giống nacc */
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    height: 100%;
+    overflow: visible;
 }
 
-/* 2 “đinh” (binder tabs) */
-/*.study-flag-card::before,
-.study-flag-card::after{
-    content:"";
-    position:absolute;
-    top:-8px;
-    width:18px; height:10px;
-    background:#1f1f1f;
-    border-radius:0 0 6px 6px;
-}*/
-/*.study-flag-card::before{ left:60px; }
-.study-flag-card::after{ left:110px; }*/
-
-/* Ribbon lá cờ + tròn icon */
-.flag{
-    position:absolute;
-    left:16px; top:-14px;
-    width:52px; height:52px;
-    background:#4c5a89;
-    border-radius:14px 14px 8px 8px;
-    box-shadow:0 6px 14px rgba(76,90,139,.25);
-}
-.flag::after{ /* đuôi lá cờ */
-    content:"";
-    position:absolute; left:0; bottom:-8px;
-    border-width:14px 14px 0 0;
-    border-style:solid;
-    border-color:#4c5a89 transparent transparent transparent;
-}
-.flag-icon{
-    position:absolute; inset:0; display:flex;
-    align-items:center; justify-content:center;
-}
-.flag-icon i{
-    width:36px; height:36px; line-height:36px;
-    text-align:center; font-size:20px; color:#4c5a89;
-    background:#fff; border-radius:50%;
-    box-shadow:0 3px 8px rgba(0,0,0,.15);
+.study-flag-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 28px rgba(0, 0, 0, 0.12);
 }
 
-/* Tiêu đề giống mock */
-.sf-title{
-    font-weight:700;
-    color:#2a2a2a;
+/* Ribbon lá cờ - làm to hơn một chút */
+.flag {
+    position: absolute;
+    left: 14px;
+    top: -12px;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #4a51a1, #8d89ba);
+    border-radius: 12px 12px 6px 6px;
+    box-shadow: 0 4px 10px rgba(76, 90, 139, 0.25);
+    z-index: 10;
+}
+
+.flag::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #4a51a1, #8d89ba);
+    border-radius: 12px 12px 6px 6px;
+    box-shadow: 0 4px 10px rgba(76, 90, 139, 0.25);
+    z-index: 1;
+}
+
+.flag::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    border-width: 12px 12px 0 0;
+    border-style: solid;
+    border-color: #6b6cad transparent transparent transparent;
+    z-index: 0;
+}
+
+.flag-icon {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.flag-icon i {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
     font-size: 18px;
-    margin:26px 0 14px 0;
+    color: #4c5a89;
+    background: #fff;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
-/* Ảnh và nội dung */
-.sf-body{ display:flex; gap:16px; align-items:flex-start; }
-/* Ảnh trên – chữ dưới */
+
+/* Tiêu đề */
+.sf-title {
+    font-weight: 700;
+    color: #2a2a2a;
+    font-size: 18px;
+    margin: 16px 20px 14px; /* Thêm padding hai bên */
+    padding-top: 10px; /* Thêm khoảng cách phía trên */
+    text-align: center;
+}
+
+/* Ảnh nằm trên cùng, sát lề */
 .sf-body.vertical {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: left; /* hoặc center nếu muốn chữ giữa */
-    gap: 14px;
+    text-align: left;
+    gap: 0; /* Loại bỏ khoảng cách */
 }
 
 .sf-body.vertical .sf-thumb {
-    flex: none;
     width: 100%;
     max-width: 100%;
+    margin: 0; /* Loại bỏ margin */
 }
 
 .sf-body.vertical .sf-thumb img {
     width: 100%;
     height: 170px;
     object-fit: cover;
-    border-radius: 12px;
-    border: 1px solid #e9ecf6;
+    border-radius: 12px 12px 0 0; /* Bo tròn chỉ phần trên */
+    border: none; /* Bỏ viền */
+    margin: 0; /* Đảm bảo không có khoảng cách */
 }
 
-.sf-thumb{ flex:0 0 220px; max-width:220px; }
+/* Nội dung text có padding */
+.styled-bullet-list {
+    padding: 0 20px 20px; /* Padding hai bên và dưới */
+    margin: 0;
+    list-style-type: none;
+}
 
-/* Card container: chia dọc */
-.study-flag-card {
-    display: flex;
-    flex-direction: column;
+.styled-bullet-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    line-height: 1.6;
+    font-size: 16px;
+    color: #2a2a2a;
 }
-.sf-body.vertical {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-.sf-body.vertical ul {
-    flex: 1;
-}
-.sf-thumb {
-    margin-top: auto;
+
+.styled-bullet-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #4c5a89;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 /* Responsive giống ảnh: 5 -> 3 -> 2 -> 1 */
@@ -4743,8 +4392,46 @@ nguonhoc*/
     .sf-thumb img{ height:170px; }
 }
 @media (max-width: 576px){
-    .study-france-grid{ grid-template-columns:repeat(2,1fr); gap:22px; margin-top: 20px}
-    .study-flag-card{ padding:24px 18px 18px; }
-    .sf-title{ margin-top:32px; }
-    .sf-body.vertical .sf-thumb img {height: 120px}
+    .study-france-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        margin-top: 15px;
+    }
+
+    .study-flag-card {
+        padding: 0;
+    }
+    .study-flag-card:nth-of-type(3), .study-flag-card:nth-of-type(4) {
+        margin-top: 10px;
+    }
+
+    .sf-title {
+        margin: 5px 15px 15px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .styled-bullet-list {
+        padding: 0 15px 15px;
+    }
+
+    .styled-bullet-list li {
+        font-size: 14px;
+    }
+
+    .sf-body.vertical .sf-thumb img {
+        height: 140px;
+    }
+
+    .flag {
+        width: 50px;
+        height: 50px;
+    }
+
+    .flag-icon i {
+        width: 34px;
+        height: 34px;
+        line-height: 34px;
+        font-size: 18px;
+    }
 }

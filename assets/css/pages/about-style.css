@@ -19,7 +19,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../../images/dots-pattern.jpg');
+    background-image: url('../../../assets/images/dots-pattern.jpg');
     opacity: 0.1;
     z-index: 1;
 }
@@ -45,6 +45,10 @@
     font-size: 1.2rem;
     max-width: 700px;
     margin: 0 auto 30px;
+}
+
+.section-heading h4 {
+    color: #e84797;
 }
 
 /* Phần giới thiệu chung */
@@ -136,7 +140,7 @@
 
 .teachers-section .section-heading .line-dec {
     margin: 20px auto 50px;
-    width: 200px;
+    width: 150px;
 }
 
 .teacher-browser {
@@ -223,7 +227,7 @@
     font-weight: 600;
     border: 1px solid #e7e9f2;
     background: #fafafe;
-    color: #4c5a89;
+    color: #4a51a1;
 }
 
 /* INFO LIST */
@@ -240,7 +244,7 @@
 
 .td-info .item i {
     min-width: 22px;
-    color: #4c5a89;
+    color: #4a51a1;
     margin-top: 2px;
     opacity: .9
 }
@@ -390,6 +394,7 @@
         border: 1px solid #eef0f6;
         border-radius: 20px;
         overflow: visible;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
     }
 
     .teacher-list {
@@ -558,9 +563,9 @@
 }
 
 .value-title {
-    font-size: 1.5rem;
+    font-size: 22px;
     font-weight: 700;
-    color: #4c5a89;
+    color: #4a51a1;
     margin-bottom: 15px;
 }
 
@@ -676,8 +681,8 @@
 }*/
 
 #about .section-heading .line-dec {
-    height: 3px;
-    width: 250px;
+    height: 2px;
+    width: 200px;
     background-color: #e84797;
 }
 

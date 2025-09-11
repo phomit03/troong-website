@@ -21,7 +21,7 @@ const TEACHERS = [
         name: 'Hoàng Hồng Linh',
         role: 'Giáo viên',
         avatar: '../assets/images/teacher-avatar2/6.png',
-        cover: '../assets/images/teacher/10.png',
+        cover: '../assets/images/teacher/9.png',
         tags: ['Nhiều năm kinh nghiệm', 'Dạy giao tiếp', 'Ôn thi DELF'],
         info: [
             {icon: 'fa-solid fa-graduation-cap', title: 'Trình độ chuyên môn', text: 'Tốt nghiệp tại Đại học Hà Nội'},
@@ -55,7 +55,7 @@ const TEACHERS = [
         tags: ['Nhiều năm kinh nghiệm', 'Luyện thi DELF A1, A2', 'Dạy giao tiếp'],
         info: [
             {icon: 'fa-solid fa-microphone', title: 'Kỹ năng', text: 'Trình độ ngôn ngữ Pháp DELF B2. Hot-face của các lớp sơ cấp với giọng nói nhẹ nhàng, truyền cảm hứng'},
-            {icon: 'fa-solid fa-award', title: 'Kinh nghiệm', text: 'Đã có kinh nghiệm luyện thi DELF A1, A2 và giảng dạy các lớp giao tiếp các trình độ Sơ cấp, Trung cấp và Nâng cao'},
+            {icon: 'fa-solid fa-award', title: 'Kinh nghiệm', text: 'Đã có kinh nghiệm luyện thi DELF A1, A2; có trình độ ôn thi TCF từ A1 đến B2 và giảng dạy các lớp giao tiếp các trình độ Sơ cấp, Trung cấp và Nâng cao'},
             {icon: 'fa-solid fa-user-tie', title: 'Vai trò', text: 'Giáo viên'},
         ]
     },
@@ -64,7 +64,7 @@ const TEACHERS = [
         name: 'Lê Mỹ An',
         role: 'Giáo viên',
         avatar: '../assets/images/teacher-avatar2/4.png',
-        cover: '../assets/images/teacher/5.png',
+        cover: '../assets/images/teacher/4.png',
         tags: ['Nhiều năm kinh nghiệm', 'Dạy giao tiếp A1-B2'],
         info: [
             {icon: 'fa-solid fa-graduation-cap', title: 'Trình độ chuyên môn', text: 'Cử nhân ngành Digital Marketing, Entrepreneuriat et E-Commerce'},
@@ -78,7 +78,7 @@ const TEACHERS = [
         name: 'Nguyễn Thị Ngọc Nghi',
         role: 'Giáo viên',
         avatar: '../assets/images/teacher-avatar2/8.png',
-        cover: '../assets/images/teacher/4.png',
+        cover: '../assets/images/teacher/6.png',
         tags: ['Nhiều năm kinh nghiệm', 'Dạy giao tiếp', 'Ôn thi TCF'],
         info: [
             {icon: 'fa-solid fa-graduation-cap', title: 'Trình độ chuyên môn', text: 'Tốt nghiệp Thạc sĩ sư phạm tiếng Pháp tại Đại học Cần Thơ'},
@@ -115,13 +115,18 @@ const TEACHERS = [
         ]
     },
     {
-        id: 'pham-ba-tung', name: 'Phạm Bá Tùng', role: 'Giáo viên',
+        id: 'pham-ba-tung',
+        name: 'Phạm Bá Tùng',
+        role: 'Giáo viên',
         avatar: '../assets/images/teacher-avatar2/11.png',
-        cover: '../assets/images/teacher/9.png',
-        tags: ['Ngữ âm học', 'TCF Canada'],
+        cover: '../assets/images/teacher/10.png',
+        tags: ['Cơ học & Xây dựng', 'Nghiên cứu', 'Giảng viên đại học'],
         info: [
-            {icon: 'fa-solid fa-microphone-lines', title: 'Nghiên cứu', text: 'Ngữ âm & phương pháp giảng dạy hiện đại'},
-            {icon: 'fa-solid fa-user-graduate', title: 'Cử nhân', text: 'Ngôn ngữ Pháp - ĐH Hà Nội'}
+            {icon: 'fa-solid fa-graduation-cap', title: 'Trình độ chuyên môn', text: 'Thạc sĩ Cơ học và Xây dựng tại Viện Nghiên cứu Khoa học Ứng dụng Quốc gia Rennes (INSA de Rennes, Pháp)'},
+            {icon: 'fa-solid fa-user-graduate', title: 'Học vị', text: 'Tiến sĩ Xây dựng tại Trường Đại học Cergy-Pontoise, Pháp'},
+            {icon: 'fa-solid fa-chalkboard-user', title: 'Kinh nghiệm giảng dạy', text: 'Giảng viên tại Đại học Công nghệ TP. Hồ Chí Minh'},
+            {icon: 'fa-solid fa-microscope', title: 'Nghiên cứu', text: 'Nghiên cứu sinh sau Tiến sĩ tại Đại học Hồ Nam, Trung Quốc'},
+            {icon: 'fa-solid fa-language', title: 'Ngoại ngữ', text: 'Giáo viên IELTS tại Trung tâm ngoại ngữ Passion'}
         ]
     },
     {
@@ -129,7 +134,7 @@ const TEACHERS = [
         name: 'Nguyễn Trà My',
         role: 'Giáo viên',
         avatar: '../assets/images/teacher-avatar2/5.png',
-        cover: '../assets/images/teacher/6.png',
+        cover: '../assets/images/teacher/5.png',
         tags: ['Nhiều năm kinh nghiệm', 'Dạy giao tiếp', 'Luyện thi'],
         info: [
             {icon: 'fa-solid fa-graduation-cap', title: 'Trình độ chuyên môn', text: 'Thạc sĩ FLE: Nghiên cứu tiếng Pháp và Pháp ngữ (EZF). Thạc sĩ FLE: Học và giảng dạy tiếng Pháp (ADFLE)'},
