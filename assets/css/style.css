@@ -80,6 +80,7 @@ header, nav, section, article, aside, footer, hgroup {
 * {
     box-sizing: border-box;
 }
+*, *::before, *::after { box-sizing: border-box; }
 
 html, body {
     font-family: 'Roboto Slab', serif;
@@ -2217,12 +2218,19 @@ responsive
     background-color: white;
     color: #4c5a89;
     border-radius: 20px;
-    margin-bottom: 15px;
-    width: 85%;
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto 15px auto;
     min-height: 0;
     font-weight: bold;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
+}
+.courses .card-custom [data-stagger]{
+    align-items: stretch;
+}
+@media (max-width: 480px){
+    .btn-course{ max-width: 350px; }
 }
 
 .btn-course:hover,
@@ -2242,7 +2250,7 @@ responsive
 .title-block {
     /*background-color: #4c5a89;*/
     color: white;
-    padding: 10px;
+    padding: 10px 0 20px 0;
     border-radius: 20px;
     font-size: 2rem;
     font-weight: bold;
