@@ -1651,7 +1651,7 @@ Due to the split circle of progress-left and progress right, we must use the ani
 
 /* === Contact Start === */
 .contact {
-    background-image: url(../images/contact-bg.png);
+    background-image: url(../images/contact-bg.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -2311,6 +2311,13 @@ responsive
     padding-bottom: 80px;
 }
 
+.study-abroad-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*margin-bottom: 50px;*/
+}
+
 .study-abroad-left-content p {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -2325,14 +2332,6 @@ responsive
     position: relative;
     text-align: center;
 }
-
-.study-abroad-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 50px;
-}
-/* === Du Hoc Phap End === */
 
 /******* button ********/
 .button-wrapper {
@@ -2356,6 +2355,21 @@ responsive
         padding-right: 30px;
     }
 }
+
+@media (max-width: 992px) {
+    .study-abroad-right-image img {
+        padding-top: 30px;
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 575px) {
+    .study-abroad-right-image img {
+        padding-top: 10px;
+        max-width: 90%;
+    }
+}
+/* === Du Hoc Phap End === */
 
 .btn-more {
     position: relative;
@@ -3232,14 +3246,19 @@ Feedback Style
 /* Responsive */
 @media (max-width: 992px) {
     .feedback-slider .owl-nav {
-        position: relative;
+        /*position: relative;
         top: 20px;
         text-align: right;
-        margin-bottom: 30px;
+        margin-bottom: 30px;*/
+        display: none;
+    }
+    .feedback-slider .owl-dots {
+        display: none;
     }
 
     .feedback-item {
         padding: 20px;
+        margin-bottom: 20px;
     }
 
     .author-avatar {

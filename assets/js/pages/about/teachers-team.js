@@ -156,7 +156,22 @@ const TEACHERS = [
             {icon: 'fa-solid fa-chalkboard-user', title: 'Kinh nghiệm', text: 'Có nhiều năm kinh nghiệm luyện thi TCF/TEF/DELF A2-B1 và các lớp giao tiếp từ A1 đến B2'},
             {icon: 'fa-solid fa-user-tie', title: 'Vai trò', text: 'Giáo viên'},
         ]
-    }
+    },
+    {
+        id: 'hoang-thu-mai',
+        name: 'Hoàng Thu Mai',
+        role: 'Giáo viên',
+        avatar: '../assets/images/teacher-avatar2/12.png',
+        cover: '../assets/images/teacher/12.png',
+        tags: ['Nhiều năm kinh nghiệm', 'Dạy giao tiếp', 'Luyện thi'],
+        info: [
+            {icon: 'fa-solid fa-graduation-cap', title: 'Trình độ chuyên môn', text: 'Tốt nghiệp đại học loại Xuất sắc ngành sư phạm tiếng Pháp'},
+            {icon: 'fa-solid fa-chalkboard-user', title: 'Kinh nghiệm giảng dạy', text: 'Từng giảng dạy tại các trung tâm Pháp ngữ và Anh ngữ: Poro Language space – Créatis Français, Clevai English; và các trường tiểu học Điện Biên, cấp 3 Phạm Hồng Thái'},
+            {icon: 'fa-solid fa-award', title: 'Thành tích', text: '“Chiến thần” của nhiều học bổng xuất sắc trong nhiều năm liên tiếp'},
+            {icon: 'fa-solid fa-chalkboard-user', title: 'Kinh nghiệm', text: 'Có nhiều kinh nghiệm giảng dạy các lớp giao tiếp và ôn thi từ các trình độ sơ cấp, trung cấp'},
+            {icon: 'fa-solid fa-user-tie', title: 'Vai trò', text: 'Giáo viên'}
+        ]
+    },
 ];
 
 /* ===== RENDER / STATE ===== */

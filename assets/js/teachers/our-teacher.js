@@ -116,7 +116,18 @@ window.TEACHERS = [
             "Sở hữu bằng DALF C1",
             "Từng giảng dạy tại các trường tiểu học của Pháp"
         ]
-    }
+    },
+    {
+        id: "hoang-thu-mai",
+        name: "Hoàng Thu Mai",
+        role: "Giáo viên tại Pháp Ngữ Troong",
+        image: "assets/images/teacher-avatar2/12.png",
+        badges: [
+            "Tốt nghiệp đại học loại Xuất sắc ngành sư phạm tiếng Pháp",
+            "Có nhiều kinh nghiệm giảng dạy các lớp giao tiếp và ôn thi từ các trình độ sơ cấp, trung cấp"
+        ]
+    },
+
 ];
 
 // ======= VIEW/LOGIC =======
