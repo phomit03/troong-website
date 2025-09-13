@@ -3524,7 +3524,8 @@ Modal Courses Style
     padding: 18px 22px 22px;
     background: radial-gradient(120% 100% at 0% 0%, #f6f7ff 0, #fbfbfe 60%, #ffffff 100%);
     flex: 1 1 auto;
-    overflow: hidden;
+    overflow: auto;
+    min-height: 0;
     display: flex;
     flex-direction: column;
 }
@@ -3778,6 +3779,10 @@ Modal Courses Style
         transform: none !important;
     }
 }
+@media (min-width: 1200px) {
+    .cmv2-panel, .cmv2-note {margin-bottom: 15px}
+    
+}
 
 @media (max-width: 1199.98px) {
     .cmv2-grid {
@@ -3833,7 +3838,16 @@ Modal Courses Style
     }
 
     .cmv2-panel {
-        height: 40vh;
+        height: auto;
+        max-height: none;
+    }
+    #cm-outcomes{
+        max-height: 48vh;
+    }
+}
+@supports (height: 100dvh) {
+    .course-modal.v2 .modal-content{
+        height: clamp(560px, 85dvh, 900px);
     }
 }
 
