@@ -3838,11 +3838,7 @@ Modal Courses Style
     }
 
     .cmv2-panel {
-        height: auto;
-        max-height: none;
-    }
-    #cm-outcomes{
-        max-height: 48vh;
+        height: 40vh;
     }
 }
 @supports (height: 100dvh) {
