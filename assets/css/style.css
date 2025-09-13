@@ -2243,8 +2243,18 @@ responsive
     color: #4c5a89;
     border-radius: 20px;
     padding: 15px;
-    text-align: center;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    white-space: normal;
+    height: auto;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.course-info span {
+    text-align: right;
 }
 
 .title-block {
@@ -2641,18 +2651,6 @@ responsive
 .title-block {
     /*border-bottom: 2px solid #e84797;*/
 }
-
-.course-info {
-    white-space: normal;
-    height: auto;
-    min-height: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
 @media (max-width: 768px) {
     .modal-lg {
         margin: 20px;
