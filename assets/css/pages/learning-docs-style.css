@@ -44,7 +44,7 @@
 
 /* News Grid */
 .news-grid {
-    padding: 60px 0;
+    padding: 60px 0 80px 0;
     background: #f9f9f9;
 }
 
@@ -188,4 +188,8 @@
     .news-grid {
         padding: 40px 20px;
     }
+}
+
+footer {
+    margin-top: 0 !important;
 }
