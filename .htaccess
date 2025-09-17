@@ -1,0 +1,27 @@
+# ----- .htaccess at public_html -----
+Options -Multiviews
+DirectoryIndex index.html
+RewriteEngine On
+RewriteBase /
+
+# Bỏ qua file/thư mục có thật
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# /index.html -> /
+RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+RewriteRule ^index\.html$ / [R=301,L]
+
+# Trang danh mục (URL đẹp -> file thật)
+RewriteRule ^about-us$ pages/about-us.html [L]
+RewriteRule ^learning-docs$ pages/learning-docs.html [L]
+RewriteRule ^study-abroad$ pages/study-abroad.html [L]
+
+# Bài chi tiết: /learning-docs/slug -> /pages/learning-docs-details/slug.html
+RewriteRule ^learning-docs/([A-Za-z0-9\-_]+)$ pages/learning-docs-details/$1.html [L]
+
+# Chuẩn hoá URL cũ -> mới (SEO 301)
+RewriteRule ^pages/about-us\.html$ /about-us [R=301,L]
+RewriteRule ^pages/learning-docs\.html$ /learning-docs [R=301,L]
+RewriteRule ^pages/learning-docs-details/([A-Za-z0-9\-_]+)\.html$ /learning-docs/$1 [R=301,L]

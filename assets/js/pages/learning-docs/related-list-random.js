@@ -1,18 +1,18 @@
 (function () {
     // Danh sách bài viết (đã nhớ)
     const ARTICLES = [
-        { file: "12-chu-de-tu-vung-di-thi-tcf-tef-delf-part1.html", title: "12 chủ đề từ vựng (P1) – TCF/TEF/DELF", img: "../../assets/images/nguonhoc/12-chu-de-tu-vung-di-thi-tcf-tef-delf-part1/1.jpg" },
-        { file: "12-chu-de-tu-vung-di-thi-tcf-tef-delf-part2.html", title: "12 chủ đề từ vựng (P2) – TCF/TEF/DELF", img: "../../assets/images/nguonhoc/12-chu-de-tu-vung-di-thi-tcf-tef-delf-part2/1.jpg" },
-        { file: "12-chu-de-tu-vung-di-thi-tcf-tef-delf-part3.html", title: "12 chủ đề từ vựng (P3) – TCF/TEF/DELF", img: "../../assets/images/nguonhoc/12-chu-de-tu-vung-di-thi-tcf-tef-delf-part3/1.jpg" },
-        { file: "4-kenh-luyen-tieng-phap.html", title: "4 kênh luyện đọc tiếng Pháp cực xịn 🌻", img: "../../assets/images/nguonhoc/4-kenh-luyen-tieng-phap/2.jpg" },
-        { file: "5-kenh-instagram-giup-ban-len-trinh-nghe-tieng-phap.html", title: "5 kênh Instagram giúp lên trình nghe tiếng Pháp", img: "../../assets/images/nguonhoc/5-kenh-instagram-giup-ban-len-trinh-nghe-tieng-phap/1.jpg" },
-        { file: "5-kenh-youtubes-hoc-tieng-phap.html", title: "5 kênh YouTube học tiếng Pháp", img: "../../assets/images/nguonhoc/5-kenh-hoc-tieng.jpg" },
-        { file: "5-kenh-youtubes-ho-tro-on-thi-tcf-tef&a2-c2.html", title: "5 kênh YouTube ôn TCF–TEF (A2→C2)", img: "../../assets/images/nguonhoc/5-kenh-youtubes-ho-tro-on-thi-TCF-TEF&A2-C2/1.jpg" },
-        { file: "cau-truc-de-thi-tcf-tp-chi-tiet.html", title: "Cấu trúc chi tiết đề thi TCF TP", img: "../../assets/images/nguonhoc/cau-truc-de-thi-tcf-tp/1.jpg" },
-        { file: "cung-troong-nang-cap-cach-su-dung-gioi-tu-pour.html", title: "Nâng cấp cách dùng giới từ “pour”", img: "../../assets/images/nguonhoc/cung-troong-nang-cap-cach-su-dung-tu-pour/1.jpg" },
-        { file: "dap-tan-noi-so-voi-cac-trang-luyen-nghe-tieng-phap.html", title: "Đập tan nỗi sợ nghe tiếng Pháp A1–C2", img: "../../assets/images/nguonhoc/noi-so-luyen-nghe.jpg" },
-        { file: "nen-thi-tcf-canada-hay-tef.html", title: "Nên thi TCF Canada hay TEF?", img: "../../assets/images/nguonhoc/nen-thi-tcf-canada-hay-tef/1.jpg" },
-        { file: "phan-biet-thu-tay-va-thu-dien-tu-trong-tcf.html", title: "Phân biệt thư tay & thư điện tử trong TCF", img: "../../assets/images/nguonhoc/phan-biet-thu-tay-va-thu-dien-tu-trong-tcf/1.jpg" }
+        { file: "12-chu-de-tu-vung-di-thi-tcf-tef-delf-part1", title: "12 chủ đề từ vựng (P1) – TCF/TEF/DELF", img: "../../assets/images/nguonhoc/12-chu-de-tu-vung-di-thi-tcf-tef-delf-part1/1.jpg" },
+        { file: "12-chu-de-tu-vung-di-thi-tcf-tef-delf-part2", title: "12 chủ đề từ vựng (P2) – TCF/TEF/DELF", img: "../../assets/images/nguonhoc/12-chu-de-tu-vung-di-thi-tcf-tef-delf-part2/1.jpg" },
+        { file: "12-chu-de-tu-vung-di-thi-tcf-tef-delf-part3", title: "12 chủ đề từ vựng (P3) – TCF/TEF/DELF", img: "../../assets/images/nguonhoc/12-chu-de-tu-vung-di-thi-tcf-tef-delf-part3/1.jpg" },
+        { file: "4-kenh-luyen-tieng-phap", title: "4 kênh luyện đọc tiếng Pháp cực xịn 🌻", img: "../../assets/images/nguonhoc/4-kenh-luyen-tieng-phap/2.jpg" },
+        { file: "5-kenh-instagram-giup-ban-len-trinh-nghe-tieng-phap", title: "5 kênh Instagram giúp lên trình nghe tiếng Pháp", img: "../../assets/images/nguonhoc/5-kenh-instagram-giup-ban-len-trinh-nghe-tieng-phap/1.jpg" },
+        { file: "5-kenh-youtubes-hoc-tieng-phap", title: "5 kênh YouTube học tiếng Pháp", img: "../../assets/images/nguonhoc/5-kenh-hoc-tieng.jpg" },
+        { file: "5-kenh-youtubes-ho-tro-on-thi-tcf-tef-va-a2-c2", title: "5 kênh YouTube ôn TCF–TEF (A2→C2)", img: "../../assets/images/nguonhoc/5-kenh-youtubes-ho-tro-on-thi-TCF-TEF-va-A2-C2/1.jpg" },
+        { file: "cau-truc-de-thi-tcf-tp-chi-tiet", title: "Cấu trúc chi tiết đề thi TCF TP", img: "../../assets/images/nguonhoc/cau-truc-de-thi-tcf-tp/1.jpg" },
+        { file: "cung-troong-nang-cap-cach-su-dung-gioi-tu-pour", title: "Nâng cấp cách dùng giới từ “pour”", img: "../../assets/images/nguonhoc/cung-troong-nang-cap-cach-su-dung-tu-pour/1.jpg" },
+        { file: "dap-tan-noi-so-voi-cac-trang-luyen-nghe-tieng-phap", title: "Đập tan nỗi sợ nghe tiếng Pháp A1–C2", img: "../../assets/images/nguonhoc/noi-so-luyen-nghe.jpg" },
+        { file: "nen-thi-tcf-canada-hay-tef", title: "Nên thi TCF Canada hay TEF?", img: "../../assets/images/nguonhoc/nen-thi-tcf-canada-hay-tef/1.jpg" },
+        { file: "phan-biet-thu-tay-va-thu-dien-tu-trong-tcf", title: "Phân biệt thư tay & thư điện tử trong TCF", img: "../../assets/images/nguonhoc/phan-biet-thu-tay-va-thu-dien-tu-trong-tcf/1.jpg" }
     ];
 
     const current = location.pathname.split("/").pop() || "index.html";
